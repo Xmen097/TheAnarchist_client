@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Maxicovina_velka.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/VIewport_container.gd" type="Script" id=4]
+
+[node name="Game" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 8000.0
+margin_bottom = 6000.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -108.0
+margin_right = 192.0
+margin_bottom = 108.0
+stretch = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+DESIRED_RESOLUTION = Vector2( 384, 216 )
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 384, 216 )
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 3
+
+[node name="Background" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
+scale = Vector2( 4, 4 )
+
+[node name="Player" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
+position = Vector2( 92.5167, 113.113 )
