@@ -60,5 +60,6 @@ position = Vector2( 92.5167, 113.113 )
 scale = Vector2( 4, 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.994912, 0.988351 )
 speed = 800
 >>>>>>> 65769e4... basic client setup
