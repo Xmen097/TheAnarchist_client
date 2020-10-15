@@ -19,14 +19,12 @@ config/name="TheAnarchist"
 run/main_scene="res://Scenes/Game.tscn"
 config/icon="res://icon.png"
 
-<<<<<<< HEAD
 [display]
 
 window/size/width=384
 window/size/height=216
 window/size/test_width=1152
 window/size/test_height=648
-window/stretch/aspect="keep_height"
 
 [importer_defaults]
 
@@ -50,16 +48,6 @@ texture={
 "stream": false,
 "svg/scale": 1.0
 }
-=======
-[autoload]
-
-Server="*res://Singletons/Server.gd"
-
-[display]
-
-window/stretch/mode="viewport"
-window/stretch/aspect="keep"
->>>>>>> 65769e4... basic client setup
 
 [input]
 
