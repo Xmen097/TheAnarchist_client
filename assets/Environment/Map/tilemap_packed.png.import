@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test_tm.png-b41b172ff004b375624014f479fef974.stex"
+path="res://.import/tilemap_packed.png-95c259f1a6ea1304300d5d221a0a165f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/Tilemap/test_tm.png"
-dest_files=[ "res://.import/test_tm.png-b41b172ff004b375624014f479fef974.stex" ]
+source_file="res://assets/Environment/Map/tilemap_packed.png"
+dest_files=[ "res://.import/tilemap_packed.png-95c259f1a6ea1304300d5d221a0a165f.stex" ]
 
 [params]
 
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
-svg/scale=1.0
+svg/scale=4.0
