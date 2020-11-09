@@ -8,21 +8,21 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node2D",
-"class": "Weapon",
-"language": "GDScript",
-"path": "res://Scripts/Hands.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"Weapon": ""
+
 }
 
 [application]
 
 config/name="TheAnarchist"
-run/main_scene="res://Scenes/Game.tscn"
+run/main_scene="res://Scenes/Game/Game.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Utils="*res://Globals/Singletons/Utils.gd"
+Weapons="*res://Globals/Singletons/Weapons.gd"
 
 [display]
 
