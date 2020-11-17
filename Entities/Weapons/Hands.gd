@@ -17,10 +17,10 @@ func look_at_mouse():
 
 func _input(event):
 	if event.is_action_pressed("attack") and !active_weapon.attacking:
-		active_weapon.left_click(weapon_animation_mode)
+		active_weapon.primary_attack(weapon_animation_mode)
 
 func _ready():
-	active_weapon = $Weapons/Cutlass
+	active_weapon = $Weapons/Halberd
 	active_weapon.init(weapon_animation_mode)
 
 func _process(_delta):

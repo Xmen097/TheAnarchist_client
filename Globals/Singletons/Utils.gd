@@ -17,12 +17,11 @@ func mouse_angle():
 	angle = angle * (1 if y < 0 else -1)
 	return angle/PI*180
 
-
 func mouse_pos():
 	var x = get_viewport().get_mouse_position().x - get_viewport_rect().size.x/2
 	var y = get_viewport().get_mouse_position().y - get_viewport_rect().size.y/2
 	return Vector2(x, y)
-	
+
 func mouse_pos_blended():
 	var x = get_viewport().get_mouse_position().x - get_viewport_rect().size.x/2
 	var y = get_viewport().get_mouse_position().y - get_viewport_rect().size.y/2

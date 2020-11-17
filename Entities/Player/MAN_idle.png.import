@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MAN_ss.png-20e3c43f209b533cadf0916fb0aef7d3.stex"
+path="res://.import/MAN_idle.png-3ee12f49911967d0c59260e6aed3dc9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Player/MAN_ss.png"
-dest_files=[ "res://.import/MAN_ss.png-20e3c43f209b533cadf0916fb0aef7d3.stex" ]
+source_file="res://Entities/Player/MAN_idle.png"
+dest_files=[ "res://.import/MAN_idle.png-3ee12f49911967d0c59260e6aed3dc9e.stex" ]
 
 [params]
 
