@@ -35,6 +35,8 @@ class Melee extends Node2D:
 		sprite = $Sprite
 		primary_area = $Primary
 		primary_collider = $Primary/Collider
+		secondary_area = $Primary
+		secondary_collider = $Primary/Collider
 
 	func idle():
 		attacking = false

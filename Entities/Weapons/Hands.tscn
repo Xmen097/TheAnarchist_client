@@ -1,6 +1,6 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=45 format=2]
 
-[ext_resource path="res://Entities/Weapons/Cutlass/Cutlass_complete.png" type="Texture" id=1]
+[ext_resource path="res://Entities/Weapons/Cutlass/cutlass.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Weapons/hand.png" type="Texture" id=2]
 [ext_resource path="res://Entities/Weapons/Hands.gd" type="Script" id=3]
 [ext_resource path="res://Entities/Weapons/Cutlass/Cutlass.gd" type="Script" id=4]
@@ -314,6 +314,24 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=21]
+resource_name = "Cutlass_Stab"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutlass/Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.4, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7, 10 ), Vector2( 8, 10 ), Vector2( 9, 10 ), Vector2( 10, 10 ), Vector2( 11, 10 ) ]
+}
+
+[sub_resource type="Animation" id=22]
 length = 0.4
 loop = true
 step = 0.025
@@ -344,7 +362,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=23]
 resource_name = "Halberd_Idle"
 loop = true
 tracks/0/type = "value"
@@ -374,7 +392,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=24]
 resource_name = "Halberd_Stab"
 length = 0.25
 step = 0.05
@@ -405,23 +423,26 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=22]
+[sub_resource type="AnimationNodeAnimation" id=25]
 animation = "Cutlass_Idle"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "Cutlass_Stab"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
 animation = "Cutlass_Swing"
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=28]
 animation = "Halberd_Idle"
 
-[sub_resource type="AnimationNodeAnimation" id=31]
+[sub_resource type="AnimationNodeAnimation" id=29]
 animation = "Halberd_Stab"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=32]
 
@@ -429,19 +450,27 @@ auto_advance = true
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=26]
-states/Cutlass_Idle/node = SubResource( 22 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=36]
+states/Cutlass_Idle/node = SubResource( 25 )
 states/Cutlass_Idle/position = Vector2( -1005, -263 )
-states/Cutlass_Swing/node = SubResource( 23 )
+states/Cutlass_Stab/node = SubResource( 26 )
+states/Cutlass_Stab/position = Vector2( -1253, -263 )
+states/Cutlass_Swing/node = SubResource( 27 )
 states/Cutlass_Swing/position = Vector2( -739, -263 )
-states/Halberd_Idle/node = SubResource( 30 )
+states/Halberd_Idle/node = SubResource( 28 )
 states/Halberd_Idle/position = Vector2( -1005, -189 )
-states/Halberd_Stab/node = SubResource( 31 )
+states/Halberd_Stab/node = SubResource( 29 )
 states/Halberd_Stab/position = Vector2( -739, -189 )
-transitions = [ "Cutlass_Swing", "Cutlass_Idle", SubResource( 24 ), "Cutlass_Idle", "Cutlass_Swing", SubResource( 25 ), "Halberd_Idle", "Halberd_Stab", SubResource( 32 ), "Halberd_Stab", "Halberd_Idle", SubResource( 33 ) ]
+transitions = [ "Cutlass_Swing", "Cutlass_Idle", SubResource( 30 ), "Cutlass_Idle", "Cutlass_Swing", SubResource( 31 ), "Halberd_Idle", "Halberd_Stab", SubResource( 32 ), "Halberd_Stab", "Halberd_Idle", SubResource( 33 ), "Cutlass_Idle", "Cutlass_Stab", SubResource( 34 ), "Cutlass_Stab", "Cutlass_Idle", SubResource( 35 ) ]
 graph_offset = Vector2( -1500, -347 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=27]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=37]
 
 [node name="Hands" type="Node2D"]
 script = ExtResource( 3 )
@@ -469,25 +498,25 @@ parameters/Hands_idle/blend_position = Vector2( 0.312602, 0.304762 )
 playback_default_blend_time = 1.0
 method_call_mode = 1
 anims/Cutlass_Idle = SubResource( 20 )
-anims/Cutlass_Swing = SubResource( 21 )
-anims/Halberd_Idle = SubResource( 28 )
-anims/Halberd_Stab = SubResource( 29 )
+anims/Cutlass_Stab = SubResource( 21 )
+anims/Cutlass_Swing = SubResource( 22 )
+anims/Halberd_Idle = SubResource( 23 )
+anims/Halberd_Stab = SubResource( 24 )
 
 [node name="AnimationTree" type="AnimationTree" parent="Weapons"]
-tree_root = SubResource( 26 )
+tree_root = SubResource( 36 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 27 )
+parameters/playback = SubResource( 37 )
 
 [node name="Cutlass" type="Node2D" parent="Weapons"]
-visible = false
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Weapons/Cutlass"]
 texture = ExtResource( 1 )
 vframes = 21
-hframes = 7
-frame = 70
+hframes = 12
+frame = 130
 
 [node name="Primary" type="Area2D" parent="Weapons/Cutlass" groups=[
 "Weapon",
@@ -499,6 +528,14 @@ script = ExtResource( 5 )
 position = Vector2( 6, 0 )
 polygon = PoolVector2Array( -3, -2, 23, -10, 23, 6, -3, 2 )
 
+[node name="Secondary" type="Area2D" parent="Weapons/Cutlass" groups=[
+"Weapon",
+]]
+script = ExtResource( 5 )
+
+[node name="Collider" type="CollisionPolygon2D" parent="Weapons/Cutlass/Secondary"]
+polygon = PoolVector2Array( 19, -3, 33, -3, 33, 5, 19, 5 )
+
 [node name="Halberd" type="Node2D" parent="Weapons"]
 visible = false
 script = ExtResource( 6 )
@@ -509,7 +546,9 @@ vframes = 21
 hframes = 4
 frame = 43
 
-[node name="Primary" type="Area2D" parent="Weapons/Halberd"]
+[node name="Primary" type="Area2D" parent="Weapons/Halberd" groups=[
+"Weapon",
+]]
 visible = false
 script = ExtResource( 5 )
 

@@ -16,11 +16,13 @@ func look_at_mouse():
 	
 
 func _input(event):
-	if event.is_action_pressed("attack") and !active_weapon.attacking:
+	if event.is_action_pressed("primary_attack") and !active_weapon.attacking:
 		active_weapon.primary_attack(weapon_animation_mode)
+	if event.is_action_pressed("secondary_attack") and !active_weapon.attacking:
+		active_weapon.secondary_attack(weapon_animation_mode)
 
 func _ready():
-	active_weapon = $Weapons/Halberd
+	active_weapon = $Weapons/Cutlass
 	active_weapon.init(weapon_animation_mode)
 
 func _process(_delta):

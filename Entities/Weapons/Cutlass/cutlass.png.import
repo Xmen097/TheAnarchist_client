@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cutlass_complete.png-7603ad2db0652c99164340dc14eb1349.stex"
+path="res://.import/cutlass.png-cc036cfe24a34a8af0c052cd0d64f61c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Weapons/Cutlass/Cutlass_complete.png"
-dest_files=[ "res://.import/Cutlass_complete.png-7603ad2db0652c99164340dc14eb1349.stex" ]
+source_file="res://Entities/Weapons/Cutlass/cutlass.png"
+dest_files=[ "res://.import/cutlass.png-cc036cfe24a34a8af0c052cd0d64f61c.stex" ]
 
 [params]
 
