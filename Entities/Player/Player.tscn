@@ -482,7 +482,7 @@ texture = ExtResource( 1 )
 flip_h = true
 vframes = 8
 hframes = 11
-frame = 6
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -496,4 +496,4 @@ smoothing_speed = 10.0
 script = ExtResource( 5 )
 
 [node name="Hands" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, 6 )
+position = Vector2( 0, 7 )

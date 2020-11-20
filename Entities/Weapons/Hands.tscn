@@ -531,6 +531,7 @@ polygon = PoolVector2Array( -3, -2, 23, -10, 23, 6, -3, 2 )
 [node name="Secondary" type="Area2D" parent="Weapons/Cutlass" groups=[
 "Weapon",
 ]]
+visible = false
 script = ExtResource( 5 )
 
 [node name="Collider" type="CollisionPolygon2D" parent="Weapons/Cutlass/Secondary"]
@@ -553,6 +554,7 @@ visible = false
 script = ExtResource( 5 )
 
 [node name="Collider" type="CollisionPolygon2D" parent="Weapons/Halberd/Primary"]
+visible = false
 polygon = PoolVector2Array( 30, 10, 49, 12, 49, -12, 30, -10 )
 
 [node name="Left" type="Node2D" parent="."]
