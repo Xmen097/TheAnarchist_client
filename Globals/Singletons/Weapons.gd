@@ -1,7 +1,7 @@
 extends Node
 
 class Melee extends Node2D:
-	var data = {
+	var data = { # This MUST be changed in child scripts
 		idle_animation = "",
 		primary_animation = "",
 		secondary_animation = "",
@@ -31,7 +31,7 @@ class Melee extends Node2D:
 		animation_mode.start(data.idle_animation)
 		visible = true
 
-	func _ready():
+	func _ready(): # Get all necessary references
 		sprite = $Sprite
 		primary_area = $Primary
 		primary_collider = $Primary/Collider
@@ -41,17 +41,17 @@ class Melee extends Node2D:
 	func idle():
 		attacking = false
 
-	func primary_damage():
+	func primary_damage(): # This is called from animation, will send damage
 		var bodies = primary_area.inside()
 		for body in bodies:
 			body.damage(data.primary_damage)
 
-	func secondary_damage():
+	func secondary_damage(): # This is called from animation, will send damage
 		var bodies = secondary_area.inside()
 		for body in bodies:
 			body.damage(data.secondary_damage)
 
-	func look_at_mouse(mouse_angle):
+	func look_at_mouse(mouse_angle): #Weapon will look at mouse
 		if mouse_angle > 105 or mouse_angle < -105:
 			scale = Vector2(-1, 1)
 		elif mouse_angle < 75 and mouse_angle >= 0 or\

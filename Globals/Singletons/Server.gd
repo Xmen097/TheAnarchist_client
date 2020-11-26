@@ -1,3 +1,6 @@
+# !!!
+#	THIS SCRIPT IS NOT IN USE, DO NOT MIND ERRORS
+# !!!
 extends Node
 
 var network = NetworkedMultiplayerENet.new()

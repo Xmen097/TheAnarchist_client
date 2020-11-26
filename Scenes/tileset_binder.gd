@@ -1,3 +1,6 @@
+# Script added to tilesets to change binding rules
+# In the future should be more generalized to apply to more spritesheets
+
 extends TileSet
 tool
 
