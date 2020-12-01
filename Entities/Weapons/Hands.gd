@@ -17,17 +17,29 @@ func look_at_mouse(): #change hand appearance to look at mouse
 	
 
 func _input(event): #Call methods on active weapon on click event
-	if event.is_action_pressed("primary_attack") and !active_weapon.attacking:
-		active_weapon.primary_attack(weapon_animation_mode)
-	if event.is_action_pressed("secondary_attack") and !active_weapon.attacking:
-		active_weapon.secondary_attack(weapon_animation_mode)
+	if active_weapon.type == "Melee":
+		if event.is_action_pressed("primary_attack") and !active_weapon.attacking:
+			active_weapon.primary_attack(weapon_animation_mode)
+		elif event.is_action_pressed("secondary_attack") and !active_weapon.attacking:
+			active_weapon.secondary_attack(weapon_animation_mode)
+	elif active_weapon.type == "Ranged":
+		if event.is_action_pressed("primary_attack") and !active_weapon.attacking:
+			active_weapon.prime(weapon_animation_mode)
+		elif event.is_action_pressed("primary_attack"):
+			active_weapon.click_queued = true
+
+		if event.is_action_released("primary_attack") and !active_weapon.attacking:
+			active_weapon.primary_attack(weapon_animation_mode)
+		elif event.is_action_released("primary_attack"):
+			active_weapon.click_queued = false
+		
 
 func _ready():
-	active_weapon = $Weapons/Cutlass
+	active_weapon = $Weapons/Bow
 	active_weapon.init(weapon_animation_mode)
 
 func _process(_delta): #every frame
 	look_at_mouse()
 
 func on_weapon_idle(): #this will be called from animation
-	active_weapon.idle()
+	active_weapon.idle(weapon_animation_mode)
