@@ -42,3 +42,5 @@ usage = 0
 render_target_update_mode = 3
 
 [node name="Map" parent="ViewportContainer/Viewport" instance=ExtResource( 1 )]
+
+[node name="ProjectilesContainer" type="Node" parent="ViewportContainer/Viewport"]

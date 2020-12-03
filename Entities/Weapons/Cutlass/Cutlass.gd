@@ -1,3 +1,4 @@
+#Cutlass weapons - customized from Weapons.gd template
 extends Weapons.Melee
 
 func _init():
