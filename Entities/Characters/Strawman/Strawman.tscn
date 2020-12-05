@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Globals/JitterFreePixelArt.tres" type="Material" id=3]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area2D
+
+
+var hp
+var max_hp = 100
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	hp = max_hp
+
+func damage(damage): # Strawman damaged, apply damage
+	hp -= damage
+	$Sprite.modulate = Color(1, hp/100.0, hp/100.0)
+	if hp <= 0:
+		die()
+		
+func die(): # hide strawman from scene, in the future it should be removed from the scene tree
+	$CollisionShape2D.set_deferred(\"disabled\", true)
+	$Sprite.set_deferred(\"visible\", false)
+"
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/enemy.png-b0f6737b0bd3b6de2307d8ea32e8c50b.stex"
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 11.574, 13.5608 )
+
+[node name="Player" type="Area2D" groups=[
+"Enemy",
+]]
+script = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+material = ExtResource( 3 )
+texture = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 3 )
+one_way_collision_margin = 0.0

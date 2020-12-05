@@ -43,10 +43,10 @@ class Melee extends Node2D:
 		sprite = $Sprite
 		primary_area = $Primary
 		primary_collider = $Primary/Collider
-		secondary_area = $Primary
-		secondary_collider = $Primary/Collider
+		secondary_area = $Secondary
+		secondary_collider = $Secondary/Collider
 
-	func idle():
+	func idle(animation_mode):
 		attacking = false
 
 	func primary_damage(): # This is called from animation, will send damage
@@ -69,10 +69,12 @@ class Melee extends Node2D:
 		if scale == Vector2(-1, 1):
 			sprite.frame_coords.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
 			primary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
+			secondary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
 			pass
 		else:
 			sprite.frame_coords.y = round((mouse_angle + 100) / 10)
 			primary_collider.rotation_degrees = -mouse_angle
+			secondary_collider.rotation_degrees = -mouse_angle
 
 
 class Ranged extends Node2D:

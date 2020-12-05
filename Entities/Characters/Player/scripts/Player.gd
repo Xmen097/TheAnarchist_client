@@ -6,6 +6,7 @@ export var speed = 100
 onready var animation_tree = $AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprite = $Sprite
+onready var hands = $Hands
 
 func _process(delta):
 	move(delta)
@@ -32,3 +33,11 @@ func look_at_mouse(): #change player sprite to look at mouse
 	elif mouse_angle < 75 and mouse_angle >= 0 or\
 		mouse_angle > -75 and mouse_angle <= 0:
 		sprite.flip_h = false 
+		
+func _input(event): #Call methods on hands on click event
+		if event.is_action_pressed("primary_attack"):
+			hands.primary_attack()
+		elif event.is_action_pressed("secondary_attack"):
+			hands.secondary_attack()
+		elif event.is_action_released("primary_attack"):
+			hands.primary_release()

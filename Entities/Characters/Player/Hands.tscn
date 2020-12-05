@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Entities/Weapons/Cutlass/cutlass.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Weapons/hand.png" type="Texture" id=2]
-[ext_resource path="res://Entities/Weapons/Hands.gd" type="Script" id=3]
+[ext_resource path="res://Entities/Characters/Player/scripts/Hands.gd" type="Script" id=3]
 [ext_resource path="res://Entities/Weapons/Cutlass/Cutlass.gd" type="Script" id=4]
 [ext_resource path="res://Entities/Weapons/Melee_collider.gd" type="Script" id=5]
 [ext_resource path="res://Entities/Weapons/Halberd/Halberd.gd" type="Script" id=6]
@@ -408,6 +408,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 7, 10 ), Vector2( 8, 10 ), Vector2( 9, 10 ), Vector2( 10, 10 ), Vector2( 11, 10 ) ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath("Cutlass")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "secondary_damage"
+} ]
+}
 
 [sub_resource type="Animation" id=25]
 length = 0.4
@@ -570,7 +584,7 @@ states/Halberd_Idle/position = Vector2( -1005, -189 )
 states/Halberd_Stab/node = SubResource( 35 )
 states/Halberd_Stab/position = Vector2( -739, -189 )
 transitions = [ "Cutlass_Swing", "Cutlass_Idle", SubResource( 36 ), "Cutlass_Idle", "Cutlass_Swing", SubResource( 37 ), "Halberd_Idle", "Halberd_Stab", SubResource( 38 ), "Halberd_Stab", "Halberd_Idle", SubResource( 39 ), "Cutlass_Idle", "Cutlass_Stab", SubResource( 40 ), "Cutlass_Stab", "Cutlass_Idle", SubResource( 41 ), "Bow_Idle", "Bow_Prime", SubResource( 42 ), "Bow_Prime", "Bow_Idle", SubResource( 43 ), "Bow_Prime", "Bow_Shoot", SubResource( 44 ), "Bow_Shoot", "Bow_Idle", SubResource( 45 ) ]
-graph_offset = Vector2( -1506, -346 )
+graph_offset = Vector2( -1458, -312 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=47]
 
@@ -664,6 +678,7 @@ visible = false
 polygon = PoolVector2Array( 30, 10, 49, 12, 49, -12, 30, -10 )
 
 [node name="Bow" type="Node2D" parent="Weapons"]
+visible = false
 position = Vector2( 0, -1 )
 script = ExtResource( 9 )
 
