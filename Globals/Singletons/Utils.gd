@@ -1,5 +1,7 @@
 extends Node2D
 
+var player_ref
+
 func mouse_angle():
 # How do angles work
 #             90 
@@ -29,3 +31,6 @@ func mouse_pos_blended():
 	var higher = abs(pos.x) if abs(pos.x) > abs(pos.y) else abs(pos.y)
 	var multiplier = 1/higher
 	return pos*multiplier
+
+func get_player():
+	return player_ref

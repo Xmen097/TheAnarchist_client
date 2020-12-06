@@ -8,4 +8,6 @@ func _init():
 		secondary_animation = "Cutlass_Stab",
 		primary_damage = 35,
 		secondary_damage = 25,
+		primary_range = 30,
+		secondary_range = 35,
 	}

@@ -5,6 +5,12 @@ var projectiles_root
 func _ready():
 	projectiles_root = get_tree().get_root().get_node("Game/ViewportContainer/Viewport/ProjectilesContainer")
 
+enum weapons {
+	Cutlass, 
+	Halberd, 
+	Bow,
+}
+
 class Melee extends Node2D:
 	var type = "Melee"
 	var data = { # This MUST be changed in child scripts
@@ -13,6 +19,8 @@ class Melee extends Node2D:
 		secondary_animation = "",
 		primary_damage = 0,
 		secondary_damage = 0,
+		primary_range = 0,
+		seconary_range = 0,
 	}
 
 	var sprite
@@ -46,7 +54,7 @@ class Melee extends Node2D:
 		secondary_area = $Secondary
 		secondary_collider = $Secondary/Collider
 
-	func idle(animation_mode):
+	func idle(_animation_mode):
 		attacking = false
 
 	func primary_damage(): # This is called from animation, will send damage

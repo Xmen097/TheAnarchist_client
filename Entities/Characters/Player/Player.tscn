@@ -445,6 +445,7 @@ extents = Vector2( 11.574, 13.5608 )
 ]]
 position = Vector2( 0.778599, -0.492609 )
 z_index = 100
+collision_mask = 8
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
@@ -474,7 +475,7 @@ texture = ExtResource( 4 )
 flip_h = true
 vframes = 8
 hframes = 11
-frame = 2
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

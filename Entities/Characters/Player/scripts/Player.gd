@@ -7,10 +7,19 @@ onready var animation_tree = $AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprite = $Sprite
 onready var hands = $Hands
+export(Weapons.weapons) var weapon
+
+func _init():
+	Utils.player_ref = self
+
+func _ready():
+	hands.weapon_id = weapon
+	hands.ready()
 
 func _process(delta):
 	move(delta)
 	look_at_mouse()
+	hands.look_at_mouse(Utils.mouse_angle())
 
 func move(delta):
 	var velocity = Vector2() # get player velocity
@@ -18,7 +27,7 @@ func move(delta):
 	velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	if velocity.length() > 0: # if moved
 		velocity = velocity.normalized() * speed
-		position += velocity * delta
+		position += (velocity * delta).round()
 		animation_mode.travel("Walk")
 	else: # didn't move
 		animation_mode.travel("Idle")

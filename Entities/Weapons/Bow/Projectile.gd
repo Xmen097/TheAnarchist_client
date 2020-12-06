@@ -18,8 +18,7 @@ func _process(delta): # Position rounded to be whole pixel
 	position = Vector2(round(position.x + vector.x * speed * delta), round(position.y + vector.y * speed * delta))
 
 func _on_area_entered(area):
-	if area.is_in_group(target) or area.is_in_group("barrier"):
-		vector = Vector2(0,0) #Stop movement
+	vector = Vector2(0,0) #Stop movement
 	if area.is_in_group(target):
 		area.damage(damage)
 
