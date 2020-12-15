@@ -11,6 +11,11 @@ enum weapons {
 	Bow,
 }
 
+enum targets {
+	Player = 0,
+	Enemy = 2,
+}
+
 class Melee extends Node2D:
 	var type = "Melee"
 	var data = { # This MUST be changed in child scripts
@@ -43,9 +48,13 @@ class Melee extends Node2D:
 		animation_mode.travel(data.secondary_animation)
 		attacking = true
 
-	func init(animation_mode):
+	func init(animation_mode, target):
 		animation_mode.start(data.idle_animation)
 		visible = true
+		if primary_area:
+			primary_area.set_collision_mask_bit(target, true)
+		if secondary_area:
+			secondary_area.set_collision_mask_bit(target, true)
 
 	func _ready(): # Get all necessary references
 		sprite = $Sprite
@@ -76,13 +85,17 @@ class Melee extends Node2D:
 	
 		if scale == Vector2(-1, 1):
 			sprite.frame_coords.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
-			primary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
-			secondary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
+			if primary_collider:
+				primary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
+			if secondary_collider:
+				secondary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
 			pass
 		else:
 			sprite.frame_coords.y = round((mouse_angle + 100) / 10)
-			primary_collider.rotation_degrees = -mouse_angle
-			secondary_collider.rotation_degrees = -mouse_angle
+			if primary_collider:
+				primary_collider.rotation_degrees = -mouse_angle
+			if secondary_collider:
+				secondary_collider.rotation_degrees = -mouse_angle
 
 
 class Ranged extends Node2D:
@@ -130,7 +143,7 @@ class Ranged extends Node2D:
 		animation_mode.travel(data.secondary_animation)
 		attacking = true
 
-	func init(animation_mode):
+	func init(animation_mode, target):
 		animation_mode.start(data.idle_animation)
 		visible = true
 

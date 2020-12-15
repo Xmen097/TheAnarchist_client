@@ -11,16 +11,18 @@ var weapon_id: int; # This must be set from parent scene
 var active_weapon
 var mouse_angle = 0
 
+export(Weapons.targets) var target
+
 func look_at_mouse(angle): #change hand appearance to look at mouse
 	if !active_weapon.attacking:  # change only when weapon is not attackng
 		mouse_angle = angle
-	active_weapon.look_at_mouse(mouse_angle) #Make active weapon look at mouse
+	active_weapon.look_at_mouse(angle) #Make active weapon look at mouse
 	
-	hands_animation_tree.set('parameters/Hands_idle/blend_position', Utils.mouse_pos_blended())
+	hands_animation_tree.set('parameters/Hands_idle/blend_position', Utils.vec_to_pos_blended(Utils.angle_to_vec(angle)))
 
 func ready():
 	active_weapon = weapons[weapon_id]
-	active_weapon.init(weapon_animation_mode)
+	active_weapon.init(weapon_animation_mode, target)
 
 func on_weapon_idle(): #this will be called from animation
 	active_weapon.idle(weapon_animation_mode)

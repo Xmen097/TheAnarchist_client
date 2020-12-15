@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 #player walking speed
 export var speed = 100
@@ -9,12 +9,17 @@ onready var sprite = $Sprite
 onready var hands = $Hands
 export(Weapons.weapons) var weapon
 
+
+var hp
+export(int) var max_hp
+
 func _init():
 	Utils.player_ref = self
 
 func _ready():
 	hands.weapon_id = weapon
 	hands.ready()
+	hp = max_hp
 
 func _process(delta):
 	move(delta)
@@ -50,3 +55,15 @@ func _input(event): #Call methods on hands on click event
 			hands.secondary_attack()
 		elif event.is_action_released("primary_attack"):
 			hands.primary_release()
+
+
+func damage(damage): # Will apply damage
+	hp -= damage
+	$Sprite.modulate = Color(1, hp/float(max_hp), hp/float(max_hp))
+	if hp <= 0:
+		die()
+
+func die(): # hide strawman from scene, in the future it should be removed from the scene tree
+	set_deferred("visible", false)
+	queue_free()
+
