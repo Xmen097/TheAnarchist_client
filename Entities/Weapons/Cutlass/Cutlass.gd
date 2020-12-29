@@ -11,3 +11,5 @@ func _init():
 		primary_range = 30,
 		secondary_range = 35,
 	}
+	has_primary = true
+	has_secondary = true

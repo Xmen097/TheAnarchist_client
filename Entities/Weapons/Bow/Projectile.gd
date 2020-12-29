@@ -17,10 +17,9 @@ func _ready():
 func _process(delta): # Position rounded to be whole pixel
 	position = Vector2(round(position.x + vector.x * speed * delta), round(position.y + vector.y * speed * delta))
 
-func _on_area_entered(area):
+func _on_body_entered(area):
 	vector = Vector2(0,0) #Stop movement
-	if area.is_in_group(target):
-		area.damage(damage)
+	area.damage(damage)
 
 func die(): # The arrow should dissapear, is called from timer
 	queue_free()

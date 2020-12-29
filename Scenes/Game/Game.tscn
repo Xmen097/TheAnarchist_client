@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Maps/test_map.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Inventory/Inventory.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Game/Viewport_container.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Game/viewport_bg_infill.png" type="Texture" id=4]
 
@@ -34,6 +35,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 DESIRED_RESOLUTION = Vector2( 384, 216 )
+
+[node name="UI" type="Control" parent="ViewportContainer"]
+margin_right = 384.0
+margin_bottom = 216.0
+
+[node name="Inventory" parent="ViewportContainer/UI" instance=ExtResource( 2 )]
+visible = false
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 384, 216 )

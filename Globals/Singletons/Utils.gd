@@ -1,6 +1,7 @@
 extends Node2D
 
 var player_ref
+var scaling_factor = 0
 
 func mouse_angle():
 # How do angles work
@@ -51,3 +52,10 @@ func vec_to_pos_blended(vec):
 
 func get_player():
 	return player_ref
+
+var characters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+'a','b','c','d','e','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+'1','2','3','4','5','6','7','8','9','0', ',', '.', ' ']
+
+func get_character_id(character):
+	 return characters.find(character, 0)

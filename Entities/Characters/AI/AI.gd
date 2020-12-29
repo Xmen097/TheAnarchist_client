@@ -49,7 +49,7 @@ func go():
 		if inside_follow_range:
 			velocity = position.direction_to(player.position) * speed
 		if velocity.length() > 0: # if moved
-			move_and_slide(velocity)
+			var _suc = move_and_slide(velocity)
 			position = position.round() #rounds position to pixel grid
 			animation_mode.travel("Walk")
 		else: # didn't move

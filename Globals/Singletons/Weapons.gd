@@ -27,6 +27,8 @@ class Melee extends Node2D:
 		primary_range = 0,
 		seconary_range = 0,
 	}
+	var has_primary
+	var has_secondary
 
 	var sprite
 	var primary_area
@@ -37,13 +39,13 @@ class Melee extends Node2D:
 	var attacking = false
 
 	func primary_attack(animation_mode):
-		if attacking:
+		if attacking or not has_primary:
 			return
 		animation_mode.travel(data.primary_animation)
 		attacking = true
 
 	func secondary_attack(animation_mode):
-		if attacking:
+		if attacking or not has_secondary:
 			return
 		animation_mode.travel(data.secondary_animation)
 		attacking = true
@@ -51,17 +53,19 @@ class Melee extends Node2D:
 	func init(animation_mode, target):
 		animation_mode.start(data.idle_animation)
 		visible = true
-		if primary_area:
+		if has_primary:
 			primary_area.set_collision_mask_bit(target, true)
-		if secondary_area:
+		if has_secondary:
 			secondary_area.set_collision_mask_bit(target, true)
 
 	func _ready(): # Get all necessary references
 		sprite = $Sprite
-		primary_area = $Primary
-		primary_collider = $Primary/Collider
-		secondary_area = $Secondary
-		secondary_collider = $Secondary/Collider
+		if has_primary:
+			primary_area = $Primary
+			primary_collider = $Primary/Collider
+		if has_secondary:
+			secondary_area = $Secondary
+			secondary_collider = $Secondary/Collider
 
 	func idle(_animation_mode):
 		attacking = false
@@ -85,16 +89,16 @@ class Melee extends Node2D:
 	
 		if scale == Vector2(-1, 1):
 			sprite.frame_coords.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
-			if primary_collider:
+			if has_primary:
 				primary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
-			if secondary_collider:
+			if has_secondary:
 				secondary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
 			pass
 		else:
 			sprite.frame_coords.y = round((mouse_angle + 100) / 10)
-			if primary_collider:
+			if has_primary:
 				primary_collider.rotation_degrees = -mouse_angle
-			if secondary_collider:
+			if has_secondary:
 				secondary_collider.rotation_degrees = -mouse_angle
 
 
@@ -143,7 +147,7 @@ class Ranged extends Node2D:
 		animation_mode.travel(data.secondary_animation)
 		attacking = true
 
-	func init(animation_mode, target):
+	func init(animation_mode, _target):
 		animation_mode.start(data.idle_animation)
 		visible = true
 
@@ -154,7 +158,6 @@ class Ranged extends Node2D:
 	func idle(animation_mode):
 		attacking = false
 		look_at_mouse(Utils.mouse_angle())
-		print(click_queued)
 		if click_queued:
 			click_queued = false
 			prime(animation_mode)

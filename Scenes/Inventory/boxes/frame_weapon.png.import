@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hand.png-7a3ce5379f3d32e2fa797c94225ae484.stex"
+path="res://.import/frame_weapon.png-0f3d537106cfb090798b78fe25db7c16.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Weapons/hand.png"
-dest_files=[ "res://.import/hand.png-7a3ce5379f3d32e2fa797c94225ae484.stex" ]
+source_file="res://Scenes/Inventory/boxes/frame_weapon.png"
+dest_files=[ "res://.import/frame_weapon.png-0f3d537106cfb090798b78fe25db7c16.stex" ]
 
 [params]
 
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -32,7 +32,7 @@ func move(delta):
 	velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	if velocity.length() > 0: # if moved
 		velocity = velocity.normalized() * speed
-		position += (velocity * delta).round()
+		position += (velocity * delta)
 		animation_mode.travel("Walk")
 	else: # didn't move
 		animation_mode.travel("Idle")

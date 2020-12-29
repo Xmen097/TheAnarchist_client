@@ -7,3 +7,5 @@ func _init():
 		secondary_animation = "",
 		primary_damage = 50,
 	}
+	has_primary = true
+	has_secondary = false
