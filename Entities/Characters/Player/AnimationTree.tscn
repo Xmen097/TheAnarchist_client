@@ -1,0 +1,42 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Entities/Characters/assets/MAN.png" type="Texture" id=1]
+[ext_resource path="res://Globals/JitterFreePixelArt.tres" type="Material" id=2]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_walk_S.tres" type="Animation" id=3]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_walk_NE.tres" type="Animation" id=4]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_idle_E.tres" type="Animation" id=5]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_idle_NE.tres" type="Animation" id=6]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_idle_N.tres" type="Animation" id=7]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_walk_E.tres" type="Animation" id=8]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_idle_S.tres" type="Animation" id=9]
+[ext_resource path="res://Entities/Characters/Player/animations/MAN_walk_N.tres" type="Animation" id=10]
+[ext_resource path="res://Entities/Characters/Player/animations/Tree.tres" type="AnimationNodeStateMachine" id=11]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[node name="AnimationTree" type="AnimationTree"]
+tree_root = ExtResource( 11 )
+anim_player = NodePath("AnimationPlayer")
+active = true
+parameters/playback = SubResource( 13 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Walk/blend_position = Vector2( 0.0430797, 0.878049 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/MAN_idle_E = ExtResource( 5 )
+anims/MAN_idle_N = ExtResource( 7 )
+anims/MAN_idle_NE = ExtResource( 6 )
+anims/MAN_idle_S = ExtResource( 9 )
+anims/MAN_walk_E = ExtResource( 8 )
+anims/MAN_walk_N = ExtResource( 10 )
+anims/MAN_walk_NE = ExtResource( 4 )
+anims/MAN_walk_S = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = ExtResource( 2 )
+position = Vector2( 0.778599, -0.492609 )
+texture = ExtResource( 1 )
+flip_h = true
+vframes = 14
+hframes = 15
+frame = 22
