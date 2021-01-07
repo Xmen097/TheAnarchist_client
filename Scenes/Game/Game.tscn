@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Maps/test_map.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Inventory/Inventory.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI/Inventory.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Game/Viewport_container.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Game/viewport_bg_infill.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UI/Overlay.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UI/Overlay.gd" type="Script" id=6]
 
 [node name="Game" type="Node"]
 
@@ -39,9 +41,14 @@ DESIRED_RESOLUTION = Vector2( 384, 216 )
 [node name="UI" type="Control" parent="ViewportContainer"]
 margin_right = 384.0
 margin_bottom = 216.0
+mouse_filter = 1
 
 [node name="Inventory" parent="ViewportContainer/UI" instance=ExtResource( 2 )]
 visible = false
+
+[node name="Overlay" parent="ViewportContainer/UI" instance=ExtResource( 5 )]
+modulate = Color( 1, 1, 1, 1 )
+script = ExtResource( 6 )
 
 [node name="Viewport" type="Viewport" parent="ViewportContainer"]
 size = Vector2( 384, 216 )

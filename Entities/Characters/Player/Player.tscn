@@ -20,6 +20,7 @@
 [sub_resource type="Animation" id=2]
 resource_name = "MAN_kick_down"
 length = 0.6
+loop = true
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame_coords")
@@ -30,13 +31,28 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
+"update": 1,
 "values": [ Vector2( 0, 12 ), Vector2( 1, 12 ), Vector2( 2, 12 ), Vector2( 3, 12 ), Vector2( 4, 12 ), Vector2( 5, 12 ), Vector2( 6, 12 ), Vector2( 7, 12 ), Vector2( 8, 12 ), Vector2( 9, 12 ), Vector2( 10, 12 ), Vector2( 11, 12 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 3 ],
+"method": "change_state"
+} ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "MAN_kick_up"
 length = 0.6
+loop = true
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame_coords")
@@ -47,14 +63,29 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
+"update": 1,
 "values": [ Vector2( 0, 13 ), Vector2( 1, 13 ), Vector2( 2, 13 ), Vector2( 3, 13 ), Vector2( 4, 13 ), Vector2( 5, 13 ), Vector2( 6, 13 ), Vector2( 7, 13 ), Vector2( 8, 13 ), Vector2( 9, 13 ), Vector2( 10, 13 ), Vector2( 11, 13 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 3 ],
+"method": "change_state"
+} ]
 }
 
 [sub_resource type="Animation" id=4]
 resource_name = "MAN_roll_E"
-length = 1.2
-step = 0.05
+length = 0.6
+loop = true
+step = 0.025
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame_coords")
 tracks/0/interp = 1
@@ -62,16 +93,31 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.2, 0.3, 0.35, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.95, 1 ),
+"times": PoolRealArray( 0, 0.025, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.475, 0.525, 0.55 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
+"update": 1,
 "values": [ Vector2( 0, 9 ), Vector2( 1, 9 ), Vector2( 2, 9 ), Vector2( 3, 9 ), Vector2( 4, 9 ), Vector2( 5, 9 ), Vector2( 6, 9 ), Vector2( 7, 9 ), Vector2( 8, 9 ), Vector2( 9, 9 ), Vector2( 10, 9 ), Vector2( 11, 9 ), Vector2( 12, 9 ), Vector2( 13, 9 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "change_state"
+} ]
 }
 
 [sub_resource type="Animation" id=5]
 resource_name = "MAN_roll_N"
-length = 1.2
-step = 0.05
+length = 0.6
+loop = true
+step = 0.035
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame_coords")
 tracks/0/interp = 1
@@ -79,16 +125,31 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.25, 0.35, 0.5, 0.55, 0.6, 0.75, 0.85, 0.95, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 11 ), Vector2( 1, 11 ), Vector2( 2, 11 ), Vector2( 3, 11 ), Vector2( 4, 11 ), Vector2( 5, 11 ), Vector2( 6, 11 ), Vector2( 7, 11 ), Vector2( 8, 11 ), Vector2( 9, 11 ), Vector2( 10, 11 ), Vector2( 11, 11 ) ]
+"times": PoolRealArray( 0, 0.035, 0.105, 0.14, 0.175, 0.245, 0.315, 0.385, 0.455, 0.525, 0.56 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 11 ), Vector2( 1, 11 ), Vector2( 2, 11 ), Vector2( 3, 11 ), Vector2( 4, 11 ), Vector2( 5, 11 ), Vector2( 7, 11 ), Vector2( 8, 11 ), Vector2( 9, 11 ), Vector2( 10, 11 ), Vector2( 11, 11 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "change_state"
+} ]
 }
 
 [sub_resource type="Animation" id=6]
 resource_name = "MAN_roll_NE"
-length = 1.2
-step = 0.05
+length = 0.6
+loop = true
+step = 0.025
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame_coords")
 tracks/0/interp = 1
@@ -96,16 +157,31 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.2, 0.3, 0.35, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.95, 1 ),
+"times": PoolRealArray( 0, 0.025, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.475, 0.525, 0.55 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
+"update": 1,
 "values": [ Vector2( 0, 10 ), Vector2( 1, 10 ), Vector2( 2, 10 ), Vector2( 3, 10 ), Vector2( 4, 10 ), Vector2( 5, 10 ), Vector2( 6, 10 ), Vector2( 7, 10 ), Vector2( 8, 10 ), Vector2( 9, 10 ), Vector2( 10, 10 ), Vector2( 11, 10 ), Vector2( 12, 10 ), Vector2( 13, 10 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "change_state"
+} ]
 }
 
 [sub_resource type="Animation" id=7]
 resource_name = "MAN_roll_S"
-length = 1.2
-step = 0.05
+length = 0.6
+loop = true
+step = 0.033
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame_coords")
 tracks/0/interp = 1
@@ -113,10 +189,24 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.2, 0.3, 0.35, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 1, 1.05 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 8 ), Vector2( 1, 8 ), Vector2( 2, 8 ), Vector2( 3, 8 ), Vector2( 4, 8 ), Vector2( 5, 8 ), Vector2( 6, 8 ), Vector2( 7, 8 ), Vector2( 8, 8 ), Vector2( 9, 8 ), Vector2( 10, 8 ), Vector2( 11, 8 ), Vector2( 12, 8 ), Vector2( 13, 8 ) ]
+"times": PoolRealArray( 0, 0.033, 0.066, 0.099, 0.132, 0.198, 0.231, 0.264, 0.297, 0.33, 0.396, 0.429, 0.495, 0.528, 0.561 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 8 ), Vector2( 1, 8 ), Vector2( 2, 8 ), Vector2( 3, 8 ), Vector2( 4, 8 ), Vector2( 5, 8 ), Vector2( 6, 8 ), Vector2( 7, 8 ), Vector2( 8, 8 ), Vector2( 9, 8 ), Vector2( 10, 8 ), Vector2( 11, 8 ), Vector2( 12, 8 ), Vector2( 13, 8 ), Vector2( 14, 8 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 2 ],
+"method": "change_state"
+} ]
 }
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -132,13 +222,17 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
+weapon = 1
 max_hp = 500
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = ExtResource( 6 )
-anim_player = NodePath("AnimationPlayer")
+anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 1 )
 parameters/Idle/blend_position = Vector2( 0.0867507, -0.0948275 )
+parameters/Kick/blend_position = Vector2( -1, -0.0259366 )
+parameters/Roll/blend_position = Vector2( 0, 0 )
 parameters/Walk/blend_position = Vector2( 0.0430797, 0.878049 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -164,7 +258,7 @@ texture = ExtResource( 4 )
 offset = Vector2( -137.799, 2.21671 )
 vframes = 14
 hframes = 15
-frame = 180
+frame = 51
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -179,4 +273,5 @@ script = ExtResource( 2 )
 
 [node name="Hands" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, 6 )
+z_index = -1
 target = 2

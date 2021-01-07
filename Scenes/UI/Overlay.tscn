@@ -1,0 +1,731 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://Scenes/UI/hotbar_number_holder.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/UI/items.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/font.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI/boxes/hotbar.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UI/Hotkey.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/UI/Inventory.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/UI/Inventory_frame.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/UI/under.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box_number.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box_yellow.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box_red.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box_brown.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box_white.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box_green.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/UI/overlay/team_box/team_box_purple.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/UI/armor.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/UI/Top.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/UI/overlay/triangle.png" type="Texture" id=22]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 384, 216 )
+
+[sub_resource type="AtlasTexture" id=109]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=121]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=122]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 360, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 288, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 216, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 72, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 144, 60, 72 )
+
+[node name="Overlay" type="PanelContainer"]
+modulate = Color( 1, 1, 1, 0.862745 )
+margin_right = 384.0
+margin_bottom = 216.0
+rect_min_size = Vector2( 384, 216 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 384.0
+margin_bottom = 216.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 384.0
+margin_bottom = 216.0
+custom_constants/separation = 125
+
+[node name="Top" parent="MarginContainer/VBoxContainer" instance=ExtResource( 18 )]
+
+[node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 143.0
+margin_right = 384.0
+margin_bottom = 214.0
+custom_constants/separation = 0
+
+[node name="Team" type="MarginContainer" parent="MarginContainer/VBoxContainer/Bottom"]
+margin_right = 70.0
+margin_bottom = 71.0
+mouse_filter = 1
+custom_constants/margin_top = 36
+custom_constants/margin_left = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/Bottom/Team"]
+margin_left = 3.0
+margin_top = 36.0
+margin_right = 70.0
+margin_bottom = 71.0
+custom_constants/vseparation = -1
+custom_constants/hseparation = -1
+columns = 6
+
+[node name="Number1" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_right = 12.0
+margin_bottom = 13.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Number2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 11.0
+margin_right = 23.0
+margin_bottom = 13.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Number3" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 22.0
+margin_right = 34.0
+margin_bottom = 13.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Number4" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 33.0
+margin_right = 45.0
+margin_bottom = 13.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Number5" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 44.0
+margin_right = 56.0
+margin_bottom = 13.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Number6" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 55.0
+margin_right = 67.0
+margin_bottom = 13.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="TopBox1" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_top = 12.0
+margin_right = 12.0
+margin_bottom = 24.0
+texture = ExtResource( 13 )
+
+[node name="TopBox2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 11.0
+margin_top = 12.0
+margin_right = 23.0
+margin_bottom = 24.0
+texture = ExtResource( 13 )
+
+[node name="TopBox3" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 22.0
+margin_top = 12.0
+margin_right = 34.0
+margin_bottom = 24.0
+texture = ExtResource( 13 )
+
+[node name="TopBox4" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 33.0
+margin_top = 12.0
+margin_right = 45.0
+margin_bottom = 24.0
+texture = ExtResource( 13 )
+
+[node name="TopBox5" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 44.0
+margin_top = 12.0
+margin_right = 56.0
+margin_bottom = 24.0
+texture = ExtResource( 13 )
+
+[node name="TopBox6" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 55.0
+margin_top = 12.0
+margin_right = 67.0
+margin_bottom = 24.0
+texture = ExtResource( 13 )
+
+[node name="BottomBox1" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_top = 23.0
+margin_right = 12.0
+margin_bottom = 35.0
+texture = ExtResource( 14 )
+
+[node name="BottomBox2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 11.0
+margin_top = 23.0
+margin_right = 23.0
+margin_bottom = 35.0
+texture = ExtResource( 15 )
+
+[node name="BottomBox3" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 22.0
+margin_top = 23.0
+margin_right = 34.0
+margin_bottom = 35.0
+texture = ExtResource( 12 )
+
+[node name="BottomBox4" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 33.0
+margin_top = 23.0
+margin_right = 45.0
+margin_bottom = 35.0
+texture = ExtResource( 10 )
+
+[node name="BottomBox5" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 44.0
+margin_top = 23.0
+margin_right = 56.0
+margin_bottom = 35.0
+texture = ExtResource( 11 )
+
+[node name="BottomBox6" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Team/GridContainer"]
+margin_left = 55.0
+margin_top = 23.0
+margin_right = 67.0
+margin_bottom = 35.0
+texture = ExtResource( 16 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Bottom"]
+margin_left = 70.0
+margin_right = 87.0
+margin_bottom = 71.0
+mouse_filter = 1
+custom_constants/margin_top = 52
+custom_constants/margin_left = -2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/MarginContainer"]
+margin_left = -2.0
+margin_top = 52.0
+margin_right = 17.0
+margin_bottom = 71.0
+texture = ExtResource( 22 )
+
+[node name="Hotbar" type="MarginContainer" parent="MarginContainer/VBoxContainer/Bottom"]
+margin_left = 87.0
+margin_right = 321.0
+margin_bottom = 71.0
+mouse_filter = 1
+custom_constants/margin_right = 31
+custom_constants/margin_top = 38
+custom_constants/margin_left = 7
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Hotbar"]
+margin_left = 7.0
+margin_top = 38.0
+margin_right = 203.0
+margin_bottom = 71.0
+custom_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 33.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+accepted_type = 8
+
+[node name="Item" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = SubResource( 109 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -11.0
+margin_right = 5.5
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+position = 0
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 110 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
+margin_left = 28.0
+margin_right = 56.0
+margin_bottom = 33.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+accepted_type = 8
+
+[node name="Item" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = SubResource( 111 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -11.0
+margin_right = 5.5
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+position = 1
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect2/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 112 )
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
+margin_left = 56.0
+margin_right = 84.0
+margin_bottom = 33.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+accepted_type = 8
+
+[node name="Item" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = SubResource( 113 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect3"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -11.0
+margin_right = 5.5
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+position = 2
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect3/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 114 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
+margin_left = 84.0
+margin_right = 112.0
+margin_bottom = 33.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+accepted_type = 8
+
+[node name="Item" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = SubResource( 115 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect4"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -11.0
+margin_right = 5.5
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+position = 3
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect4/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 116 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
+margin_left = 112.0
+margin_right = 140.0
+margin_bottom = 33.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+accepted_type = 8
+
+[node name="Item" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = SubResource( 117 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect5"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -11.0
+margin_right = 5.5
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+position = 4
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect5/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 118 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
+margin_left = 140.0
+margin_right = 168.0
+margin_bottom = 33.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+accepted_type = 8
+
+[node name="Item" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect6"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = SubResource( 119 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect6"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -11.0
+margin_right = 5.5
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+position = 5
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect6/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 120 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
+margin_left = 168.0
+margin_right = 196.0
+margin_bottom = 33.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+accepted_type = 8
+
+[node name="Item" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect7"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 224, -63.9091 )
+texture = SubResource( 121 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect7"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -5.5
+margin_top = -11.0
+margin_right = 5.5
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+position = 6
+
+[node name="Key" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect7/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 122 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Control" parent="MarginContainer/VBoxContainer/Bottom"]
+margin_left = 321.0
+margin_right = 321.0
+margin_bottom = 71.0
+mouse_filter = 1
+
+[node name="Head" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Body"]
+margin_right = 60.0
+margin_bottom = 72.0
+texture = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LArm" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Body"]
+margin_right = 60.0
+margin_bottom = 72.0
+texture = SubResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RArm" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Body"]
+margin_right = 60.0
+margin_bottom = 72.0
+texture = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Torso" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Body"]
+margin_right = 60.0
+margin_bottom = 72.0
+texture = SubResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RLeg" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Body"]
+margin_right = 60.0
+margin_bottom = 72.0
+texture = SubResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LLeg" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/Body"]
+margin_right = 60.0
+margin_bottom = 72.0
+texture = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

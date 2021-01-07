@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=20 format=2]
+[gd_resource type="AnimationNodeStateMachine" load_steps=44 format=2]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "MAN_idle_N"
@@ -46,57 +46,159 @@ triangles = PoolIntArray( 0, 2, 4, 3, 4, 5, 0, 1, 7, 3, 6, 7 )
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id=10]
-animation = "MAN_walk_S"
+animation = "MAN_kick_down"
 
 [sub_resource type="AnimationNodeAnimation" id=11]
-animation = "MAN_walk_E"
+animation = "MAN_kick_up"
 
 [sub_resource type="AnimationNodeAnimation" id=12]
-animation = "MAN_walk_E"
+animation = "MAN_kick_up"
 
 [sub_resource type="AnimationNodeAnimation" id=13]
-animation = "MAN_walk_E"
+animation = "MAN_kick_down"
 
 [sub_resource type="AnimationNodeAnimation" id=14]
-animation = "MAN_walk_E"
+animation = "MAN_kick_down"
 
 [sub_resource type="AnimationNodeAnimation" id=15]
-animation = "MAN_walk_NE"
+animation = "MAN_kick_down"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
-animation = "MAN_walk_N"
-
-[sub_resource type="AnimationNodeAnimation" id=17]
-animation = "MAN_walk_NE"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=18]
-auto_triangles = false
+[sub_resource type="AnimationNodeBlendSpace2D" id=16]
 blend_point_0/node = SubResource( 10 )
-blend_point_0/pos = Vector2( 0, 1 )
+blend_point_0/pos = Vector2( 1, 1 )
 blend_point_1/node = SubResource( 11 )
-blend_point_1/pos = Vector2( -1, 1 )
+blend_point_1/pos = Vector2( 1, -1 )
 blend_point_2/node = SubResource( 12 )
-blend_point_2/pos = Vector2( 1, 1 )
+blend_point_2/pos = Vector2( -1, -1 )
 blend_point_3/node = SubResource( 13 )
-blend_point_3/pos = Vector2( -1, 0 )
+blend_point_3/pos = Vector2( -1, 1 )
 blend_point_4/node = SubResource( 14 )
 blend_point_4/pos = Vector2( 1, 0 )
 blend_point_5/node = SubResource( 15 )
+blend_point_5/pos = Vector2( -1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "MAN_roll_S"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "MAN_roll_E"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "MAN_roll_E"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "MAN_roll_NE"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "MAN_roll_N"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "MAN_roll_NE"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "MAN_roll_E"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "MAN_roll_E"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=25]
+blend_point_0/node = SubResource( 17 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 18 )
+blend_point_1/pos = Vector2( 1, 1 )
+blend_point_2/node = SubResource( 19 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 20 )
+blend_point_3/pos = Vector2( 1, -1 )
+blend_point_4/node = SubResource( 21 )
+blend_point_4/pos = Vector2( 0, -1 )
+blend_point_5/node = SubResource( 22 )
 blend_point_5/pos = Vector2( -1, -1 )
-blend_point_6/node = SubResource( 16 )
+blend_point_6/node = SubResource( 23 )
+blend_point_6/pos = Vector2( -1, 0 )
+blend_point_7/node = SubResource( 24 )
+blend_point_7/pos = Vector2( -1, 1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "MAN_walk_S"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "MAN_walk_E"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "MAN_walk_E"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "MAN_walk_E"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "MAN_walk_E"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "MAN_walk_NE"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "MAN_walk_N"
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "MAN_walk_NE"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=34]
+auto_triangles = false
+blend_point_0/node = SubResource( 26 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 27 )
+blend_point_1/pos = Vector2( -1, 1 )
+blend_point_2/node = SubResource( 28 )
+blend_point_2/pos = Vector2( 1, 1 )
+blend_point_3/node = SubResource( 29 )
+blend_point_3/pos = Vector2( -1, 0 )
+blend_point_4/node = SubResource( 30 )
+blend_point_4/pos = Vector2( 1, 0 )
+blend_point_5/node = SubResource( 31 )
+blend_point_5/pos = Vector2( -1, -1 )
+blend_point_6/node = SubResource( 32 )
 blend_point_6/pos = Vector2( 0, -1 )
-blend_point_7/node = SubResource( 17 )
+blend_point_7/node = SubResource( 33 )
 blend_point_7/pos = Vector2( 1, -1 )
 triangles = PoolIntArray( 0, 1, 3, 0, 2, 4, 3, 5, 6, 4, 6, 7 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
 
 [resource]
 states/Idle/node = SubResource( 9 )
 states/Idle/position = Vector2( 331, 102 )
-states/Walk/node = SubResource( 18 )
+states/Kick/node = SubResource( 16 )
+states/Kick/position = Vector2( 459, -3 )
+states/Roll/node = SubResource( 25 )
+states/Roll/position = Vector2( 459, 213 )
+states/Walk/node = SubResource( 34 )
 states/Walk/position = Vector2( 582, 102 )
-transitions = [ "Idle", "Walk", SubResource( 19 ) ]
+transitions = [ "Idle", "Walk", SubResource( 35 ), "Idle", "Kick", SubResource( 36 ), "Walk", "Idle", SubResource( 37 ), "Kick", "Idle", SubResource( 38 ), "Roll", "Idle", SubResource( 39 ), "Kick", "Walk", SubResource( 40 ), "Roll", "Walk", SubResource( 41 ), "Walk", "Roll", SubResource( 42 ), "Walk", "Kick", SubResource( 43 ) ]
 start_node = "Idle"
-graph_offset = Vector2( 41, -31 )
+graph_offset = Vector2( -79, 12 )
