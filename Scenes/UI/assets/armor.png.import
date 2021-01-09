@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flag_yellow.png-9629934791f79929068880597df32722.stex"
+path="res://.import/armor.png-afd2325582e30019e7c02b0216c63a25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/overlay/flag_yellow.png"
-dest_files=[ "res://.import/flag_yellow.png-9629934791f79929068880597df32722.stex" ]
+source_file="res://Scenes/UI/assets/armor.png"
+dest_files=[ "res://.import/armor.png-afd2325582e30019e7c02b0216c63a25.stex" ]
 
 [params]
 

@@ -24,6 +24,7 @@ config/icon="res://icon.png"
 Utils="*res://Globals/Singletons/Utils.gd"
 Weapons="*res://Globals/Singletons/Weapons.gd"
 Items="*res://Globals/Singletons/Items.gd"
+Player="*res://Globals/Singletons/Player.gd"
 
 [display]
 

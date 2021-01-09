@@ -15,7 +15,7 @@ tile_data = PoolIntArray( -983006, 8, 458761, -983005, 8, 524293, -983004, 8, 52
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 70, 106 )
-weapon = 0
+weapon = 2
 
 [node name="AI2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 321, 87 )

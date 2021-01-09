@@ -8,12 +8,17 @@ var preview
 export(bool) var is_trash = false
 export(bool) var has_preview = false
 
-signal item_changed(new_item)
+export(int) var frame_id
+export(Player.frame_type) var frame_type
+
+
+signal item_changed(new_item, id, type)
 
 func _ready():
 	var success = false #connect to events
 	success = success or connect("mouse_entered", self, "_on_mouse_entered")
 	success = success or connect("mouse_exited", self, "_on_mouse_exited")
+	success = success or connect("item_changed", Player, "_on_item_changed")
 	assert(!success, "Inventory frame failed to connect to events!")
 	if not is_trash:
 		item_texture = $Item
@@ -30,7 +35,7 @@ func _on_mouse_exited():
 	
 func change_item(new_item): # item setter
 	item = new_item;
-	emit_signal("item_changed", item);
+	emit_signal("item_changed", item, frame_id, frame_type);
 	if has_preview:
 		preview.visible = item == Items.items.None
 	if item_texture:

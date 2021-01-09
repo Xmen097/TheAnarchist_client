@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/items.png-4d2fc952be259f679ecef000d0b24c6e.stex"
+path="res://.import/trash.png-0d646c10fedb9d0165ff520c42dd0660.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/items.png"
-dest_files=[ "res://.import/items.png-4d2fc952be259f679ecef000d0b24c6e.stex" ]
+source_file="res://Scenes/UI/Inventory/buttons/trash.png"
+dest_files=[ "res://.import/trash.png-0d646c10fedb9d0165ff520c42dd0660.stex" ]
 
 [params]
 

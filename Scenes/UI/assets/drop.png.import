@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/armor_preview.png-adc03f9369a8585041ba0437524b1efe.stex"
+path="res://.import/drop.png-20fae688017779a02c6435551155d4c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/armor_preview.png"
-dest_files=[ "res://.import/armor_preview.png-adc03f9369a8585041ba0437524b1efe.stex" ]
+source_file="res://Scenes/UI/assets/drop.png"
+dest_files=[ "res://.import/drop.png-20fae688017779a02c6435551155d4c6.stex" ]
 
 [params]
 

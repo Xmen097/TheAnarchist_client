@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/armor.png-1ad6fd9addc2e9d3705cc56df0d333c0.stex"
+path="res://.import/hotbar_number_holder.png-34181501824dc5c9cf1a596541ac2e90.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/armor.png"
-dest_files=[ "res://.import/armor.png-1ad6fd9addc2e9d3705cc56df0d333c0.stex" ]
+source_file="res://Scenes/UI/assets/hotbar_number_holder.png"
+dest_files=[ "res://.import/hotbar_number_holder.png-34181501824dc5c9cf1a596541ac2e90.stex" ]
 
 [params]
 

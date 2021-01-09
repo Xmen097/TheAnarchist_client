@@ -14,7 +14,7 @@ var inside_follow_range = false
 
 export(Weapons.weapons) var weapon
 
-onready var player = Utils.get_player()
+onready var player = Player.get_reference()
 
 enum Personality {
 	Chaser,

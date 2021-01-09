@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trash.png-011ab7a63181c116e50a5b12f6e27b94.stex"
+path="res://.import/flag_red.png-7c2e6ca3155371ec7e3faee9fc4d8f8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/buttons/trash.png"
-dest_files=[ "res://.import/trash.png-011ab7a63181c116e50a5b12f6e27b94.stex" ]
+source_file="res://Scenes/UI/assets/flag_red.png"
+dest_files=[ "res://.import/flag_red.png-7c2e6ca3155371ec7e3faee9fc4d8f8e.stex" ]
 
 [params]
 

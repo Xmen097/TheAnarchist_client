@@ -25,7 +25,7 @@ var hp
 export(int) var max_hp
 
 func _init():
-	Utils.player_ref = self
+	Player.player_ref = self
 
 func _ready():
 	hands.weapon_id = weapon

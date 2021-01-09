@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/drop.png-7aa217ffbe342b18cf601ccc5cf77654.stex"
+path="res://.import/under.png-3da28a773f828f64157f7282aa39235f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/overlay/drop.png"
-dest_files=[ "res://.import/drop.png-7aa217ffbe342b18cf601ccc5cf77654.stex" ]
+source_file="res://Scenes/UI/assets/under.png"
+dest_files=[ "res://.import/under.png-3da28a773f828f64157f7282aa39235f.stex" ]
 
 [params]
 

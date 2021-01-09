@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hotbar_number_holder.png-d16e6db2be0a9505eeb1eb6a062972bd.stex"
+path="res://.import/drop.png-85eaf29c5e8ef6faf29c9a7e4e3891b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/hotbar_number_holder.png"
-dest_files=[ "res://.import/hotbar_number_holder.png-d16e6db2be0a9505eeb1eb6a062972bd.stex" ]
+source_file="res://Scenes/UI/Inventory/buttons/drop.png"
+dest_files=[ "res://.import/drop.png-85eaf29c5e8ef6faf29c9a7e4e3891b0.stex" ]
 
 [params]
 

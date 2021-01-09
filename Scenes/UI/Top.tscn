@@ -1,88 +1,88 @@
 [gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Scenes/UI/overlay/flag_yellow.png" type="Texture" id=1]
-[ext_resource path="res://Scenes/UI/font.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/UI/overlay/flag_red.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/UI/overlay/coin.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/UI/overlay/drop.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/UI/assets/flag_yellow.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/UI/assets/font.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/assets/flag_red.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI/assets/coin.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UI/assets/drop.png" type="Texture" id=5]
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=31]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 2 )
 region = Rect2( 320, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=39]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=40]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=41]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 2 )
 region = Rect2( 305, 0, 5, 9 )
 
@@ -90,6 +90,9 @@ region = Rect2( 305, 0, 5, 9 )
 margin_right = 384.0
 margin_bottom = 18.0
 custom_constants/separation = 54
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Left" type="HBoxContainer" parent="."]
 margin_right = 58.0
@@ -114,35 +117,35 @@ custom_constants/separation = 1
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_right = 5.0
 margin_bottom = 16.0
-texture = SubResource( 22 )
+texture = SubResource( 1 )
 
 [node name="Number2" type="TextureRect" parent="Left/Gold1/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 6.0
 margin_right = 11.0
 margin_bottom = 16.0
-texture = SubResource( 23 )
+texture = SubResource( 2 )
 
 [node name="Number3" type="TextureRect" parent="Left/Gold1/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 12.0
 margin_right = 17.0
 margin_bottom = 16.0
-texture = SubResource( 24 )
+texture = SubResource( 3 )
 
 [node name="Number4" type="TextureRect" parent="Left/Gold1/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 18.0
 margin_right = 23.0
 margin_bottom = 16.0
-texture = SubResource( 25 )
+texture = SubResource( 4 )
 
 [node name="Number5" type="TextureRect" parent="Left/Gold1/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 24.0
 margin_right = 29.0
 margin_bottom = 16.0
-texture = SubResource( 26 )
+texture = SubResource( 5 )
 
 [node name="Icon" type="TextureRect" parent="Left/Gold1/MarginContainer"]
 margin_left = 30.0
@@ -168,14 +171,14 @@ custom_constants/separation = 1
 modulate = Color( 0.811765, 0.341176, 0.235294, 1 )
 margin_right = 5.0
 margin_bottom = 16.0
-texture = SubResource( 27 )
+texture = SubResource( 6 )
 
 [node name="Number2" type="TextureRect" parent="Left/Gold2/MarginContainer"]
 modulate = Color( 0.811765, 0.341176, 0.235294, 1 )
 margin_left = 6.0
 margin_right = 11.0
 margin_bottom = 16.0
-texture = SubResource( 28 )
+texture = SubResource( 7 )
 
 [node name="Icon" type="TextureRect" parent="Left/Gold2/MarginContainer"]
 margin_left = 12.0
@@ -205,14 +208,14 @@ custom_constants/separation = 1
 modulate = Color( 0.811765, 0.341176, 0.235294, 1 )
 margin_right = 5.0
 margin_bottom = 16.0
-texture = SubResource( 27 )
+texture = SubResource( 6 )
 
 [node name="Number2" type="TextureRect" parent="Center/Gold2/MarginContainer"]
 modulate = Color( 0.811765, 0.341176, 0.235294, 1 )
 margin_left = 6.0
 margin_right = 11.0
 margin_bottom = 16.0
-texture = SubResource( 28 )
+texture = SubResource( 7 )
 
 [node name="Icon" type="TextureRect" parent="Center/Gold2/MarginContainer"]
 margin_left = 12.0
@@ -238,28 +241,28 @@ custom_constants/separation = 1
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_right = 5.0
 margin_bottom = 16.0
-texture = SubResource( 29 )
+texture = SubResource( 8 )
 
 [node name="Number2" type="TextureRect" parent="Center/Gold1/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 6.0
 margin_right = 11.0
 margin_bottom = 16.0
-texture = SubResource( 30 )
+texture = SubResource( 9 )
 
 [node name="Number3" type="TextureRect" parent="Center/Gold1/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 12.0
 margin_right = 17.0
 margin_bottom = 16.0
-texture = SubResource( 31 )
+texture = SubResource( 10 )
 
 [node name="Number4" type="TextureRect" parent="Center/Gold1/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 18.0
 margin_right = 23.0
 margin_bottom = 16.0
-texture = SubResource( 32 )
+texture = SubResource( 11 )
 
 [node name="Icon" type="TextureRect" parent="Center/Gold1/MarginContainer"]
 margin_left = 24.0
@@ -293,14 +296,14 @@ custom_constants/separation = 1
 modulate = Color( 0.780392, 0.811765, 0.8, 1 )
 margin_right = 5.0
 margin_bottom = 16.0
-texture = SubResource( 33 )
+texture = SubResource( 12 )
 
 [node name="Number2" type="TextureRect" parent="Center/Time/HBoxContainer"]
 modulate = Color( 0.780392, 0.811765, 0.8, 1 )
 margin_left = 6.0
 margin_right = 11.0
 margin_bottom = 16.0
-texture = SubResource( 34 )
+texture = SubResource( 13 )
 
 [node name="Separator" type="MarginContainer" parent="Center/Time/HBoxContainer"]
 margin_left = 12.0
@@ -314,21 +317,21 @@ modulate = Color( 0.505882, 0.592157, 0.588235, 1 )
 margin_left = -1.0
 margin_right = 4.0
 margin_bottom = 16.0
-texture = SubResource( 35 )
+texture = SubResource( 14 )
 
 [node name="Number3" type="TextureRect" parent="Center/Time/HBoxContainer"]
 modulate = Color( 0.658824, 0.709804, 0.698039, 1 )
 margin_left = 15.0
 margin_right = 20.0
 margin_bottom = 16.0
-texture = SubResource( 34 )
+texture = SubResource( 13 )
 
 [node name="Number4" type="TextureRect" parent="Center/Time/HBoxContainer"]
 modulate = Color( 0.658824, 0.709804, 0.698039, 1 )
 margin_left = 21.0
 margin_right = 26.0
 margin_bottom = 16.0
-texture = SubResource( 34 )
+texture = SubResource( 13 )
 
 [node name="TextureRect2" type="TextureRect" parent="Center"]
 margin_left = 94.0
@@ -354,28 +357,28 @@ custom_constants/separation = 1
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_right = 5.0
 margin_bottom = 16.0
-texture = SubResource( 36 )
+texture = SubResource( 15 )
 
 [node name="Number2" type="TextureRect" parent="Center/Gold3/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 6.0
 margin_right = 11.0
 margin_bottom = 16.0
-texture = SubResource( 37 )
+texture = SubResource( 16 )
 
 [node name="Number3" type="TextureRect" parent="Center/Gold3/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 12.0
 margin_right = 17.0
 margin_bottom = 16.0
-texture = SubResource( 38 )
+texture = SubResource( 17 )
 
 [node name="Number4" type="TextureRect" parent="Center/Gold3/MarginContainer"]
 modulate = Color( 0.909804, 0.756863, 0.439216, 1 )
 margin_left = 18.0
 margin_right = 23.0
 margin_bottom = 16.0
-texture = SubResource( 39 )
+texture = SubResource( 18 )
 
 [node name="Icon" type="TextureRect" parent="Center/Gold3/MarginContainer"]
 margin_left = 24.0
@@ -400,14 +403,14 @@ custom_constants/separation = 1
 modulate = Color( 0.811765, 0.341176, 0.235294, 1 )
 margin_right = 5.0
 margin_bottom = 16.0
-texture = SubResource( 40 )
+texture = SubResource( 19 )
 
 [node name="Number2" type="TextureRect" parent="Center/Gold4/MarginContainer"]
 modulate = Color( 0.811765, 0.341176, 0.235294, 1 )
 margin_left = 6.0
 margin_right = 11.0
 margin_bottom = 16.0
-texture = SubResource( 41 )
+texture = SubResource( 20 )
 
 [node name="Icon" type="TextureRect" parent="Center/Gold4/MarginContainer"]
 margin_left = 12.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/font.png-9f181c91f20184431468a18efd086755.stex"
+path="res://.import/coin.png-5ac142b2d7ce4a80033380d121453992.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/font.png"
-dest_files=[ "res://.import/font.png-9f181c91f20184431468a18efd086755.stex" ]
+source_file="res://Scenes/UI/assets/coin.png"
+dest_files=[ "res://.import/coin.png-5ac142b2d7ce4a80033380d121453992.stex" ]
 
 [params]
 
