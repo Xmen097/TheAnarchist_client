@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/triangle.png-98cc8a7c23003ca62cca473d44dcdbdd.stex"
+path="res://.import/triangle.png-db858886084b2c0af2252024d4f17fdd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/Overlay/triangle.png"
-dest_files=[ "res://.import/triangle.png-98cc8a7c23003ca62cca473d44dcdbdd.stex" ]
+source_file="res://Scenes/UI/overlay/triangle.png"
+dest_files=[ "res://.import/triangle.png-db858886084b2c0af2252024d4f17fdd.stex" ]
 
 [params]
 
