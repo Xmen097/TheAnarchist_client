@@ -32,21 +32,23 @@ func _ready():
 	hands.ready()
 	hp = max_hp
 
-func _process(delta):
-	move(delta)
+func _physics_process(_delta):
+	move()
+	
+func _process(_delta):
 	look_at_mouse()
 	hands.look_at_mouse(Utils.mouse_angle())
 
-func move(delta):
+func move():
 	if state == states.Rolling:
-		position += velocity * delta * roll_speed_multiplier
+		move_and_slide(velocity * roll_speed_multiplier)
 	else:
 		velocity = Vector2() # get player velocity
 		velocity.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
-		if velocity.length() > 0: # if moved
+		if velocity.length() > 0 and not move_and_collide(velocity, true, true, true): # if moved
 			velocity = velocity.normalized() * speed
-			position += (velocity * delta)
+			move_and_slide(velocity)
 			state = states.Walking
 			animation_tree.set('parameters/Roll/blend_position', Utils.vec_to_pos_blended(velocity))
 			animation_mode.travel("Walk")
