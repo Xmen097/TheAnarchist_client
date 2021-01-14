@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Maps/map.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Characters/AI/AI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Entities/Characters/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Maps/Assets/Map/grass-Sheet01.png" type="Texture" id=4]
+
+[node name="Map" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1407.0
+margin_top = -834.0
+margin_right = 1377.0
+margin_bottom = 963.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 70, 106 )
+
+[node name="AI2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 321, 87 )
+
+[node name="AI3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -128, 149 )
+weapon = 1
+personality = 1
+
+[node name="AI4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -135, 7 )
+personality = 1
+
+[node name="AI" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3, 18 )
+personality = 2
+
+[node name="map" parent="." instance=ExtResource( 1 )]
