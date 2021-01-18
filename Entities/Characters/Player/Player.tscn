@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Entities/Weapons/Hands/Hands.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Entities/Characters/Player/scripts/Camera_pixel_perfect.gd" type="Script" id=2]
@@ -17,6 +17,50 @@
 [ext_resource path="res://Entities/Characters/Hitbox.gd" type="Script" id=15]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="Animation" id=10]
+resource_name = "MAN_falling"
+length = 2.5
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "die"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ -1 ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "MAN_kick_down"
@@ -219,12 +263,13 @@ extents = Vector2( 9, 11 )
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
-position = Vector2( 0.778599, -0.492609 )
+scale = Vector2( 0.345703, 0.345703 )
 collision_mask = 8
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
+falling_speed = 25
 weapon = 1
 max_hp = 500
 
@@ -233,12 +278,14 @@ tree_root = ExtResource( 6 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 1 )
-parameters/Idle/blend_position = Vector2( 0.0867507, -0.0948275 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Kick/blend_position = Vector2( -1, -0.0259366 )
 parameters/Roll/blend_position = Vector2( 0, 0 )
 parameters/Walk/blend_position = Vector2( 0.0430797, 0.878049 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/MAN_falling = SubResource( 10 )
 anims/MAN_idle_E = ExtResource( 9 )
 anims/MAN_idle_N = ExtResource( 11 )
 anims/MAN_idle_NE = ExtResource( 10 )
@@ -256,14 +303,14 @@ anims/MAN_walk_S = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
 material = ExtResource( 5 )
-position = Vector2( 137.799, -14 )
 texture = ExtResource( 4 )
-offset = Vector2( -137.799, 2.21671 )
+offset = Vector2( 0, -12 )
 vframes = 14
 hframes = 15
-frame = 47
+frame = 51
 
 [node name="Movement_collider" type="CollisionShape2D" parent="."]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -4 )
 shape = SubResource( 8 )
@@ -278,7 +325,7 @@ script = ExtResource( 2 )
 
 [node name="Hands" parent="." instance=ExtResource( 1 )]
 show_behind_parent = true
-position = Vector2( 0, -5 )
+position = Vector2( 0, -6 )
 target = 12
 
 [node name="Hitbox" type="Area2D" parent="."]
@@ -288,6 +335,7 @@ collision_mask = 0
 script = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+visible = false
 modulate = Color( 0.968627, 1, 0, 1 )
 position = Vector2( -0.2, 0 )
 shape = SubResource( 9 )

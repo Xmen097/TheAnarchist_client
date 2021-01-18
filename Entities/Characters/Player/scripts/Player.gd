@@ -4,6 +4,7 @@ extends KinematicBody2D
 export var speed = 100
 
 export var roll_speed_multiplier = 1.2
+export var falling_speed = 60
 
 onready var animation_tree = $AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
@@ -16,6 +17,7 @@ enum states {
 	Walking,
 	Rolling,
 	Kicking,
+	Falling,
 }
 var state = states.Idle
 
@@ -32,26 +34,29 @@ func _ready():
 	hands.ready()
 	hp = max_hp
 
-func _physics_process(_delta):
-	move()
+func _physics_process(delta):
+	move(delta)
 	
 func _process(_delta):
 	look_at_mouse()
 	hands.look_at_mouse(Utils.mouse_angle())
 
-func move():
+func move(delta):
 	if state == states.Rolling:
 		move_and_slide(velocity * roll_speed_multiplier)
+	elif state == states.Falling:
+		position += Vector2(0, delta * falling_speed)
 	else:
 		velocity = Vector2() # get player velocity
 		velocity.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		if velocity.length() > 0: # if moved
 			velocity = velocity.normalized() * speed
-			move_and_slide(velocity)
-			state = states.Walking
-			animation_tree.set('parameters/Roll/blend_position', Utils.vec_to_pos_blended(velocity))
-			animation_mode.travel("Walk")
+			var result = move_and_slide(velocity)
+			if result.length() > 0: # not stopped by collision
+				state = states.Walking
+				animation_tree.set('parameters/Roll/blend_position', Utils.vec_to_pos_blended(velocity))
+				animation_mode.travel("Walk")
 		else: # didn't move
 			state = states.Idle
 			animation_mode.travel("Idle")
@@ -90,17 +95,22 @@ func roll():
 func kick():
 	state = states.Kicking
 	animation_mode.travel("Kick")
+	
+func fall(): # Called from Fallin_area
+	state = states.Falling
+	animation_mode.start("Falling") # Immidiately switch to falling
 
-func change_state(state_id):
+func change_state(state_id): #called from animations
 	state = state_id
 
-func damage(damage): # Will apply damage
+func damage(damage): # Will apply damage, called from weapons
 	hp -= damage
 	$Sprite.modulate = Color(1, hp/float(max_hp), hp/float(max_hp))
 	if hp <= 0:
 		die()
 
-func die(): # hide strawman from scene, in the future it should be removed from the scene tree
+func die(): # hide from from scene and then remove. Should be replaced with death menu
 	set_deferred("visible", false)
+	animation_mode.stop()
 	queue_free()
 
