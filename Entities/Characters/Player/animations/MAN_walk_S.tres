@@ -26,10 +26,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ Vector2( 0, 6 ) ]
+"values": [ Vector2( 0, -6 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("Hands:z_index")
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -37,11 +37,13 @@ tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
+"values": [ {
+"args": [ 1 ],
+"method": "change_state"
+} ]
 }
-tracks/3/type = "method"
-tracks/3/path = NodePath(".")
+tracks/3/type = "value"
+tracks/3/path = NodePath("Hands:show_behind_parent")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -49,8 +51,6 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 1 ],
-"method": "change_state"
-} ]
+"update": 1,
+"values": [ false ]
 }

@@ -12,8 +12,8 @@ enum weapons {
 }
 
 enum targets {
-	Player = 0,
-	Enemy = 2,
+	Player = 10,
+	Enemy = 12,
 }
 
 class Melee extends Node2D:

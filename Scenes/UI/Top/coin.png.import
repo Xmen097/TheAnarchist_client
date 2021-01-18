@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/7-10_numbers-Sheet.png-523902d4fdb50eaa6ca392c773dc8474.stex"
+path="res://.import/coin.png-1ddfddc51e7a225cea581b294b0f7321.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/7-10_numbers-Sheet.png"
-dest_files=[ "res://.import/7-10_numbers-Sheet.png-523902d4fdb50eaa6ca392c773dc8474.stex" ]
+source_file="res://Scenes/UI/Top/coin.png"
+dest_files=[ "res://.import/coin.png-1ddfddc51e7a225cea581b294b0f7321.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/statue.png-5afb7aec2d50bbbe6bc5f004e94fbfec.stex"
+path="res://.import/flag_red.png-92642bfcc5fd7013d72af19596a9800c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Maps/Assets/Map/statue.png"
-dest_files=[ "res://.import/statue.png-5afb7aec2d50bbbe6bc5f004e94fbfec.stex" ]
+source_file="res://Scenes/UI/Top/flag_red.png"
+dest_files=[ "res://.import/flag_red.png-92642bfcc5fd7013d72af19596a9800c.stex" ]
 
 [params]
 

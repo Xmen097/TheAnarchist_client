@@ -16,7 +16,7 @@ func _init():
 		inventory.append(Items.items.None)
 	for _a in range(10):
 		body.append(Items.items.None)
-		
+
 func get_reference():
 	return player_ref
 
@@ -28,4 +28,3 @@ func _on_item_changed(new_item, id, type):
 	elif type == frame_type.Body:
 		body[id] = new_item
 	emit_signal("item_changed", new_item, id, type);
-

@@ -78,6 +78,8 @@ func damage(damage): # Will apply damage
 func die():
 	set_deferred("visible", false)
 	animation_mode.stop()
+	GameManager.increase_stat(GameManager.stat.player.bloodshed, 1)
+	GameManager.increase_stat(GameManager.stat.player.gold, 15)
 	queue_free()
 
 

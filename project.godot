@@ -25,6 +25,7 @@ Utils="*res://Globals/Singletons/Utils.gd"
 Weapons="*res://Globals/Singletons/Weapons.gd"
 Items="*res://Globals/Singletons/Items.gd"
 Player="*res://Globals/Singletons/Player.gd"
+GameManager="*res://Globals/Singletons/GameManager.gd"
 
 [display]
 
@@ -149,6 +150,9 @@ kick={
 2d_physics/layer_2="Projectile"
 2d_physics/layer_3="Enemy"
 2d_physics/layer_4="Solid"
+2d_physics/layer_5="Weapon"
+2d_physics/layer_11="Player_hitbox"
+2d_physics/layer_13="Enemy_hitbox"
 
 [rendering]
 

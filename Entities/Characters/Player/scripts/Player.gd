@@ -46,7 +46,7 @@ func move():
 		velocity = Vector2() # get player velocity
 		velocity.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
-		if velocity.length() > 0 and not move_and_collide(velocity, true, true, true): # if moved
+		if velocity.length() > 0: # if moved
 			velocity = velocity.normalized() * speed
 			move_and_slide(velocity)
 			state = states.Walking

@@ -13,11 +13,12 @@
 [ext_resource path="res://Scenes/UI/boxes/backpack.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/UI/boxes/frame_basic.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/UI/Inventory/text_area.png" type="Texture" id=14]
-[ext_resource path="res://Scenes/UI/Top.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/UI/Top/Top.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/drop.png" type="Texture" id=17]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/trash.png" type="Texture" id=18]
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/UI/assets/font.png" type="Texture" id=21]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0.470588 )

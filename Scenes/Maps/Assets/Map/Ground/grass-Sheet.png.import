@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/coin.png-5ac142b2d7ce4a80033380d121453992.stex"
+path="res://.import/grass-Sheet.png-65e5497df86921176e40b2acd2faa082.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/assets/coin.png"
-dest_files=[ "res://.import/coin.png-5ac142b2d7ce4a80033380d121453992.stex" ]
+source_file="res://Scenes/Maps/Assets/Map/Ground/grass-Sheet.png"
+dest_files=[ "res://.import/grass-Sheet.png-65e5497df86921176e40b2acd2faa082.stex" ]
 
 [params]
 
