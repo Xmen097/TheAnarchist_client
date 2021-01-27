@@ -16,12 +16,26 @@ enum targets {
 	Enemy = 12,
 }
 
+enum types {
+	Swing,
+	Stab,
+	Projectile,
+}
+
+enum states {
+	Idle,
+	Blocking,
+	Primary_attacking,
+	Secondary_attacking,
+}
+
 class Melee extends Node2D:
 	var type = "Melee"
 	var data = { # This MUST be changed in child scripts
 		idle_animation = "",
 		primary_animation = "",
 		secondary_animation = "",
+		block_animation = "",
 		primary_damage = 0,
 		secondary_damage = 0,
 		primary_range = 0,
@@ -29,6 +43,7 @@ class Melee extends Node2D:
 	}
 	var has_primary
 	var has_secondary
+	var has_block
 
 	var sprite
 	var primary_area
@@ -36,19 +51,29 @@ class Melee extends Node2D:
 	var secondary_area
 	var secondary_collider
 
-	var attacking = false
+	var state = states.Idle
+
+	func idle(animation_mode):
+		if state != states.Idle:
+			animation_mode.travel(data.idle_animation)
+			state = states.Idle
 
 	func primary_attack(animation_mode):
-		if attacking or not has_primary:
+		if state != states.Idle or not has_primary:
 			return
 		animation_mode.travel(data.primary_animation)
-		attacking = true
+		state = states.Primary_attacking
 
 	func secondary_attack(animation_mode):
-		if attacking or not has_secondary:
+		if state != states.Idle or not has_secondary:
 			return
 		animation_mode.travel(data.secondary_animation)
-		attacking = true
+		state = states.Secondary_attacking
+
+	func block(animation_mode):
+		if state != states.Blocking and has_block:
+			state = states.Blocking
+			animation_mode.travel(data.block_animation)
 
 	func init(animation_mode, target):
 		animation_mode.start(data.idle_animation)
@@ -67,18 +92,15 @@ class Melee extends Node2D:
 			secondary_area = $Secondary
 			secondary_collider = $Secondary/Collider
 
-	func idle(_animation_mode):
-		attacking = false
-
 	func primary_damage(): # This is called from animation, will send damage
 		var bodies = primary_area.inside()
 		for body in bodies:
-			body.damage(data.primary_damage)
+			body.hit(types.Swing, data.primary_damage)
 
 	func secondary_damage(): # This is called from animation, will send damage
 		var bodies = secondary_area.inside()
 		for body in bodies:
-			body.damage(data.secondary_damage)
+			body.hit(types.Stab, data.secondary_damage)
 
 	func look_at_mouse(mouse_angle): #Weapon will look at mouse
 		if mouse_angle > 105 or mouse_angle < -105:

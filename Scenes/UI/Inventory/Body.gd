@@ -33,10 +33,11 @@ var armor = {
 	right_leg = Items.armor_type.None,
 }
 
-func _on_Body_item_changed(new_item, id, _type):
-	if new_item == Items.items.None:
-		armor[armor.keys()[id]] = Items.armor_type.None
-	else:
-		armor[armor.keys()[id]] = new_item.armor_type
+func _init():
+	var failed = Player.connect("armor_changed", self, "_on_armor_changed")
+	assert(!failed, "UI failed to connect to events!")
+
+func _on_armor_changed(armor_type, id):
+	armor[armor.keys()[id]] = armor_type
 	var part_slot = body_parts[body_parts.keys()[id]]
 	part_slot.texture.region = Rect2(armor[armor.keys()[id]]*60, part_slot.texture.region.position.y, 60, 72)

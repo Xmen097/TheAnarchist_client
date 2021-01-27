@@ -5,8 +5,6 @@ var sprite_data
 var damage
 export var speed = 20
 
-export var target = "Enemy"
-
 func _ready():
 	var sprite = $Sprite
 	sprite.flip_h = sprite_data.flip_h
@@ -17,9 +15,9 @@ func _ready():
 func _process(delta): # Position rounded to be whole pixel
 	position = Vector2(round(position.x + vector.x * speed * delta), round(position.y + vector.y * speed * delta))
 
-func _on_body_entered(area):
+func _on_body_entered(body):
 	vector = Vector2(0,0) #Stop movement
-	area.damage(damage)
+	body.hit(Weapons.types.projectile, damage)
 
 func die(): # The arrow should dissapear, is called from timer
 	queue_free()

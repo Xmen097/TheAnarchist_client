@@ -1,11 +1,11 @@
 extends Node2D
 
 #Animations objects
-onready var weapon_animation_tree = $Weapons/AnimationTree
+onready var weapon_animation_tree = $AnimationTree
 onready var weapon_animation_mode = weapon_animation_tree["parameters/playback"]
 onready var hands_animation_tree = $AnimationTree
 
-onready var weapons = [$Weapons/Cutlass, $Weapons/Halberd, $Weapons/Bow]
+onready var weapons = [$Cutlass, $Halberd, $Bow]
 var weapon_id: int; # This must be set from parent scene
 
 var active_weapon
@@ -17,8 +17,6 @@ func look_at_mouse(angle): #change hand appearance to look at mouse
 	if active_weapon.state == Weapons.states.Idle or active_weapon.state == Weapons.states.Blocking:  # change only when weapon is not attackng
 		mouse_angle = angle
 	active_weapon.look_at_mouse(angle) #Make active weapon look at mouse
-	
-	hands_animation_tree.set('parameters/Hands_idle/blend_position', Utils.vec_to_pos_blended(Utils.angle_to_vec(angle)))
 
 func ready():
 	active_weapon = weapons[weapon_id]

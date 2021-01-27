@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Entities/Weapons/Cutlass/cutlass.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Weapons/Hands/hand.png" type="Texture" id=2]
@@ -300,7 +300,7 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "on_weapon_idle"
+"method": "idle"
 } ]
 }
 tracks/1/type = "value"
@@ -364,6 +364,22 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=23]
+resource_name = "Cutlass_Block"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cutlass/Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 12, 10 ) ]
+}
+
+[sub_resource type="Animation" id=24]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Cutlass/Sprite:frame_coords")
@@ -388,11 +404,11 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "on_weapon_idle"
+"method": "idle"
 } ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=25]
 length = 0.6
 loop = true
 step = 0.05
@@ -423,7 +439,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=26]
 length = 0.4
 loop = true
 step = 0.025
@@ -454,7 +470,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=27]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Halberd/Sprite:frame_coords")
@@ -479,11 +495,11 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "on_weapon_idle"
+"method": "idle"
 } ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=28]
 length = 0.25
 step = 0.05
 tracks/0/type = "value"
@@ -513,41 +529,38 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=28]
+[sub_resource type="AnimationNodeAnimation" id=29]
 animation = "Bow_Idle"
 
-[sub_resource type="AnimationNodeAnimation" id=29]
+[sub_resource type="AnimationNodeAnimation" id=30]
 animation = "Bow_Prime"
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=31]
 animation = "Bow_Shoot"
 
-[sub_resource type="AnimationNodeAnimation" id=31]
-animation = "Cutlass_Idle"
-
 [sub_resource type="AnimationNodeAnimation" id=32]
-animation = "Cutlass_Stab"
+animation = "Cutlass_Block"
 
 [sub_resource type="AnimationNodeAnimation" id=33]
-animation = "Cutlass_Swing"
+animation = "Cutlass_Idle"
 
 [sub_resource type="AnimationNodeAnimation" id=34]
-animation = "Halberd_Idle"
+animation = "Cutlass_Stab"
 
 [sub_resource type="AnimationNodeAnimation" id=35]
+animation = "Cutlass_Swing"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "Halberd_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=37]
 animation = "Halberd_Stab"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
 switch_mode = 2
 auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=37]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=38]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=39]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=40]
 
@@ -558,35 +571,47 @@ auto_advance = true
 [sub_resource type="AnimationNodeStateMachineTransition" id=42]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=43]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=44]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=45]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=46]
-states/Bow_Idle/node = SubResource( 28 )
-states/Bow_Idle/position = Vector2( -1005, -121 )
-states/Bow_Prime/node = SubResource( 29 )
-states/Bow_Prime/position = Vector2( -739, -40 )
-states/Bow_Shoot/node = SubResource( 30 )
-states/Bow_Shoot/position = Vector2( -496, -121 )
-states/Cutlass_Idle/node = SubResource( 31 )
-states/Cutlass_Idle/position = Vector2( -1005, -263 )
-states/Cutlass_Stab/node = SubResource( 32 )
-states/Cutlass_Stab/position = Vector2( -1253, -263 )
-states/Cutlass_Swing/node = SubResource( 33 )
-states/Cutlass_Swing/position = Vector2( -739, -263 )
-states/Halberd_Idle/node = SubResource( 34 )
-states/Halberd_Idle/position = Vector2( -1005, -189 )
-states/Halberd_Stab/node = SubResource( 35 )
-states/Halberd_Stab/position = Vector2( -739, -189 )
-transitions = [ "Cutlass_Swing", "Cutlass_Idle", SubResource( 36 ), "Cutlass_Idle", "Cutlass_Swing", SubResource( 37 ), "Halberd_Idle", "Halberd_Stab", SubResource( 38 ), "Halberd_Stab", "Halberd_Idle", SubResource( 39 ), "Cutlass_Idle", "Cutlass_Stab", SubResource( 40 ), "Cutlass_Stab", "Cutlass_Idle", SubResource( 41 ), "Bow_Idle", "Bow_Prime", SubResource( 42 ), "Bow_Prime", "Bow_Idle", SubResource( 43 ), "Bow_Prime", "Bow_Shoot", SubResource( 44 ), "Bow_Shoot", "Bow_Idle", SubResource( 45 ) ]
-graph_offset = Vector2( -1458, -312 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=47]
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+
+[sub_resource type="AnimationNodeStateMachine" id=50]
+states/Bow_Idle/node = SubResource( 29 )
+states/Bow_Idle/position = Vector2( -1005, -121 )
+states/Bow_Prime/node = SubResource( 30 )
+states/Bow_Prime/position = Vector2( -739, -40 )
+states/Bow_Shoot/node = SubResource( 31 )
+states/Bow_Shoot/position = Vector2( -496, -121 )
+states/Cutlass_Block/node = SubResource( 32 )
+states/Cutlass_Block/position = Vector2( -960, -569 )
+states/Cutlass_Idle/node = SubResource( 33 )
+states/Cutlass_Idle/position = Vector2( -960, -476 )
+states/Cutlass_Stab/node = SubResource( 34 )
+states/Cutlass_Stab/position = Vector2( -1169, -476 )
+states/Cutlass_Swing/node = SubResource( 35 )
+states/Cutlass_Swing/position = Vector2( -739, -476 )
+states/Halberd_Idle/node = SubResource( 36 )
+states/Halberd_Idle/position = Vector2( -1005, -189 )
+states/Halberd_Stab/node = SubResource( 37 )
+states/Halberd_Stab/position = Vector2( -739, -189 )
+transitions = [ "Cutlass_Swing", "Cutlass_Idle", SubResource( 38 ), "Cutlass_Idle", "Cutlass_Swing", SubResource( 39 ), "Halberd_Idle", "Halberd_Stab", SubResource( 40 ), "Halberd_Stab", "Halberd_Idle", SubResource( 41 ), "Cutlass_Idle", "Cutlass_Stab", SubResource( 42 ), "Cutlass_Stab", "Cutlass_Idle", SubResource( 43 ), "Bow_Idle", "Bow_Prime", SubResource( 44 ), "Bow_Prime", "Bow_Idle", SubResource( 45 ), "Bow_Prime", "Bow_Shoot", SubResource( 46 ), "Bow_Shoot", "Bow_Idle", SubResource( 47 ), "Cutlass_Idle", "Cutlass_Block", SubResource( 48 ), "Cutlass_Block", "Cutlass_Idle", SubResource( 49 ) ]
+graph_offset = Vector2( -1555, -688 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=51]
 
 [node name="Hands" type="Node2D"]
 script = ExtResource( 3 )
@@ -616,17 +641,18 @@ method_call_mode = 1
 anims/Bow_Idle = SubResource( 20 )
 anims/Bow_Prime = SubResource( 21 )
 anims/Bow_Shoot = SubResource( 22 )
-anims/Cutlass_Idle = SubResource( 23 )
-anims/Cutlass_Stab = SubResource( 24 )
-anims/Cutlass_Swing = SubResource( 25 )
-anims/Halberd_Idle = SubResource( 26 )
-anims/Halberd_Stab = SubResource( 27 )
+anims/Cutlass_Block = SubResource( 23 )
+anims/Cutlass_Idle = SubResource( 24 )
+anims/Cutlass_Stab = SubResource( 25 )
+anims/Cutlass_Swing = SubResource( 26 )
+anims/Halberd_Idle = SubResource( 27 )
+anims/Halberd_Stab = SubResource( 28 )
 
 [node name="AnimationTree" type="AnimationTree" parent="Weapons"]
-tree_root = SubResource( 46 )
+tree_root = SubResource( 50 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 47 )
+parameters/playback = SubResource( 51 )
 
 [node name="Cutlass" type="Node2D" parent="Weapons"]
 visible = false
@@ -635,8 +661,8 @@ script = ExtResource( 4 )
 [node name="Sprite" type="Sprite" parent="Weapons/Cutlass"]
 texture = ExtResource( 1 )
 vframes = 21
-hframes = 12
-frame = 127
+hframes = 13
+frame = 130
 
 [node name="Primary" type="Area2D" parent="Weapons/Cutlass" groups=[
 "Weapon",
@@ -698,12 +724,13 @@ frame = 60
 position = Vector2( 1, 0 )
 
 [node name="Palm" type="Sprite" parent="Left"]
-position = Vector2( -6, -18 )
+position = Vector2( 5, -18 )
 texture = ExtResource( 2 )
 flip_h = true
 
 [node name="Right" type="Node2D" parent="."]
 
 [node name="Palm" type="Sprite" parent="Right"]
-position = Vector2( 6, -18 )
+position = Vector2( -5, -18 )
 texture = ExtResource( 2 )
+flip_h = true

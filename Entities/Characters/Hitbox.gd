@@ -1,5 +1,5 @@
 extends Area2D
 
 
-func damage(damage): # Will apply damage
-	get_parent().damage(damage)
+func hit(type, damage): # Will send damage to it's parent
+	get_parent().hit(type, damage)

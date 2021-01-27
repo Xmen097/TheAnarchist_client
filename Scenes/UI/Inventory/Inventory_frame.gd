@@ -1,3 +1,8 @@
+# Inventory frame.
+# When an Item is changed, this will only send a signal to Player global object
+# Then, it will receive from Player _on_item_changed
+
+
 extends TextureRect
 
 export(Items.types) var accepted_type = Items.types.General
@@ -19,11 +24,12 @@ func _ready():
 	success = success or connect("mouse_entered", self, "_on_mouse_entered")
 	success = success or connect("mouse_exited", self, "_on_mouse_exited")
 	success = success or connect("item_changed", Player, "_on_item_changed")
+	success = success or Player.connect("item_changed", self, "_on_item_changed")
 	assert(!success, "Inventory frame failed to connect to events!")
 	if not is_trash:
 		item_texture = $Item
 		if starting_item_id != 0:
-			change_item(Items.items[Items.items.keys()[starting_item_id]])
+			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type);
 	if has_preview:
 		preview = $Preview
 	
@@ -35,7 +41,6 @@ func _on_mouse_exited():
 	
 func change_item(new_item): # item setter
 	item = new_item;
-	emit_signal("item_changed", item, frame_id, frame_type);
 	if has_preview:
 		preview.visible = item == Items.items.None
 	if item_texture:
@@ -57,12 +62,17 @@ func get_drag_data(_pos):
 
 func can_drop_data(_pos, data):
 	return item == Items.items.None and \
-	(data.item.type == accepted_type or accepted_type == Items.types.General) or\
+	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
+	not (frame_type == Player.frame_type.Body and Player.armor[Player.armor.keys()[frame_id]] == Items.armor_type.Destroyed) or\
 	is_trash
 	
 func drop_data(_pos, data):
-	change_item(data.item)
+	emit_signal("item_changed", data.item, frame_id, frame_type);
 	data.from.dropped_success()
 	
 func dropped_success():
-	change_item(Items.items.None)
+	emit_signal("item_changed", Items.items.None, frame_id, frame_type);
+
+func _on_item_changed(new_item, id, type):
+	if frame_type == type and id == frame_id:
+		change_item(new_item)

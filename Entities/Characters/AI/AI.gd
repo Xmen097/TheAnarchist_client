@@ -6,7 +6,7 @@ export var speed = 100
 onready var animation_tree = $AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprite = $Sprite
-onready var hands = $Hands
+onready var hands = $Weapons
 onready var attack_range = $AttackRange
 var inside_attack_range = false
 onready var follow_range = $FollowRange
@@ -32,6 +32,7 @@ func _ready():
 	hands.weapon_id = weapon
 	hands.ready()
 	hp = max_hp
+	scale = Vector2(1,1)
 
 func _process(_delta):
 	attack()
@@ -69,7 +70,7 @@ func look_at_player():
 	hands.look_at_mouse(angle)
 
 
-func damage(damage): # Will apply damage
+func hit(type, damage): # Will apply damage
 	hp -= damage
 	$Sprite.modulate = Color(1, hp/float(max_hp), hp/float(max_hp))
 	if hp <= 0:

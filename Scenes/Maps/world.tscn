@@ -57,7 +57,7 @@ cell_y_sort = true
 collision_layer = 8
 collision_mask = 7
 format = 1
-tile_data = PoolIntArray( 131078, 13, 3, 131087, 13, 7, 131096, 13, 3, 196621, 1, 0, 196661, 10, 4, 262152, 13, 10, 262166, 13, 10, 983050, 13, 6, 983060, 13, 6, 1048589, 1, 0, 1114118, 13, 3, 1114136, 13, 3 )
+tile_data = PoolIntArray( 131078, 13, 3, 131087, 13, 7, 131096, 13, 3, 196621, 1, 0, 196661, 10, 4, 262152, 13, 10, 262166, 13, 10, 589839, 13, 5, 983050, 13, 6, 983060, 13, 6, 1048589, 1, 0, 1114118, 13, 3, 1114136, 13, 3 )
 
 [node name="Walls" type="TileMap" parent="Foreground"]
 tile_set = ExtResource( 1 )
@@ -72,7 +72,6 @@ tile_data = PoolIntArray( 4, 6, 1, 5, 6, 196610, 6, 6, 196610, 7, 6, 196610, 8, 
 
 [node name="Player" parent="Foreground" instance=ExtResource( 3 )]
 position = Vector2( 70, 106 )
-scale = Vector2( 1, 1 )
 
 [node name="AI3" parent="Foreground" instance=ExtResource( 2 )]
 position = Vector2( -128, 149 )

@@ -41,7 +41,11 @@ func mouse_pos_blended():
 	var y = get_viewport().get_mouse_position().y - get_viewport_rect().size.y/2
 	var pos = Vector2(x,y).normalized()
 	var higher = abs(pos.x) if abs(pos.x) > abs(pos.y) else abs(pos.y)
-	var multiplier = 1/higher
+	var multiplier
+	if higher != 0:
+		multiplier = 1/higher
+	else:
+		multiplier = 0
 	return pos*multiplier
 	
 func vec_to_pos_blended(vec):

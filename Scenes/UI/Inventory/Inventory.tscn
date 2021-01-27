@@ -19,7 +19,6 @@
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/UI/assets/font.png" type="Texture" id=21]
 
-
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0.470588 )
 
@@ -594,6 +593,7 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 21
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect"]
 margin_right = 40.0
@@ -614,6 +614,8 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 22
+frame_id = 1
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect2"]
 margin_right = 40.0
@@ -634,6 +636,8 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 23
+frame_id = 2
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect3"]
 margin_right = 40.0
@@ -654,6 +658,8 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 24
+frame_id = 3
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect4"]
 margin_right = 40.0
@@ -674,6 +680,8 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 25
+frame_id = 4
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect5"]
 margin_right = 40.0
@@ -695,6 +703,8 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 26
+frame_id = 5
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect6"]
 margin_right = 40.0
@@ -716,6 +726,8 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 27
+frame_id = 6
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect7"]
 margin_right = 252.0
@@ -738,6 +750,8 @@ __meta__ = {
 "_edit_group_": true
 }
 starting_item_id = 28
+frame_id = 7
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect8"]
 margin_right = 40.0
@@ -757,6 +771,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 8
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect9"]
 margin_right = 40.0
@@ -777,6 +793,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 9
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect10"]
 margin_right = 252.0
@@ -798,6 +816,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 10
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect11"]
 margin_right = 40.0
@@ -818,6 +838,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 11
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect12"]
 margin_right = 40.0
@@ -837,6 +859,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 12
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect13"]
 margin_right = 40.0
@@ -857,6 +881,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 13
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect14"]
 margin_right = 40.0
@@ -877,6 +903,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 14
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect15"]
 margin_right = 40.0
@@ -897,6 +925,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 15
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect16"]
 margin_right = 40.0
@@ -916,6 +946,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 16
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect17"]
 margin_right = 40.0
@@ -936,6 +968,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 17
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect18"]
 margin_right = 40.0
@@ -956,6 +990,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 18
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect19"]
 margin_right = 40.0
@@ -976,6 +1012,8 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+frame_id = 19
+frame_type = 3
 
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack/TextureRect20"]
 margin_right = 40.0
@@ -2538,9 +2576,3 @@ margin_bottom = 37.0
 texture = ExtResource( 18 )
 script = ExtResource( 4 )
 is_trash = true
-[connection signal="item_changed" from="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/Head" to="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body" method="_on_Body_item_changed"]
-[connection signal="item_changed" from="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/LArm" to="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body" method="_on_Body_item_changed"]
-[connection signal="item_changed" from="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/RArm" to="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body" method="_on_Body_item_changed"]
-[connection signal="item_changed" from="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/Body" to="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body" method="_on_Body_item_changed"]
-[connection signal="item_changed" from="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/LLeg" to="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body" method="_on_Body_item_changed"]
-[connection signal="item_changed" from="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/RLeg" to="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body" method="_on_Body_item_changed"]

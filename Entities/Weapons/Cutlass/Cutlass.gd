@@ -4,6 +4,7 @@ extends Weapons.Melee
 func _init():
 	data = {
 		idle_animation = "Cutlass_Idle",
+		block_animation = "Cutlass_Block",
 		primary_animation = "Cutlass_Swing",
 		secondary_animation = "Cutlass_Stab",
 		primary_damage = 35,
@@ -13,3 +14,4 @@ func _init():
 	}
 	has_primary = true
 	has_secondary = true
+	has_block = true

@@ -8,8 +8,8 @@ export var falling_speed = 60
 
 onready var animation_tree = $AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
-onready var sprite = $Sprite
-onready var hands = $Hands
+onready var sprites = $Sprite
+onready var hands = $Weapons
 export(Weapons.weapons) var weapon
 
 enum states {
@@ -23,8 +23,6 @@ var state = states.Idle
 
 var velocity
 
-var hp
-export(int) var max_hp
 
 func _init():
 	Player.player_ref = self
@@ -32,7 +30,7 @@ func _init():
 func _ready():
 	hands.weapon_id = weapon
 	hands.ready()
-	hp = max_hp
+	scale = Vector2(1,1)
 
 func _physics_process(delta):
 	move(delta)
@@ -46,7 +44,7 @@ func move(delta):
 		move_and_slide(velocity * roll_speed_multiplier)
 	elif state == states.Falling:
 		position += Vector2(0, delta * falling_speed)
-	else:
+	elif state != states.Kicking:
 		velocity = Vector2() # get player velocity
 		velocity.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
@@ -69,10 +67,10 @@ func look_at_mouse(): #change player sprite to look at mouse
 	var mouse_angle = Utils.mouse_angle()
 	if state != states.Rolling:
 		if mouse_angle > 105 or mouse_angle < -105: #some space as to not flicker at border
-			sprite.flip_h = true
+			sprites.flip_h = true
 		elif mouse_angle < 75 and mouse_angle >= 0 or\
 			mouse_angle > -75 and mouse_angle <= 0:
-			sprite.flip_h = false 
+			sprites.flip_h = false 
 		
 func _input(event): #  Call methods on hands on click event
 		if event.is_action_pressed("primary_attack"):
@@ -81,6 +79,10 @@ func _input(event): #  Call methods on hands on click event
 			hands.secondary_attack()
 		elif event.is_action_released("primary_attack"):
 			hands.primary_release()
+		elif event.is_action_pressed("block"):
+			hands.block()
+		elif event.is_action_released("block"):
+			hands.idle()
 		elif event.is_action_pressed("roll"):
 			if state == states.Walking:
 				roll()
@@ -90,24 +92,24 @@ func _input(event): #  Call methods on hands on click event
 func roll():
 	state = states.Rolling
 	animation_mode.travel("Roll")
-	sprite.flip_h = Utils.vec_to_pos_blended(velocity).x < 0
+	sprites.flip_h = Utils.vec_to_pos_blended(velocity).x < 0
 	
 func kick():
 	state = states.Kicking
 	animation_mode.travel("Kick")
 	
-func fall(): # Called from Fallin_area
+func fall(): # Called from Falling_area
 	state = states.Falling
 	animation_mode.start("Falling") # Immidiately switch to falling
 
 func change_state(state_id): #called from animations
 	state = state_id
 
-func damage(damage): # Will apply damage, called from weapons
-	hp -= damage
-	$Sprite.modulate = Color(1, hp/float(max_hp), hp/float(max_hp))
-	if hp <= 0:
-		die()
+func hit(type, damage): # Will apply damage, called from weapons
+	if type == Weapons.types.Swing and hands.active_weapon.state != Weapons.states.Blocking:
+		Player.swing(damage)
+	elif type == Weapons.types.Stab:
+		Player.stab(damage)
 
 func die(): # hide from from scene and then remove. Should be replaced with death menu
 	set_deferred("visible", false)

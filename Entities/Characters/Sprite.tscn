@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Entities/Characters/Player/Sprites.gd" type="Script" id=1]
+[ext_resource path="res://Entities/Characters/assets/Player.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 240, 336 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 240, 0, 240, 336 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 480, 0, 240, 336 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 720, 0, 240, 336 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 960, 0, 240, 336 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 1200, 0, 240, 336 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 1440, 0, 240, 336 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 1680, 0, 240, 336 )
+
+[node name="Sprite" type="Node2D"]
+z_index = 1
+script = ExtResource( 1 )
+frame = Vector2( 4, 0 )
+node_paths = [ NodePath("Torso"), NodePath("leg_right"), NodePath("leg_left"), NodePath("shoe_right"), NodePath("shoe_left"), NodePath("head"), NodePath("hand_right"), NodePath("hand_left") ]
+
+[node name="Torso" type="Sprite" parent="."]
+texture = SubResource( 1 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+frame = 110
+
+[node name="leg_right" type="Sprite" parent="."]
+texture = SubResource( 2 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+frame = 35
+
+[node name="leg_left" type="Sprite" parent="."]
+texture = SubResource( 3 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+frame = 35
+
+[node name="shoe_right" type="Sprite" parent="."]
+texture = SubResource( 4 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+frame = 35
+
+[node name="shoe_left" type="Sprite" parent="."]
+texture = SubResource( 5 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+frame = 35
+
+[node name="head" type="Sprite" parent="."]
+texture = SubResource( 6 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+
+[node name="hand_right" type="Sprite" parent="."]
+texture = SubResource( 7 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+frame = 35
+
+[node name="hand_left" type="Sprite" parent="."]
+texture = SubResource( 8 )
+offset = Vector2( 0, -12 )
+vframes = 14
+hframes = 10
+frame = 35
