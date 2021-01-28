@@ -50,7 +50,7 @@ func _on_item_changed(new_item, id, type): # called from inventory_frames and ot
 func swing(damage): # will be called from Player gameobject (not this script)
 	var possible_targets = []
 	for i in range(6):
-		if body[i].durability > 0:
+		if armor[armor.keys()[i]] != Items.armor_type.Destroyed:
 			possible_targets.append(i)
 			
 	var hit_target = possible_targets[floor(rand_range(0, len(possible_targets)))]
