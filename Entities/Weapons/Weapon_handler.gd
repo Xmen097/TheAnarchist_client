@@ -7,6 +7,7 @@ onready var hands_animation_tree = $AnimationTree
 
 onready var weapons = [$Cutlass, $Halberd, $Bow]
 var weapon_id: int; # This must be set from parent scene
+var mirrored: bool
 
 var active_weapon
 var mouse_angle = 0
@@ -16,7 +17,7 @@ export(Weapons.targets) var target
 func look_at_mouse(angle): #change hand appearance to look at mouse
 	if active_weapon.state == Weapons.states.Idle or active_weapon.state == Weapons.states.Blocking:  # change only when weapon is not attackng
 		mouse_angle = angle
-	active_weapon.look_at_mouse(angle) #Make active weapon look at mouse
+	active_weapon.look_at_mouse(angle, mirrored) #Make active weapon look at mouse
 
 func ready():
 	active_weapon = weapons[weapon_id]

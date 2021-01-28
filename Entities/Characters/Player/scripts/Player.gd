@@ -6,10 +6,10 @@ export var speed = 100
 export var roll_speed_multiplier = 1.2
 export var falling_speed = 60
 
-onready var animation_tree = $AnimationTree
+onready var animation_tree = $Sprite/AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprites = $Sprite
-onready var hands = $Weapons
+onready var weapons = $Sprite/Weapons
 export(Weapons.weapons) var weapon
 
 enum states {
@@ -28,8 +28,9 @@ func _init():
 	Player.player_ref = self
 
 func _ready():
-	hands.weapon_id = weapon
-	hands.ready()
+	weapons.weapon_id = weapon
+	weapons.target = Weapons.targets.Enemy
+	weapons.ready()
 	scale = Vector2(1,1)
 
 func _physics_process(delta):
@@ -37,7 +38,7 @@ func _physics_process(delta):
 	
 func _process(_delta):
 	look_at_mouse()
-	hands.look_at_mouse(Utils.mouse_angle())
+	weapons.look_at_mouse(Utils.mouse_angle())
 
 func move(delta):
 	if state == states.Rolling:
@@ -45,7 +46,7 @@ func move(delta):
 	elif state == states.Falling:
 		position += Vector2(0, delta * falling_speed)
 	elif state != states.Kicking:
-		velocity = Vector2() # get player velocity
+		velocity = Vector2()
 		velocity.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		if velocity.length() > 0: # if moved
@@ -67,22 +68,26 @@ func look_at_mouse(): #change player sprite to look at mouse
 	var mouse_angle = Utils.mouse_angle()
 	if state != states.Rolling:
 		if mouse_angle > 105 or mouse_angle < -105: #some space as to not flicker at border
-			sprites.flip_h = true
+			weapons.mirrored = true
+			scale = Vector2(1, -1)
+			rotation_degrees = -180
 		elif mouse_angle < 75 and mouse_angle >= 0 or\
 			mouse_angle > -75 and mouse_angle <= 0:
-			sprites.flip_h = false 
+			weapons.mirrored = false 
+			scale = Vector2(1, 1)
+			rotation_degrees = -0
 		
 func _input(event): #  Call methods on hands on click event
 		if event.is_action_pressed("primary_attack"):
-			hands.primary_attack()
+			weapons.primary_attack()
 		elif event.is_action_pressed("secondary_attack"):
-			hands.secondary_attack()
+			weapons.secondary_attack()
 		elif event.is_action_released("primary_attack"):
-			hands.primary_release()
+			weapons.primary_release()
 		elif event.is_action_pressed("block"):
-			hands.block()
+			weapons.block()
 		elif event.is_action_released("block"):
-			hands.idle()
+			weapons.idle()
 		elif event.is_action_pressed("roll"):
 			if state == states.Walking:
 				roll()
@@ -106,7 +111,7 @@ func change_state(state_id): #called from animations
 	state = state_id
 
 func hit(type, damage): # Will apply damage, called from weapons
-	if type == Weapons.types.Swing and hands.active_weapon.state != Weapons.states.Blocking:
+	if type == Weapons.types.Swing and weapons.active_weapon.state != Weapons.states.Blocking:
 		Player.swing(damage)
 	elif type == Weapons.types.Stab:
 		Player.stab(damage)

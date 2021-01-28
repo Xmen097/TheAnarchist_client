@@ -13,7 +13,7 @@
 resource_name = "Bow_Idle"
 loop = true
 tracks/0/type = "method"
-tracks/0/path = NodePath("..")
+tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -117,7 +117,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 10 ) ]
 }
 tracks/1/type = "method"
-tracks/1/path = NodePath("..")
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -208,7 +208,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 10 ) ]
 }
 tracks/1/type = "method"
-tracks/1/path = NodePath("..")
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -422,4 +422,4 @@ script = ExtResource( 6 )
 texture = ExtResource( 3 )
 vframes = 21
 hframes = 6
-frame = 60
+frame = 62

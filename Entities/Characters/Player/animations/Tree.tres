@@ -1,7 +1,7 @@
 [gd_resource type="AnimationNodeStateMachine" load_steps=47 format=2]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
-animation = "MAN_falling"
+animation = "falling"
 
 [sub_resource type="AnimationNodeAnimation" id=2]
 animation = "idle_back"
@@ -220,4 +220,4 @@ states/Walk/node = SubResource( 37 )
 states/Walk/position = Vector2( 687, 102 )
 transitions = [ "Idle", "Walk", SubResource( 38 ), "Idle", "Kick", SubResource( 39 ), "Walk", "Idle", SubResource( 40 ), "Kick", "Idle", SubResource( 41 ), "Roll", "Idle", SubResource( 42 ), "Kick", "Walk", SubResource( 43 ), "Roll", "Walk", SubResource( 44 ), "Walk", "Roll", SubResource( 45 ), "Walk", "Kick", SubResource( 46 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -61, -44 )
+graph_offset = Vector2( -35, -76 )

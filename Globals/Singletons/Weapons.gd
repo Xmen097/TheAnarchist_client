@@ -102,14 +102,8 @@ class Melee extends Node2D:
 		for body in bodies:
 			body.hit(types.Stab, data.secondary_damage)
 
-	func look_at_mouse(mouse_angle): #Weapon will look at mouse
-		if mouse_angle > 105 or mouse_angle < -105:
-			scale = Vector2(-1, 1)
-		elif mouse_angle < 75 and mouse_angle >= 0 or\
-			mouse_angle > -75 and mouse_angle <= 0:
-			scale = Vector2(1, 1)
-	
-		if scale == Vector2(-1, 1):
+	func look_at_mouse(mouse_angle, mirrored): #Weapon will look at mouse
+		if mirrored:
 			sprite.frame_coords.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
 			if has_primary:
 				primary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180

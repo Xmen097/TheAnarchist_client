@@ -3,10 +3,10 @@ extends KinematicBody2D
 #player walking speed
 export var speed = 100
 
-onready var animation_tree = $AnimationTree
+onready var animation_tree = $Sprite/AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprite = $Sprite
-onready var hands = $Weapons
+onready var weapons = $Sprite/Weapons
 onready var attack_range = $AttackRange
 var inside_attack_range = false
 onready var follow_range = $FollowRange
@@ -29,8 +29,9 @@ export var max_hp = 100
 
 
 func _ready():
-	hands.weapon_id = weapon
-	hands.ready()
+	weapons.weapon_id = weapon
+	weapons.target = Weapons.targets.Player
+	weapons.ready()
 	hp = max_hp
 	scale = Vector2(1,1)
 
@@ -42,7 +43,7 @@ func _process(_delta):
 func attack():
 	if personality == Personality.Chaser || personality == Personality.StaticDefender:
 		if inside_attack_range:
-			hands.primary_attack();
+			weapons.primary_attack();
 		
 func go():
 	if personality == Personality.Chaser:
@@ -51,7 +52,7 @@ func go():
 			velocity = position.direction_to(player.position) * speed
 		if velocity.length() > 0: # if moved
 			var _suc = move_and_slide(velocity)
-			position = position.round() #rounds position to pixel grid
+			position = position.round() #rounds position to pixel grid, dunno if neccesary
 			animation_mode.travel("Walk")
 		else: # didn't move
 			animation_mode.travel("Idle")
@@ -63,11 +64,15 @@ func look_at_player():
 	animation_tree.set('parameters/Walk/blend_position', blended)
 	var angle = Utils.vec_to_angle(vec)
 	if angle > 105 or angle < -105: #some space as to not flicker at border
-		sprite.flip_h = true
+		weapons.mirrored = true 
+		scale = Vector2(1, -1)
+		rotation_degrees = -180
 	elif angle < 75 and angle >= 0 or\
 		angle > -75 and angle <= 0:
-		sprite.flip_h = false 
-	hands.look_at_mouse(angle)
+		weapons.mirrored = false 
+		scale = Vector2(1, 1)
+		rotation_degrees = 0
+	weapons.look_at_mouse(angle)
 
 
 func hit(type, damage): # Will apply damage
