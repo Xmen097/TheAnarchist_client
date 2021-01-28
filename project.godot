@@ -26,6 +26,7 @@ Weapons="*res://Globals/Singletons/Weapons.gd"
 Items="*res://Globals/Singletons/Items.gd"
 Player="*res://Globals/Singletons/Player.gd"
 GameManager="*res://Globals/Singletons/GameManager.gd"
+Music="*res://Globals/Music.tscn"
 
 [display]
 
