@@ -48,7 +48,13 @@ func _on_item_changed(new_item, id, type): # called from inventory_frames and ot
 	emit_signal("item_changed", new_item, id, type);
 	
 func swing(damage): # will be called from Player gameobject (not this script)
-	var hit_target = floor(rand_range(0, 6))
+	var possible_targets = []
+	for i in range(6):
+		if body[i].durability > 0:
+			possible_targets.append(i)
+			
+	var hit_target = possible_targets[floor(rand_range(0, len(possible_targets)))]
+	
 	if armor[armor.keys()[hit_target]] == Items.armor_type.None:
 		armor[armor.keys()[hit_target]] = Items.armor_type.Destroyed
 		emit_signal("armor_changed", Items.armor_type.Destroyed, hit_target)
