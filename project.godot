@@ -26,6 +26,7 @@ Weapons="*res://Globals/Singletons/Weapons.gd"
 Items="*res://Globals/Singletons/Items.gd"
 Player="*res://Globals/Singletons/Player.gd"
 GameManager="*res://Globals/Singletons/GameManager.gd"
+Music="*res://Globals/Music.tscn"
 
 [display]
 
@@ -162,5 +163,6 @@ block={
 [rendering]
 
 quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
 quality/dynamic_fonts/use_oversampling=false

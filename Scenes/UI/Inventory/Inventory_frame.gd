@@ -19,6 +19,7 @@ export(Player.frame_type) var frame_type
 
 signal item_changed(new_item, id, type)
 
+
 func _ready():
 	var success = false #connect to events
 	success = success or connect("mouse_entered", self, "_on_mouse_entered")
@@ -35,6 +36,7 @@ func _ready():
 	
 func _on_mouse_entered():
 	self_modulate = Color(1, 1, 1, 255/220.0)
+	Player.emit_signal("item_hovered", Items.items[Items.items.keys()[starting_item_id]], frame_id, frame_type)
 
 func _on_mouse_exited():
 	self_modulate = Color(1, 1, 1, 1)

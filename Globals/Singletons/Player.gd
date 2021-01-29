@@ -7,6 +7,7 @@ var inventory = []
 var body = []
 enum frame_type {Inventory, Hotbar, Body, Backpack}
 signal item_changed(new_item, id, type)
+signal item_hovered(item, id, type)
 signal armor_changed(armor_type, id)
 
 var armor = {
@@ -45,7 +46,7 @@ func _on_item_changed(new_item, id, type): # called from inventory_frames and ot
 			armor[armor.keys()[id]] = new_item.armor_type
 			emit_signal("armor_changed", new_item.armor_type, id)
 	
-	emit_signal("item_changed", new_item, id, type);
+	emit_signal("item_changed", new_item, id, type)
 	
 func swing(damage): # will be called from Player gameobject (not this script)
 	var possible_targets = []
