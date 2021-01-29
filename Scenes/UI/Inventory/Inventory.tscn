@@ -1906,6 +1906,8 @@ margin_bottom = 10.0
 theme = SubResource( 96 )
 bbcode_enabled = true
 bbcode_text = "[shake rate=10 level=5]Neproporcionalni[/shake]"
+text = "Neproporcionalni"
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
