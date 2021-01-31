@@ -42,7 +42,7 @@ func _process(_delta):
 
 func move(delta):
 	if state == states.Rolling:
-		move_and_slide(velocity * roll_speed_multiplier)
+		var _suc = move_and_slide(velocity * roll_speed_multiplier)
 	elif state == states.Falling:
 		position += Vector2(0, delta * falling_speed)
 	elif state != states.Kicking:
@@ -97,7 +97,6 @@ func _input(event): #  Call methods on hands on click event
 func roll():
 	state = states.Rolling
 	animation_mode.travel("Roll")
-	sprites.flip_h = Utils.vec_to_pos_blended(velocity).x < 0
 	
 func kick():
 	state = states.Kicking

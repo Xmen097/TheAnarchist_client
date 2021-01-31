@@ -5,7 +5,7 @@ var player_ref
 var hotbar = []
 var inventory = []
 var body = []
-enum frame_type {Inventory, Hotbar, Body, Backpack}
+enum frame_type {Inventory, Hotbar, Body, Backpack, Trash}
 signal item_changed(new_item, id, type)
 signal item_hovered(item, id, type)
 signal armor_changed(armor_type, id)

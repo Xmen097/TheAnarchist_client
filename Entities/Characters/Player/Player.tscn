@@ -6,10 +6,10 @@
 [ext_resource path="res://Entities/Characters/Hitbox.gd" type="Script" id=15]
 [ext_resource path="res://Entities/Characters/Player/light.png" type="Texture" id=16]
 
-[sub_resource type="RectangleShape2D" id=23]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 4 )
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 9, 11 )
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -30,13 +30,13 @@ shadow_color = Color( 0, 0, 0, 1 )
 
 [node name="Sprite" parent="." instance=ExtResource( 1 )]
 z_index = 1
-frame = Vector2( 6, 0 )
+frame = Vector2( 1, 0 )
 
 [node name="Movement_collider" type="CollisionShape2D" parent="."]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -4 )
-shape = SubResource( 23 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -12 )
@@ -56,4 +56,4 @@ script = ExtResource( 15 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 modulate = Color( 0.968627, 1, 0, 1 )
 position = Vector2( -0.2, 0 )
-shape = SubResource( 24 )
+shape = SubResource( 2 )
