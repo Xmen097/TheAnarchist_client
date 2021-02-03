@@ -37,8 +37,9 @@ func _physics_process(delta):
 	move(delta)
 	
 func _process(_delta):
-	look_at_mouse()
-	weapons.look_at_mouse(Utils.mouse_angle())
+	if state != states.Rolling:
+		look_at_mouse()
+		weapons.look_at_mouse(Utils.mouse_angle())
 
 func move(delta):
 	if state == states.Rolling:
@@ -66,16 +67,15 @@ func look_at_mouse(): #change player sprite to look at mouse
 	animation_tree.set('parameters/Walk/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Kick/blend_position', mouse_pos_blended)
 	var mouse_angle = Utils.mouse_angle()
-	if state != states.Rolling:
-		if mouse_angle > 105 or mouse_angle < -105: #some space as to not flicker at border
-			weapons.mirrored = true
-			scale = Vector2(1, -1)
-			rotation_degrees = -180
-		elif mouse_angle < 75 and mouse_angle >= 0 or\
-			mouse_angle > -75 and mouse_angle <= 0:
-			weapons.mirrored = false 
-			scale = Vector2(1, 1)
-			rotation_degrees = -0
+	if mouse_angle > 105 or mouse_angle < -105: #some space as to not flicker at border
+		weapons.mirrored = true
+		scale = Vector2(1, -1)
+		rotation_degrees = -180
+	elif mouse_angle < 75 and mouse_angle >= 0 or\
+		mouse_angle > -75 and mouse_angle <= 0:
+		weapons.mirrored = false 
+		scale = Vector2(1, 1)
+		rotation_degrees = -0
 		
 func _input(event): #  Call methods on hands on click event
 		if event.is_action_pressed("primary_attack"):
@@ -96,7 +96,16 @@ func _input(event): #  Call methods on hands on click event
 
 func roll():
 	state = states.Rolling
+	Player.stats.vulnerable = false
 	animation_mode.travel("Roll")
+	if velocity.x < 0:
+		weapons.mirrored = true
+		scale = Vector2(1, -1)
+		rotation_degrees = -180
+	else:
+		weapons.mirrored = false 
+		scale = Vector2(1, 1)
+		rotation_degrees = -0
 	
 func kick():
 	state = states.Kicking
@@ -108,6 +117,8 @@ func fall(): # Called from Falling_area
 
 func change_state(state_id): #called from animations
 	state = state_id
+	if state != states.Rolling:
+		Player.stats.vulnerable = true
 
 func hit(type, damage): # Will apply damage, called from weapons
 	if type == Weapons.types.Swing and weapons.active_weapon.state != Weapons.states.Blocking:

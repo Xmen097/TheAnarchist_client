@@ -1071,6 +1071,7 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = -1
 script = ExtResource( 6 )
+frame = Vector2( 1, 0 )
 node_paths = [ NodePath("Torso"), NodePath("leg_right"), NodePath("leg_left"), NodePath("shoe_right"), NodePath("shoe_left"), NodePath("head"), NodePath("hand_right"), NodePath("hand_left") ]
 
 [node name="Torso" type="Sprite" parent="."]

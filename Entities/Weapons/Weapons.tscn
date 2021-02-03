@@ -359,6 +359,7 @@ active = true
 parameters/playback = SubResource( 32 )
 
 [node name="Cutlass" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Cutlass"]
