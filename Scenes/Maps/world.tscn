@@ -72,25 +72,20 @@ tile_data = PoolIntArray( 4, 6, 1, 5, 6, 196610, 6, 6, 196610, 7, 6, 196610, 8, 
 
 [node name="Player" parent="Foreground" instance=ExtResource( 3 )]
 position = Vector2( 70, 106 )
-weapon = 1
 
 [node name="AI3" parent="Foreground" instance=ExtResource( 2 )]
 position = Vector2( -128, 149 )
-z_index = 0
 weapon = 1
 personality = 1
 
 [node name="AI4" parent="Foreground" instance=ExtResource( 2 )]
 position = Vector2( -135, 7 )
-z_index = 0
 personality = 1
 
 [node name="AI" parent="Foreground" instance=ExtResource( 2 )]
 position = Vector2( 3, 18 )
-z_index = 0
 personality = 2
 
 [node name="AI2" parent="Foreground" instance=ExtResource( 2 )]
 position = Vector2( 321, 87 )
-z_index = 0
 [connection signal="body_entered" from="Background/Falling_area" to="Background/Falling_area" method="_on_Falling_area_body_entered"]

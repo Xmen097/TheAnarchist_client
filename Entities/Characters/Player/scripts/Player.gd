@@ -5,6 +5,7 @@ export var speed = 100
 
 export var roll_speed_multiplier = 1.2
 export var falling_speed = 60
+export var kick_strength = 5
 
 onready var animation_tree = $Sprite/AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
@@ -36,14 +37,17 @@ func _ready():
 func _physics_process(delta):
 	move(delta)
 	
-func _process(_delta):
+func _process(delta):
 	if state != states.Rolling:
 		look_at_mouse()
 		weapons.look_at_mouse(Utils.mouse_angle())
 
 func move(delta):
 	if state == states.Rolling:
-		var _suc = move_and_slide(velocity * roll_speed_multiplier)
+		var moved = move_and_slide(velocity * roll_speed_multiplier)
+		if moved.length() == 0:
+			state = states.Idle
+			animation_mode.start("Idle")
 	elif state == states.Falling:
 		position += Vector2(0, delta * falling_speed)
 	elif state != states.Kicking:
@@ -88,13 +92,18 @@ func _input(event): #  Call methods on hands on click event
 			weapons.block()
 		elif event.is_action_released("block"):
 			weapons.idle()
+		elif event.is_action_pressed("prepare"):
+			weapons.prepare()
+		elif event.is_action_released("prepare"):
+			weapons.idle()
 		elif event.is_action_pressed("roll"):
-			if state == states.Walking:
-				roll()
+			roll()
 		elif event.is_action_pressed("kick"):
 			kick()
 
 func roll():
+	if state != states.Walking:
+		return
 	state = states.Rolling
 	Player.stats.vulnerable = false
 	animation_mode.travel("Roll")
@@ -121,9 +130,10 @@ func change_state(state_id): #called from animations
 		Player.stats.vulnerable = true
 
 func hit(type, damage): # Will apply damage, called from weapons
+	print(weapons.active_weapon.state)
 	if type == Weapons.types.Swing and weapons.active_weapon.state != Weapons.states.Blocking:
 		Player.swing(damage)
-	elif type == Weapons.types.Stab:
+	elif type == Weapons.types.Stab and weapons.active_weapon.state != Weapons.states.Preparing:
 		Player.stab(damage)
 
 func die(): # hide from from scene and then remove. Should be replaced with death menu

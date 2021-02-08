@@ -43,7 +43,10 @@ func _process(_delta):
 func attack():
 	if personality == Personality.Chaser || personality == Personality.StaticDefender:
 		if inside_attack_range:
-			weapons.primary_attack();
+			if weapons.active_weapon.has_primary:
+				weapons.primary_attack()
+			elif weapons.active_weapon.has_secondary:
+				weapons.secondary_attack()
 		
 func go():
 	if personality == Personality.Chaser:

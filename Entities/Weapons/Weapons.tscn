@@ -248,7 +248,7 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "primary_damage"
+"method": "secondary_damage"
 } ]
 }
 
@@ -401,7 +401,7 @@ vframes = 21
 hframes = 4
 frame = 40
 
-[node name="Primary" type="Area2D" parent="Halberd" groups=[
+[node name="Secondary" type="Area2D" parent="Halberd" groups=[
 "Weapon",
 ]]
 visible = false
@@ -409,7 +409,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource( 5 )
 
-[node name="Collider" type="CollisionPolygon2D" parent="Halberd/Primary"]
+[node name="Collider" type="CollisionPolygon2D" parent="Halberd/Secondary"]
 visible = false
 polygon = PoolVector2Array( 30, 10, 49, 12, 49, -12, 30, -10 )
 
@@ -422,4 +422,4 @@ script = ExtResource( 6 )
 texture = ExtResource( 3 )
 vframes = 21
 hframes = 6
-frame = 62
+frame = 60

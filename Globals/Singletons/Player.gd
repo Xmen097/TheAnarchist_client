@@ -14,9 +14,18 @@ var armor = {
 	head = Items.armor_type.None,
 	left_arm = Items.armor_type.None,
 	right_arm = Items.armor_type.None,
-	torso = Items.armor_type.None,
 	left_leg = Items.armor_type.None,
 	right_leg = Items.armor_type.None,
+	torso = Items.armor_type.None,
+}
+
+var body_health = {
+	head = 150,
+	left_arm = 100,
+	right_arm = 100,
+	left_leg = 200,
+	right_leg = 200,
+	torso = 500,
 }
 
 var stats = {
@@ -56,20 +65,38 @@ func swing(damage): # will be called from Player gameobject (not this script)
 	if not stats.vulnerable:
 		return
 	var possible_targets = []
-	for i in range(6):
-		if armor[armor.keys()[i]] != Items.armor_type.Destroyed:
+	for i in range(6): # stab for every externality except torso
+		if armor[armor.keys()[i]] != Items.armor_type.Destroyed and armor.keys()[i] != "torso":
 			possible_targets.append(i)
 			
 	var hit_target = possible_targets[floor(rand_range(0, len(possible_targets)))]
+	var target_key = armor.keys()[hit_target]
 	
-	if armor[armor.keys()[hit_target]] == Items.armor_type.None:
-		armor[armor.keys()[hit_target]] = Items.armor_type.Destroyed
-		emit_signal("armor_changed", Items.armor_type.Destroyed, hit_target)
-	elif armor[armor.keys()[hit_target]] != Items.armor_type.Destroyed:
+	if armor[target_key] == Items.armor_type.None: # no armor
+		body_health[target_key] -= damage
+		emit_signal("body_damaged", body_health[target_key], hit_target)
+		if body_health[target_key] <= 0:
+			armor[target_key] = Items.armor_type.Destroyed
+			emit_signal("armor_changed", Items.armor_type.Destroyed, hit_target)
+	elif armor[target_key] != Items.armor_type.Destroyed: # has armor
 		body[hit_target].durability -= damage
+		emit_signal("armor_damaged", body[hit_target].durability, hit_target)
 		if body[hit_target].durability <= 0:
 			_on_item_changed(Items.items.None, hit_target, frame_type.Body);
 			
 func stab(damage):
-	pass
+	if not stats.vulnerable:
+		return
+	var torso_id = armor.keys().find("torso", 0)
+	if armor.torso == Items.armor_type.None: # no armor
+		body_health.torso -= damage
+		emit_signal("body_damaged", body_health.torso, torso_id)
+		if body_health.torso <= 0:
+			armor.torso = Items.armor_type.Destroyed
+			emit_signal("armor_changed", Items.armor_type.Destroyed, torso_id)
+	elif armor.body != Items.armor_type.Destroyed: # has armor
+		body.body.durability -= damage
+		emit_signal("armor_damaged", body.body.durability, torso_id)
+		if body.body.durability <= 0:
+			_on_item_changed(Items.items.None, torso_id, frame_type.Body);
 	

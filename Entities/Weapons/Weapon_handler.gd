@@ -42,7 +42,6 @@ func primary_release():
 			active_weapon.primary_attack(weapon_animation_mode)
 		else:
 			active_weapon.click_queued = false
-			
 
 func secondary_attack():
 	if active_weapon.type == "Melee":
@@ -53,4 +52,9 @@ func block():
 	if active_weapon.type == "Melee":
 		if active_weapon.state == Weapons.states.Idle:
 			active_weapon.block(weapon_animation_mode)
+			
+func prepare():
+	if active_weapon.type == "Melee":
+		if active_weapon.state == Weapons.states.Idle:
+			active_weapon.prepare(weapon_animation_mode)
 

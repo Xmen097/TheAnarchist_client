@@ -26,6 +26,7 @@ enum states {
 	Idle,
 	Blocking,
 	Primary_attacking,
+	Preparing,
 	Secondary_attacking,
 }
 
@@ -74,6 +75,10 @@ class Melee extends Node2D:
 		if state != states.Blocking and has_block:
 			state = states.Blocking
 			animation_mode.travel(data.block_animation)
+
+	func prepare(animation_mode):
+		if state != states.Preparing:
+			state = states.Preparing
 
 	func init(animation_mode, target):
 		animation_mode.start(data.idle_animation)
