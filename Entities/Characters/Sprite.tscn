@@ -39,9 +39,9 @@ region = Rect2( 1440, 0, 240, 336 )
 atlas = ExtResource( 2 )
 region = Rect2( 1680, 0, 240, 336 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=22]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 1.2
 loop = true
 step = 0.15
@@ -120,7 +120,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -9 ), Vector2( 1, -9 ), Vector2( 1, -9 ), Vector2( 1, -9 ), Vector2( 1, -10 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 length = 1.2
 loop = true
 step = 0.15
@@ -199,7 +199,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, -10 ), Vector2( 0, -10 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 length = 1.2
 loop = true
 step = 0.15
@@ -278,7 +278,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, -10 ), Vector2( 0, -10 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 length = 0.675
 loop = true
 step = 0.075
@@ -357,7 +357,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( -1, -14 ), Vector2( -3, -14 ), Vector2( -4, -13 ), Vector2( -4, -13 ), Vector2( -4, -13 ), Vector2( -3, -14 ), Vector2( -1, -14 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=14]
 length = 0.675
 loop = true
 step = 0.075
@@ -436,7 +436,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( -1, -14 ), Vector2( -3, -14 ), Vector2( -4, -13 ), Vector2( -4, -13 ), Vector2( -4, -13 ), Vector2( -3, -14 ), Vector2( -1, -14 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 length = 0.845
 loop = true
 step = 0.065
@@ -515,7 +515,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, -10 ), Vector2( 1, -12 ), Vector2( 1, -14 ), Vector2( 1, -10 ), Vector2( 1, -7 ), Vector2( 1, -3 ), Vector2( 1, -3 ), Vector2( 1, -9 ), Vector2( 1, -14 ), Vector2( 1, -10 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=16]
 length = 0.845
 loop = true
 step = 0.065
@@ -594,7 +594,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, -12 ), Vector2( 1, -7 ), Vector2( -2, -4 ), Vector2( -6, -3 ), Vector2( -11, -3 ), Vector2( -11, -3 ), Vector2( -2, -7 ), Vector2( -2, -9 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 length = 0.845
 loop = true
 step = 0.065
@@ -673,7 +673,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, -10 ), Vector2( 1, -12 ), Vector2( 1, -14 ), Vector2( 1, -9 ), Vector2( 1, -6 ), Vector2( 1, -3 ), Vector2( 1, -3 ), Vector2( 1, -6 ), Vector2( 0, -8 ), Vector2( 1, -10 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=18]
 length = 0.845
 loop = true
 step = 0.065
@@ -752,7 +752,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, -12 ), Vector2( 1, -7 ), Vector2( -2, -4 ), Vector2( -6, -3 ), Vector2( -11, -3 ), Vector2( -11, -3 ), Vector2( -2, -7 ), Vector2( -2, -9 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=19]
 length = 0.6
 loop = true
 step = 0.075
@@ -831,7 +831,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -11 ), Vector2( 1, -11 ), Vector2( 1, -11 ), Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -10 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=20]
 length = 0.525
 loop = true
 step = 0.075
@@ -910,7 +910,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( -1, -10 ), Vector2( -1, -10 ), Vector2( -1, -10 ), Vector2( 0, -10 ), Vector2( 0, -10 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=21]
 length = 0.6
 loop = true
 step = 0.075
@@ -989,7 +989,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, -11 ), Vector2( 1, -11 ), Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -10 ), Vector2( 1, -11 ) ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=22]
 length = 0.525
 loop = true
 step = 0.075
@@ -1071,6 +1071,7 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = -1
 script = ExtResource( 6 )
+frame = Vector2( 1, 0 )
 node_paths = [ NodePath("Torso"), NodePath("leg_right"), NodePath("leg_left"), NodePath("shoe_right"), NodePath("shoe_left"), NodePath("head"), NodePath("hand_right"), NodePath("hand_left") ]
 
 [node name="Torso" type="Sprite" parent="."]
@@ -1130,7 +1131,7 @@ hframes = 10
 tree_root = ExtResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 22 )
+parameters/playback = SubResource( 9 )
 parameters/Idle/blend_position = Vector2( 0.00110006, 0.955446 )
 parameters/Kick/blend_position = Vector2( -0.997897, 0.0317125 )
 parameters/Roll/blend_position = Vector2( 0, 0 )
@@ -1139,17 +1140,17 @@ parameters/Walk/blend_position = Vector2( 0.0430797, 0.878049 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1
 anims/falling = ExtResource( 4 )
-anims/idle_back = SubResource( 9 )
-anims/idle_backside = SubResource( 10 )
+anims/idle_back = SubResource( 10 )
+anims/idle_backside = SubResource( 11 )
 anims/idle_front = ExtResource( 3 )
-anims/idle_frontside = SubResource( 11 )
-anims/kick_back = SubResource( 12 )
-anims/kick_front = SubResource( 13 )
-anims/roll_back = SubResource( 14 )
-anims/roll_backside = SubResource( 15 )
-anims/roll_front = SubResource( 16 )
-anims/roll_frontside = SubResource( 17 )
-anims/walk_back = SubResource( 18 )
-anims/walk_backside = SubResource( 19 )
-anims/walk_front = SubResource( 20 )
-anims/walk_frontside = SubResource( 21 )
+anims/idle_frontside = SubResource( 12 )
+anims/kick_back = SubResource( 13 )
+anims/kick_front = SubResource( 14 )
+anims/roll_back = SubResource( 15 )
+anims/roll_backside = SubResource( 16 )
+anims/roll_front = SubResource( 17 )
+anims/roll_frontside = SubResource( 18 )
+anims/walk_back = SubResource( 19 )
+anims/walk_backside = SubResource( 20 )
+anims/walk_front = SubResource( 21 )
+anims/walk_frontside = SubResource( 22 )

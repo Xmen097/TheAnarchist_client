@@ -53,17 +53,18 @@ func swing(damage): # will be called from Player gameobject (not this script)
 	for i in range(6):
 		if armor[armor.keys()[i]] != Items.armor_type.Destroyed:
 			possible_targets.append(i)
-			
-	var hit_target = possible_targets[floor(rand_range(0, len(possible_targets)))]
 	
-	if armor[armor.keys()[hit_target]] == Items.armor_type.None:
-		armor[armor.keys()[hit_target]] = Items.armor_type.Destroyed
-		emit_signal("armor_changed", Items.armor_type.Destroyed, hit_target)
-	elif armor[armor.keys()[hit_target]] != Items.armor_type.Destroyed:
-		body[hit_target].durability -= damage
-		if body[hit_target].durability <= 0:
-			_on_item_changed(Items.items.None, hit_target, frame_type.Body);
-			
+	if possible_targets:
+		var hit_target = possible_targets[floor(rand_range(0, len(possible_targets)))]
+	
+		if armor[armor.keys()[hit_target]] == Items.armor_type.None:
+			armor[armor.keys()[hit_target]] = Items.armor_type.Destroyed
+			emit_signal("armor_changed", Items.armor_type.Destroyed, hit_target)
+		elif armor[armor.keys()[hit_target]] != Items.armor_type.Destroyed:
+			body[hit_target].durability -= damage
+			if body[hit_target].durability <= 0:
+				_on_item_changed(Items.items.None, hit_target, frame_type.Body);
+				
 func stab(damage):
 	pass
 	
