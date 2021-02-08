@@ -31,8 +31,27 @@ func _on_item_hovered(item, id, type):
 		text = text.replace(x[0].to_upper(), x[1].to_upper())
 		
 	if len(text) > 10:
-		label.text = text + " ".repeat(space_len) + text + " ".repeat(space_len)
+		label.text = text + " ".repeat(space_len) + text + " ".repeat(len(text))
 	else:
 		label.text = text
+		
+	var type_ = ""
+	match item.type:
+		Items.types.Head_armor: 
+			type_ = "OH"
+		Items.types.Torso_armor: 
+			type_ = "OT"
+		Items.types.Arm_armor:
+			type_ = "ON"
+		Items.types.Leg_armor:
+			type_ = "OK"
+		Items.types.Weapon:
+			type_ = "Z"
+		Items.types.Usable:
+			type_ = "A"
+		Items.types.Shoes:
+			type_ = "B"
+		Items.types.Amulet:
+			type_ = "N"
 	
-	desc.bbcode_text = "zlevni vsechny predmety o jeden zlatak"
+	desc.bbcode_text = "Typ: " + type_  + "\n" + item.description

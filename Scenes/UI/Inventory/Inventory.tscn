@@ -22,481 +22,481 @@
 [ext_resource path="res://Scenes/UI/assets/hotbar_number_holder.png" type="Texture" id=20]
 [ext_resource path="res://Scenes/UI/assets/font.png" type="Texture" id=21]
 
-[sub_resource type="StyleBoxFlat" id=117]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0.470588 )
 
-[sub_resource type="StyleBoxTexture" id=118]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 384, 216 )
 
-[sub_resource type="AtlasTexture" id=119]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 19 )
 region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 360, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 288, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 216, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 144, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 72, 60, 72 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 7 )
+region = Rect2( 84, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 7 )
+region = Rect2( 112, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 7 )
+region = Rect2( 56, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 7 )
+region = Rect2( 56, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 7 )
+region = Rect2( 28, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=91]
+atlas = ExtResource( 7 )
+region = Rect2( 112, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=92]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 7 )
+region = Rect2( 112, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 7 )
+region = Rect2( 112, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=96]
+
+[sub_resource type="StyleBoxEmpty" id=97]
+
+[sub_resource type="StyleBoxEmpty" id=98]
+
+[sub_resource type="StyleBoxEmpty" id=99]
+
+[sub_resource type="StyleBoxEmpty" id=100]
+
+[sub_resource type="Theme" id=101]
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = SubResource( 96 )
+HScrollBar/styles/grabber_highlight = SubResource( 97 )
+HScrollBar/styles/grabber_pressed = SubResource( 98 )
+HScrollBar/styles/scroll = SubResource( 99 )
+HScrollBar/styles/scroll_focus = SubResource( 100 )
+
+[sub_resource type="StyleBoxEmpty" id=102]
+
+[sub_resource type="StyleBoxEmpty" id=103]
+
+[sub_resource type="StyleBoxEmpty" id=104]
+
+[sub_resource type="StyleBoxEmpty" id=105]
+
+[sub_resource type="StyleBoxEmpty" id=106]
+
+[sub_resource type="Theme" id=107]
+default_font = ExtResource( 8 )
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = SubResource( 102 )
+HScrollBar/styles/grabber_highlight = SubResource( 103 )
+HScrollBar/styles/grabber_pressed = SubResource( 104 )
+HScrollBar/styles/scroll = SubResource( 105 )
+HScrollBar/styles/scroll_focus = SubResource( 106 )
+
+[sub_resource type="AtlasTexture" id=108]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=109]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
 
 [sub_resource type="AtlasTexture" id=120]
 atlas = ExtResource( 19 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=121]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=122]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=123]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=124]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=125]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=126]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=127]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=128]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=129]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=130]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=131]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=132]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=133]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=134]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=135]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=136]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=137]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=138]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=139]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=140]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=141]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=142]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=143]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=144]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=145]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=146]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=147]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=148]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=149]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=150]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=151]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=152]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=153]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=154]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=155]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=156]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=157]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=158]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=159]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=160]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=161]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=162]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=163]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=164]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=165]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=166]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=167]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=168]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=169]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=170]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=171]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=172]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=173]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=174]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=175]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=176]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=177]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=178]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=179]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 360, 60, 72 )
-
-[sub_resource type="AtlasTexture" id=180]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 288, 60, 72 )
-
-[sub_resource type="AtlasTexture" id=181]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 216, 60, 72 )
-
-[sub_resource type="AtlasTexture" id=182]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 60, 72 )
-
-[sub_resource type="AtlasTexture" id=183]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 144, 60, 72 )
-
-[sub_resource type="AtlasTexture" id=184]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 72, 60, 72 )
-
-[sub_resource type="AtlasTexture" id=185]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=186]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=187]
-atlas = ExtResource( 7 )
-region = Rect2( 84, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=188]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=189]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=190]
-atlas = ExtResource( 7 )
-region = Rect2( 112, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=191]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=192]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=193]
-atlas = ExtResource( 7 )
-region = Rect2( 56, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=194]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=195]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=196]
-atlas = ExtResource( 7 )
-region = Rect2( 56, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=197]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=198]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=199]
-atlas = ExtResource( 7 )
-region = Rect2( 28, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=200]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=201]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=202]
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=203]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=204]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=205]
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=206]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=207]
-atlas = ExtResource( 7 )
-region = Rect2( 112, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=208]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=209]
-atlas = ExtResource( 7 )
-region = Rect2( 112, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=210]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=211]
-atlas = ExtResource( 7 )
-region = Rect2( 112, 0, 28, 28 )
-
-[sub_resource type="StyleBoxEmpty" id=111]
-
-[sub_resource type="StyleBoxEmpty" id=112]
-
-[sub_resource type="StyleBoxEmpty" id=113]
-
-[sub_resource type="StyleBoxEmpty" id=114]
-
-[sub_resource type="StyleBoxEmpty" id=115]
-
-[sub_resource type="Theme" id=116]
-HScrollBar/icons/decrement = null
-HScrollBar/icons/decrement_highlight = null
-HScrollBar/icons/increment = null
-HScrollBar/icons/increment_highlight = null
-HScrollBar/styles/grabber = SubResource( 111 )
-HScrollBar/styles/grabber_highlight = SubResource( 112 )
-HScrollBar/styles/grabber_pressed = SubResource( 113 )
-HScrollBar/styles/scroll = SubResource( 114 )
-HScrollBar/styles/scroll_focus = SubResource( 115 )
-
-[sub_resource type="StyleBoxEmpty" id=212]
-
-[sub_resource type="StyleBoxEmpty" id=213]
-
-[sub_resource type="StyleBoxEmpty" id=214]
-
-[sub_resource type="StyleBoxEmpty" id=215]
-
-[sub_resource type="StyleBoxEmpty" id=216]
-
-[sub_resource type="Theme" id=217]
-default_font = ExtResource( 8 )
-HScrollBar/icons/decrement = null
-HScrollBar/icons/decrement_highlight = null
-HScrollBar/icons/increment = null
-HScrollBar/icons/increment_highlight = null
-HScrollBar/styles/grabber = SubResource( 212 )
-HScrollBar/styles/grabber_highlight = SubResource( 213 )
-HScrollBar/styles/grabber_pressed = SubResource( 214 )
-HScrollBar/styles/scroll = SubResource( 215 )
-HScrollBar/styles/scroll_focus = SubResource( 216 )
-
-[sub_resource type="AtlasTexture" id=218]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=219]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
-
-[sub_resource type="AtlasTexture" id=220]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=221]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
-
-[sub_resource type="AtlasTexture" id=222]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=223]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
-
-[sub_resource type="AtlasTexture" id=224]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=225]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
-
-[sub_resource type="AtlasTexture" id=226]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=227]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
-
-[sub_resource type="AtlasTexture" id=228]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=229]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
-
-[sub_resource type="AtlasTexture" id=230]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=231]
 atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 5, 9 )
 
@@ -505,7 +505,7 @@ margin_right = 384.0
 margin_bottom = 216.0
 rect_min_size = Vector2( 384, 216 )
 mouse_filter = 1
-custom_styles/panel = SubResource( 117 )
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true,
@@ -515,7 +515,7 @@ __meta__ = {
 [node name="PanelContainer" type="PanelContainer" parent="."]
 margin_right = 384.0
 margin_bottom = 216.0
-custom_styles/panel = SubResource( 118 )
+custom_styles/panel = SubResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 margin_right = 384.0
@@ -586,7 +586,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 119 )
+texture = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -608,7 +608,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 120 )
+texture = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -630,7 +630,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 121 )
+texture = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -652,7 +652,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 122 )
+texture = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -674,7 +674,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 123 )
+texture = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -697,7 +697,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 124 )
+texture = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -721,7 +721,7 @@ margin_right = 252.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 243.938, -6.50571 )
 mouse_filter = 2
-texture = SubResource( 125 )
+texture = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -744,7 +744,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 126 )
+texture = SubResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -765,7 +765,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 127 )
+texture = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -788,7 +788,7 @@ margin_right = 252.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 242, -34.7417 )
 mouse_filter = 2
-texture = SubResource( 128 )
+texture = SubResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -810,7 +810,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 129 )
+texture = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -832,7 +832,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 130 )
+texture = SubResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -853,7 +853,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 131 )
+texture = SubResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -875,7 +875,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 132 )
+texture = SubResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -897,7 +897,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 133 )
+texture = SubResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -919,7 +919,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 134 )
+texture = SubResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -940,7 +940,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 135 )
+texture = SubResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -962,7 +962,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 136 )
+texture = SubResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -984,7 +984,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 137 )
+texture = SubResource( 21 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1006,7 +1006,7 @@ frame_type = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 138 )
+texture = SubResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1025,7 +1025,7 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Main"]
 margin_right = 28.0
 margin_bottom = 28.0
-texture = SubResource( 139 )
+texture = SubResource( 23 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1036,7 +1036,7 @@ starting_item_id = 1
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 140 )
+texture = SubResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1045,7 +1045,7 @@ __meta__ = {
 margin_left = 28.0
 margin_right = 56.0
 margin_bottom = 28.0
-texture = SubResource( 141 )
+texture = SubResource( 25 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1057,7 +1057,7 @@ frame_id = 1
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 142 )
+texture = SubResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1066,7 +1066,7 @@ __meta__ = {
 margin_left = 56.0
 margin_right = 84.0
 margin_bottom = 28.0
-texture = SubResource( 143 )
+texture = SubResource( 27 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1078,7 +1078,7 @@ frame_id = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 144 )
+texture = SubResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1087,7 +1087,7 @@ __meta__ = {
 margin_left = 84.0
 margin_right = 112.0
 margin_bottom = 28.0
-texture = SubResource( 145 )
+texture = SubResource( 29 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1099,7 +1099,7 @@ frame_id = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 146 )
+texture = SubResource( 30 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1108,7 +1108,7 @@ __meta__ = {
 margin_top = 28.0
 margin_right = 28.0
 margin_bottom = 56.0
-texture = SubResource( 147 )
+texture = SubResource( 31 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1120,7 +1120,7 @@ frame_id = 4
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 148 )
+texture = SubResource( 32 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1130,7 +1130,7 @@ margin_left = 28.0
 margin_top = 28.0
 margin_right = 56.0
 margin_bottom = 56.0
-texture = SubResource( 149 )
+texture = SubResource( 33 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1142,7 +1142,7 @@ frame_id = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 150 )
+texture = SubResource( 34 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1152,7 +1152,7 @@ margin_left = 56.0
 margin_top = 28.0
 margin_right = 84.0
 margin_bottom = 56.0
-texture = SubResource( 151 )
+texture = SubResource( 35 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1164,7 +1164,7 @@ frame_id = 6
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 152 )
+texture = SubResource( 36 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1174,7 +1174,7 @@ margin_left = 84.0
 margin_top = 28.0
 margin_right = 112.0
 margin_bottom = 56.0
-texture = SubResource( 153 )
+texture = SubResource( 37 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1186,7 +1186,7 @@ frame_id = 7
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 154 )
+texture = SubResource( 38 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1195,7 +1195,7 @@ __meta__ = {
 margin_top = 56.0
 margin_right = 28.0
 margin_bottom = 84.0
-texture = SubResource( 155 )
+texture = SubResource( 39 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1207,7 +1207,7 @@ frame_id = 8
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 156 )
+texture = SubResource( 40 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1217,7 +1217,7 @@ margin_left = 28.0
 margin_top = 56.0
 margin_right = 56.0
 margin_bottom = 84.0
-texture = SubResource( 157 )
+texture = SubResource( 41 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1229,7 +1229,7 @@ frame_id = 9
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 158 )
+texture = SubResource( 42 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1239,7 +1239,7 @@ margin_left = 56.0
 margin_top = 56.0
 margin_right = 84.0
 margin_bottom = 84.0
-texture = SubResource( 159 )
+texture = SubResource( 43 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1251,7 +1251,7 @@ frame_id = 10
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 160 )
+texture = SubResource( 44 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1261,7 +1261,7 @@ margin_left = 84.0
 margin_top = 56.0
 margin_right = 112.0
 margin_bottom = 84.0
-texture = SubResource( 161 )
+texture = SubResource( 45 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1273,7 +1273,7 @@ frame_id = 11
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 162 )
+texture = SubResource( 46 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1282,7 +1282,7 @@ __meta__ = {
 margin_top = 84.0
 margin_right = 28.0
 margin_bottom = 112.0
-texture = SubResource( 163 )
+texture = SubResource( 47 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1294,7 +1294,7 @@ frame_id = 12
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 164 )
+texture = SubResource( 48 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1304,7 +1304,7 @@ margin_left = 28.0
 margin_top = 84.0
 margin_right = 56.0
 margin_bottom = 112.0
-texture = SubResource( 165 )
+texture = SubResource( 49 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1316,7 +1316,7 @@ frame_id = 13
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 166 )
+texture = SubResource( 50 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1326,7 +1326,7 @@ margin_left = 56.0
 margin_top = 84.0
 margin_right = 84.0
 margin_bottom = 112.0
-texture = SubResource( 167 )
+texture = SubResource( 51 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1338,7 +1338,7 @@ frame_id = 14
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 168 )
+texture = SubResource( 52 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1348,7 +1348,7 @@ margin_left = 84.0
 margin_top = 84.0
 margin_right = 112.0
 margin_bottom = 112.0
-texture = SubResource( 169 )
+texture = SubResource( 53 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1360,7 +1360,7 @@ frame_id = 15
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 170 )
+texture = SubResource( 54 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1369,7 +1369,7 @@ __meta__ = {
 margin_top = 112.0
 margin_right = 28.0
 margin_bottom = 140.0
-texture = SubResource( 171 )
+texture = SubResource( 55 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1381,7 +1381,7 @@ frame_id = 16
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 172 )
+texture = SubResource( 56 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1391,7 +1391,7 @@ margin_left = 28.0
 margin_top = 112.0
 margin_right = 56.0
 margin_bottom = 140.0
-texture = SubResource( 173 )
+texture = SubResource( 57 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1403,7 +1403,7 @@ frame_id = 17
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 174 )
+texture = SubResource( 58 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1413,7 +1413,7 @@ margin_left = 56.0
 margin_top = 112.0
 margin_right = 84.0
 margin_bottom = 140.0
-texture = SubResource( 175 )
+texture = SubResource( 59 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1425,7 +1425,7 @@ frame_id = 18
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 176 )
+texture = SubResource( 60 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1435,7 +1435,7 @@ margin_left = 84.0
 margin_top = 112.0
 margin_right = 112.0
 margin_bottom = 140.0
-texture = SubResource( 177 )
+texture = SubResource( 61 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -1447,7 +1447,7 @@ frame_id = 19
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 178 )
+texture = SubResource( 62 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1483,7 +1483,7 @@ margin_top = -72.5
 margin_right = 1.0
 margin_bottom = -0.5
 rect_scale = Vector2( 2, 2 )
-texture = SubResource( 179 )
+texture = SubResource( 63 )
 stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1499,7 +1499,7 @@ margin_top = -72.5
 margin_right = 1.0
 margin_bottom = -0.5
 rect_scale = Vector2( 2, 2 )
-texture = SubResource( 180 )
+texture = SubResource( 64 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1514,7 +1514,7 @@ margin_top = -72.5
 margin_right = 1.0
 margin_bottom = -0.5
 rect_scale = Vector2( 2, 2 )
-texture = SubResource( 181 )
+texture = SubResource( 65 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1529,7 +1529,7 @@ margin_top = -72.5
 margin_right = 1.0
 margin_bottom = -0.5
 rect_scale = Vector2( 2, 2 )
-texture = SubResource( 182 )
+texture = SubResource( 66 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1544,7 +1544,7 @@ margin_top = -72.5
 margin_right = 1.0
 margin_bottom = -0.5
 rect_scale = Vector2( 2, 2 )
-texture = SubResource( 183 )
+texture = SubResource( 67 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1559,7 +1559,7 @@ margin_top = -72.5
 margin_right = 1.0
 margin_bottom = -0.5
 rect_scale = Vector2( 2, 2 )
-texture = SubResource( 184 )
+texture = SubResource( 68 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1583,7 +1583,7 @@ margin_left = 20.9299
 margin_top = -79.0
 margin_right = 48.9299
 margin_bottom = -51.0
-texture = SubResource( 185 )
+texture = SubResource( 69 )
 stretch_mode = 3
 script = ExtResource( 4 )
 __meta__ = {
@@ -1598,12 +1598,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 186 )
+texture = SubResource( 70 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/Head"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 187 )
+texture = SubResource( 71 )
 
 [node name="Amulet" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes"]
 anchor_left = 0.5
@@ -1614,7 +1614,7 @@ margin_left = -47.0
 margin_top = -79.0
 margin_right = -19.0
 margin_bottom = -51.0
-texture = SubResource( 188 )
+texture = SubResource( 72 )
 stretch_mode = 3
 script = ExtResource( 4 )
 __meta__ = {
@@ -1629,12 +1629,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 189 )
+texture = SubResource( 73 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/Amulet"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 190 )
+texture = SubResource( 74 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1649,7 +1649,7 @@ margin_top = -42.5
 margin_right = -39.0
 margin_bottom = -14.5
 rect_pivot_offset = Vector2( 9.54713, 25.0399 )
-texture = SubResource( 191 )
+texture = SubResource( 75 )
 stretch_mode = 3
 script = ExtResource( 4 )
 __meta__ = {
@@ -1665,12 +1665,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 192 )
+texture = SubResource( 76 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/LArm"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 193 )
+texture = SubResource( 77 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1684,7 +1684,7 @@ margin_left = 41.0
 margin_top = -42.5
 margin_right = 69.0
 margin_bottom = -14.5
-texture = SubResource( 194 )
+texture = SubResource( 78 )
 stretch_mode = 3
 script = ExtResource( 4 )
 __meta__ = {
@@ -1700,12 +1700,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 195 )
+texture = SubResource( 79 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/RArm"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 196 )
+texture = SubResource( 80 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1719,7 +1719,7 @@ margin_left = -13.0
 margin_top = -8.49999
 margin_right = 15.0
 margin_bottom = 19.5
-texture = SubResource( 197 )
+texture = SubResource( 81 )
 stretch_mode = 3
 script = ExtResource( 4 )
 __meta__ = {
@@ -1735,12 +1735,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 198 )
+texture = SubResource( 82 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/Body"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 199 )
+texture = SubResource( 83 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1754,7 +1754,7 @@ margin_left = -56.0625
 margin_top = 31.375
 margin_right = -28.0625
 margin_bottom = 59.375
-texture = SubResource( 200 )
+texture = SubResource( 84 )
 stretch_mode = 3
 script = ExtResource( 4 )
 __meta__ = {
@@ -1770,12 +1770,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 201 )
+texture = SubResource( 85 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/LLeg"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 202 )
+texture = SubResource( 86 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1789,7 +1789,7 @@ margin_left = 28.0
 margin_top = 30.5
 margin_right = 56.0
 margin_bottom = 58.5
-texture = SubResource( 203 )
+texture = SubResource( 87 )
 stretch_mode = 3
 script = ExtResource( 4 )
 __meta__ = {
@@ -1805,12 +1805,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 204 )
+texture = SubResource( 88 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/RLeg"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 205 )
+texture = SubResource( 89 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1839,12 +1839,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 206 )
+texture = SubResource( 90 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/Shoes"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 207 )
+texture = SubResource( 91 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1874,12 +1874,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 208 )
+texture = SubResource( 92 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/LWeapon"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 209 )
+texture = SubResource( 93 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1909,12 +1909,12 @@ frame_type = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 210 )
+texture = SubResource( 94 )
 
 [node name="Preview" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Body/Boxes/RWeapon"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 211 )
+texture = SubResource( 95 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1942,14 +1942,14 @@ margin_left = 1.0
 margin_top = 1.0
 margin_right = 83.0
 margin_bottom = 10.0
-theme = SubResource( 116 )
+theme = SubResource( 101 )
 scroll_vertical_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Description/Description/ScrollContainer"]
-margin_bottom = 1.0
+margin_bottom = 5.0
 custom_fonts/font = ExtResource( 8 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Description/Description"]
@@ -1958,7 +1958,7 @@ margin_left = 1.0
 margin_top = 11.0
 margin_right = 16.052
 margin_bottom = 36.0
-theme = SubResource( 217 )
+theme = SubResource( 107 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1995,7 +1995,7 @@ frame_type = 1
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 218 )
+texture = SubResource( 108 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2026,7 +2026,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 219 )
+texture = SubResource( 109 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2047,7 +2047,7 @@ frame_type = 1
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 220 )
+texture = SubResource( 110 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2078,7 +2078,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 221 )
+texture = SubResource( 111 )
 
 [node name="TextureRect3" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
 margin_left = 56.0
@@ -2102,7 +2102,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 222 )
+texture = SubResource( 112 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2133,7 +2133,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 223 )
+texture = SubResource( 113 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2160,7 +2160,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 224 )
+texture = SubResource( 114 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2191,7 +2191,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 225 )
+texture = SubResource( 115 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2218,7 +2218,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 226 )
+texture = SubResource( 116 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2249,7 +2249,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 227 )
+texture = SubResource( 117 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2276,7 +2276,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 228 )
+texture = SubResource( 118 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2307,7 +2307,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 229 )
+texture = SubResource( 119 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2335,7 +2335,7 @@ margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 224, -63.9091 )
-texture = SubResource( 230 )
+texture = SubResource( 120 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2366,7 +2366,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 231 )
+texture = SubResource( 121 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
