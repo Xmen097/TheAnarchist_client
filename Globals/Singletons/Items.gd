@@ -52,7 +52,7 @@ var items = {
 	Leather_shoes = Item.new(types.Shoes, 25, "Kožené boty", ""),
 	Cutlass = Item.new(types.Weapon, 26, "Šavle", ""),
 	Necklace = Item.new(types.Amulet, 27, "Smaragdový náhrdelník", ""),
-	Acid = Item.new(types.Usable, 28, "Šmahajova kyselinka", ""),
+	Acid = Item.new(types.Usable, 28, "Šmahajova kyselinka", "[img]res://Scenes/UI/assets/AoE.png[/img]"),
 }
 
 class Item:

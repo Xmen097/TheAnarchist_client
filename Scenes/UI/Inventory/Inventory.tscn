@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=2]
+[gd_scene load_steps=148 format=2]
 
 [ext_resource path="res://Scenes/UI/assets/armor.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/UI/boxes/frame_weapon.png" type="Texture" id=2]
@@ -422,15 +422,25 @@ HScrollBar/styles/grabber_pressed = SubResource( 98 )
 HScrollBar/styles/scroll = SubResource( 99 )
 HScrollBar/styles/scroll_focus = SubResource( 100 )
 
-[sub_resource type="StyleBoxEmpty" id=102]
+[sub_resource type="StyleBoxEmpty" id=122]
 
-[sub_resource type="StyleBoxEmpty" id=103]
+[sub_resource type="StyleBoxEmpty" id=123]
 
-[sub_resource type="StyleBoxEmpty" id=104]
+[sub_resource type="StyleBoxEmpty" id=124]
 
-[sub_resource type="StyleBoxEmpty" id=105]
+[sub_resource type="StyleBoxEmpty" id=125]
 
-[sub_resource type="StyleBoxEmpty" id=106]
+[sub_resource type="StyleBoxEmpty" id=126]
+
+[sub_resource type="StyleBoxEmpty" id=127]
+
+[sub_resource type="StyleBoxEmpty" id=128]
+
+[sub_resource type="StyleBoxEmpty" id=129]
+
+[sub_resource type="StyleBoxEmpty" id=130]
+
+[sub_resource type="StyleBoxEmpty" id=131]
 
 [sub_resource type="Theme" id=107]
 default_font = ExtResource( 8 )
@@ -438,11 +448,20 @@ HScrollBar/icons/decrement = null
 HScrollBar/icons/decrement_highlight = null
 HScrollBar/icons/increment = null
 HScrollBar/icons/increment_highlight = null
-HScrollBar/styles/grabber = SubResource( 102 )
-HScrollBar/styles/grabber_highlight = SubResource( 103 )
-HScrollBar/styles/grabber_pressed = SubResource( 104 )
-HScrollBar/styles/scroll = SubResource( 105 )
-HScrollBar/styles/scroll_focus = SubResource( 106 )
+HScrollBar/styles/grabber = SubResource( 122 )
+HScrollBar/styles/grabber_highlight = SubResource( 123 )
+HScrollBar/styles/grabber_pressed = SubResource( 124 )
+HScrollBar/styles/scroll = SubResource( 125 )
+HScrollBar/styles/scroll_focus = SubResource( 126 )
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = SubResource( 127 )
+VScrollBar/styles/grabber_highlight = SubResource( 128 )
+VScrollBar/styles/grabber_pressed = SubResource( 129 )
+VScrollBar/styles/scroll = SubResource( 130 )
+VScrollBar/styles/scroll_focus = SubResource( 131 )
 
 [sub_resource type="AtlasTexture" id=108]
 atlas = ExtResource( 19 )
