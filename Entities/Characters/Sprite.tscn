@@ -278,7 +278,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, -10 ), Vector2( 0, -10 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -9 ), Vector2( 0, -10 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 length = 0.675
 loop = true
 step = 0.075
@@ -1071,7 +1071,7 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = -1
 script = ExtResource( 6 )
-frame = Vector2( 6, 0 )
+frame = Vector2( 1, 0 )
 node_paths = [ NodePath("Torso"), NodePath("leg_right"), NodePath("leg_left"), NodePath("shoe_right"), NodePath("shoe_left"), NodePath("head"), NodePath("hand_right"), NodePath("hand_left") ]
 
 [node name="Torso" type="Sprite" parent="."]
@@ -1111,7 +1111,7 @@ vframes = 14
 hframes = 10
 
 [node name="Weapons" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1, -9 )
+position = Vector2( 1, -10 )
 
 [node name="hand_right" type="Sprite" parent="."]
 texture = SubResource( 7 )
@@ -1130,7 +1130,7 @@ hframes = 10
 tree_root = ExtResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 9 )
+parameters/playback = SubResource( 22 )
 parameters/Idle/blend_position = Vector2( 0.00110006, 0.955446 )
 parameters/Kick/blend_position = Vector2( -0.997897, 0.0317125 )
 parameters/Roll/blend_position = Vector2( 0, 0 )
@@ -1139,17 +1139,17 @@ parameters/Walk/blend_position = Vector2( 0.0430797, 0.878049 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1
 anims/falling = ExtResource( 4 )
-anims/idle_back = SubResource( 10 )
-anims/idle_backside = SubResource( 11 )
+anims/idle_back = SubResource( 9 )
+anims/idle_backside = SubResource( 10 )
 anims/idle_front = ExtResource( 3 )
-anims/idle_frontside = SubResource( 12 )
-anims/kick_back = SubResource( 13 )
-anims/kick_front = SubResource( 14 )
-anims/roll_back = SubResource( 15 )
-anims/roll_backside = SubResource( 16 )
-anims/roll_front = SubResource( 17 )
-anims/roll_frontside = SubResource( 18 )
-anims/walk_back = SubResource( 19 )
-anims/walk_backside = SubResource( 20 )
-anims/walk_front = SubResource( 21 )
-anims/walk_frontside = SubResource( 22 )
+anims/idle_frontside = SubResource( 11 )
+anims/kick_back = SubResource( 12 )
+anims/kick_front = SubResource( 13 )
+anims/roll_back = SubResource( 14 )
+anims/roll_backside = SubResource( 15 )
+anims/roll_front = SubResource( 16 )
+anims/roll_frontside = SubResource( 17 )
+anims/walk_back = SubResource( 18 )
+anims/walk_backside = SubResource( 19 )
+anims/walk_front = SubResource( 20 )
+anims/walk_frontside = SubResource( 21 )

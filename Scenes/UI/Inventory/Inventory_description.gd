@@ -5,11 +5,10 @@ extends TextureRect
 # var a = 2
 # var b = "text"
 
-onready var label = $RichTextLabel
-export var maxlen = 8
-var text = ""
-var orig_len = 0
+onready var scroll = $ScrollContainer
+onready var label = $ScrollContainer/Label
 var time = 0
+var text = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,8 +18,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta
-	if orig_len: # TODO: fix, does not really work
-		label.bbcode_text = "[shake freq=5 level=5]" + text.substr(int(time*4)%orig_len, 15) + "[/shake]"
+	if text:
+		scroll.scroll_horizontal = int(time*20)%(5*(len(text)+3))
 
 
 func _on_item_hovered(item, id, type):
@@ -29,5 +28,4 @@ func _on_item_hovered(item, id, type):
 		text = text.replace(x[0], x[1])
 		text = text.replace(x[0].to_upper(), x[1].to_upper())
 	
-	orig_len = len(text)
-	text = "   " + text + "   " + text
+	label.text = text + "   " + text

@@ -69,20 +69,20 @@ func swing(damage): # will be called from Player gameobject (not this script)
 		if armor[armor.keys()[i]] != Items.armor_type.Destroyed and armor.keys()[i] != "torso":
 			possible_targets.append(i)
 			
-	var hit_target = possible_targets[floor(rand_range(0, len(possible_targets)))]
-	var target_key = armor.keys()[hit_target]
-	
-	if armor[target_key] == Items.armor_type.None: # no armor
-		body_health[target_key] -= damage
-		emit_signal("body_damaged", body_health[target_key], hit_target)
-		if body_health[target_key] <= 0:
-			armor[target_key] = Items.armor_type.Destroyed
-			emit_signal("armor_changed", Items.armor_type.Destroyed, hit_target)
-	elif armor[target_key] != Items.armor_type.Destroyed: # has armor
-		body[hit_target].durability -= damage
-		emit_signal("armor_damaged", body[hit_target].durability, hit_target)
-		if body[hit_target].durability <= 0:
-			_on_item_changed(Items.items.None, hit_target, frame_type.Body);
+	if possible_targets:
+		var hit_target = possible_targets[floor(rand_range(0, len(possible_targets)))]
+		
+		if armor[target_key] == Items.armor_type.None: # no armor
+			body_health[target_key] -= damage
+			emit_signal("body_damaged", body_health[target_key], hit_target)
+			if body_health[target_key] <= 0:
+				armor[target_key] = Items.armor_type.Destroyed
+				emit_signal("armor_changed", Items.armor_type.Destroyed, hit_target)
+		elif armor[target_key] != Items.armor_type.Destroyed: # has armor
+			body[hit_target].durability -= damage
+			emit_signal("armor_damaged", body[hit_target].durability, hit_target)
+			if body[hit_target].durability <= 0:
+				_on_item_changed(Items.items.None, hit_target, frame_type.Body);
 			
 func stab(damage):
 	if not stats.vulnerable:
