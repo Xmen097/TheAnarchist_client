@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=2]
+[gd_scene load_steps=148 format=2]
 
 [ext_resource path="res://Scenes/UI/assets/armor.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/UI/boxes/frame_weapon.png" type="Texture" id=2]
@@ -422,29 +422,46 @@ HScrollBar/styles/grabber_pressed = SubResource( 98 )
 HScrollBar/styles/scroll = SubResource( 99 )
 HScrollBar/styles/scroll_focus = SubResource( 100 )
 
-[sub_resource type="AtlasTexture" id=102]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
+[sub_resource type="StyleBoxEmpty" id=122]
 
-[sub_resource type="AtlasTexture" id=103]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
+[sub_resource type="StyleBoxEmpty" id=123]
 
-[sub_resource type="AtlasTexture" id=104]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
+[sub_resource type="StyleBoxEmpty" id=124]
 
-[sub_resource type="AtlasTexture" id=105]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
+[sub_resource type="StyleBoxEmpty" id=125]
 
-[sub_resource type="AtlasTexture" id=106]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 28, 28 )
+[sub_resource type="StyleBoxEmpty" id=126]
 
-[sub_resource type="AtlasTexture" id=107]
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 5, 9 )
+[sub_resource type="StyleBoxEmpty" id=127]
+
+[sub_resource type="StyleBoxEmpty" id=128]
+
+[sub_resource type="StyleBoxEmpty" id=129]
+
+[sub_resource type="StyleBoxEmpty" id=130]
+
+[sub_resource type="StyleBoxEmpty" id=131]
+
+[sub_resource type="Theme" id=107]
+default_font = ExtResource( 8 )
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = SubResource( 122 )
+HScrollBar/styles/grabber_highlight = SubResource( 123 )
+HScrollBar/styles/grabber_pressed = SubResource( 124 )
+HScrollBar/styles/scroll = SubResource( 125 )
+HScrollBar/styles/scroll_focus = SubResource( 126 )
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = SubResource( 127 )
+VScrollBar/styles/grabber_highlight = SubResource( 128 )
+VScrollBar/styles/grabber_pressed = SubResource( 129 )
+VScrollBar/styles/scroll = SubResource( 130 )
+VScrollBar/styles/scroll_focus = SubResource( 131 )
 
 [sub_resource type="AtlasTexture" id=108]
 atlas = ExtResource( 19 )
@@ -475,6 +492,30 @@ atlas = ExtResource( 19 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=121]
 atlas = ExtResource( 21 )
 region = Rect2( 0, 0, 5, 9 )
 
@@ -1927,8 +1968,20 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Description/Description/ScrollContainer"]
-margin_bottom = 1.0
+margin_bottom = 5.0
 custom_fonts/font = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Description/Description"]
+anchor_right = 0.797
+margin_left = 1.0
+margin_top = 11.0
+margin_right = 16.052
+margin_bottom = 36.0
+theme = SubResource( 107 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Hotbar" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom"]
 margin_left = 92.0
@@ -1961,7 +2014,7 @@ frame_type = 1
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 102 )
+texture = SubResource( 108 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1992,7 +2045,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 103 )
+texture = SubResource( 109 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2013,7 +2066,7 @@ frame_type = 1
 [node name="Item" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer/TextureRect2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 104 )
+texture = SubResource( 110 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2044,7 +2097,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 105 )
+texture = SubResource( 111 )
 
 [node name="TextureRect3" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Bottom/Hotbar/HBoxContainer"]
 margin_left = 56.0
@@ -2068,7 +2121,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 106 )
+texture = SubResource( 112 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2099,7 +2152,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 107 )
+texture = SubResource( 113 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2126,7 +2179,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 108 )
+texture = SubResource( 114 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2157,7 +2210,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 109 )
+texture = SubResource( 115 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2184,7 +2237,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 110 )
+texture = SubResource( 116 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2215,7 +2268,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 111 )
+texture = SubResource( 117 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2242,7 +2295,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 112 )
+texture = SubResource( 118 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2273,7 +2326,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 113 )
+texture = SubResource( 119 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2301,7 +2354,7 @@ margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 224, -63.9091 )
-texture = SubResource( 114 )
+texture = SubResource( 120 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2332,7 +2385,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 115 )
+texture = SubResource( 121 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
