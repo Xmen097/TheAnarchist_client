@@ -117,8 +117,9 @@ func roll():
 		rotation_degrees = -0
 	
 func kick():
-	state = states.Kicking
-	animation_mode.travel("Kick")
+	if state != states.Rolling:
+		state = states.Kicking
+		animation_mode.travel("Kick")
 	
 func fall(): # Called from Falling_area
 	state = states.Falling

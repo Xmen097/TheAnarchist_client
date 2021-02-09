@@ -1,15 +1,11 @@
 extends PanelContainer
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _input(event): #Call methods on hands on click event
+	if not visible and event.is_action_pressed("ui_cancel"):
+		visible = true
+	if event.is_action_pressed("open_inventory"):
+		visible = !visible
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	visible = true
-
-func _input(event): #Call methods on hands on click event
-		if event.is_action_pressed("open_inventory"):
-			visible = !visible
