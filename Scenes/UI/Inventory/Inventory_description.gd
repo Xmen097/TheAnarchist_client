@@ -54,4 +54,4 @@ func _on_item_hovered(item, id, type):
 		Items.types.Amulet:
 			type_ = "N"
 	
-	desc.bbcode_text = "Typ: " + type_  + "\n\n" + item.description
+	desc.bbcode_text = "Typ: " + type_  + "\n" + item.description
