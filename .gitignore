@@ -11,3 +11,6 @@ data_*/
 
 # Mac-specific ignores
 .DS_Store
+
+# git mergetools relicts
+*.orig
