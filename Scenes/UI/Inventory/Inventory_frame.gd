@@ -65,7 +65,7 @@ func get_drag_data(_pos):
 func can_drop_data(_pos, data):
 	return item == Items.items.None and \
 	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
-	not (frame_type == Player.frame_type.Body and Player.armor[Player.armor.keys()[frame_id]] == Items.armor_type.Destroyed) or\
+	not (frame_type == Player.frame_type.Body and Player.body[Player.body.keys()[frame_id]].armor == Items.armor_type.Destroyed) or\
 	is_trash
 	
 func drop_data(_pos, data):

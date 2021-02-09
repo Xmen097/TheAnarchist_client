@@ -1071,6 +1071,11 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = -1
 script = ExtResource( 6 )
+<<<<<<< HEAD
+frame = Vector2( 6, 0 )
+=======
+frame = Vector2( 1, 0 )
+>>>>>>> fcb0c9e51cff899e4c17052eaaeee865a5e5e189
 node_paths = [ NodePath("Torso"), NodePath("leg_right"), NodePath("leg_left"), NodePath("shoe_right"), NodePath("shoe_left"), NodePath("head"), NodePath("hand_right"), NodePath("hand_left") ]
 
 [node name="Torso" type="Sprite" parent="."]
@@ -1110,7 +1115,7 @@ vframes = 14
 hframes = 10
 
 [node name="Weapons" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1, -10 )
+position = Vector2( 1, -9 )
 
 [node name="hand_right" type="Sprite" parent="."]
 texture = SubResource( 7 )

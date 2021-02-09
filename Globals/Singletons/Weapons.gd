@@ -76,7 +76,7 @@ class Melee extends Node2D:
 			state = states.Blocking
 			animation_mode.travel(data.block_animation)
 
-	func prepare(animation_mode):
+	func prepare(_animation_mode):
 		if state != states.Preparing:
 			state = states.Preparing
 

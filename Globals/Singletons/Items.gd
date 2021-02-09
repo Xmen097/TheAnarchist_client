@@ -74,9 +74,11 @@ class Item:
 class Armor extends Item:
 	var armor_type
 	var durability
+	var max_durability
 	func _init(new_type, new_id, new_tooltip, new_description, new_armor_type, new_durability).(new_type, new_id, new_tooltip, new_description):
 		self.armor_type = new_armor_type
-		self.durability = new_durability	
+		self.durability = new_durability
+		self.max_durability = new_durability
 		
 	func duplicate():
 		var dup = Armor.new(self.type, self.id, self.tooltip, self.description, self.armor_type, self.durability)

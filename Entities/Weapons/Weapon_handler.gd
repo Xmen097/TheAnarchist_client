@@ -23,8 +23,9 @@ func ready():
 	active_weapon = weapons[weapon_id]
 	active_weapon.init(weapon_animation_mode, target)
 
-func idle(): #this will be called from animation
-	active_weapon.idle(weapon_animation_mode)
+func idle(unprepare=false): #this will be called from animation
+	if active_weapon.state != Weapons.states.Preparing or unprepare:
+		active_weapon.idle(weapon_animation_mode)
 	
 func primary_attack():
 	if active_weapon.type == "Melee":

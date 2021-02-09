@@ -95,7 +95,7 @@ func _input(event): #  Call methods on hands on click event
 		elif event.is_action_pressed("prepare"):
 			weapons.prepare()
 		elif event.is_action_released("prepare"):
-			weapons.idle()
+			weapons.idle(true)
 		elif event.is_action_pressed("roll"):
 			roll()
 		elif event.is_action_pressed("kick"):
@@ -130,7 +130,6 @@ func change_state(state_id): #called from animations
 		Player.stats.vulnerable = true
 
 func hit(type, damage): # Will apply damage, called from weapons
-	print(weapons.active_weapon.state)
 	if type == Weapons.types.Swing and weapons.active_weapon.state != Weapons.states.Blocking:
 		Player.swing(damage)
 	elif type == Weapons.types.Stab and weapons.active_weapon.state != Weapons.states.Preparing:
