@@ -25,7 +25,8 @@ var body = {
 }
 
 var stats = {
-	vulnerable = true
+	vulnerable = true,
+	flag = false
 }
 
 

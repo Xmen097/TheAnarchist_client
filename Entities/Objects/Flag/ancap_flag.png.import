@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/team_box_red.png-cfce0c7a844029e4e5830a83c69df72e.stex"
+path="res://.import/ancap_flag.png-45b2e7ecac22de1940f4a018da5a3214.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/overlay/team_box/team_box_red.png"
-dest_files=[ "res://.import/team_box_red.png-cfce0c7a844029e4e5830a83c69df72e.stex" ]
+source_file="res://Entities/Objects/Flag/ancap_flag.png"
+dest_files=[ "res://.import/ancap_flag.png-45b2e7ecac22de1940f4a018da5a3214.stex" ]
 
 [params]
 
