@@ -12,7 +12,6 @@ onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprites = $Sprite
 onready var weapons = $Sprite/Weapons
 onready var kick_range = $KickRange
-export(Weapons.weapons) var weapon
 
 enum states {
 	Idle,
@@ -28,11 +27,11 @@ var velocity
 
 func _init():
 	Player.player_ref = self
+	var success = Player.connect("weapon_changed", self, "_on_weapon_changed")
+	assert(!success, "Inventory frame failed to connect to events!")
 
 func _ready():
-	weapons.weapon_id = weapon
-	weapons.target = Weapons.targets.Enemy
-	weapons.ready()
+	weapons.ready(Weapons.targets.Enemy)
 	scale = Vector2(1,1)
 
 func _physics_process(delta):
@@ -147,3 +146,5 @@ func die(): # hide from from scene and then remove. Should be replaced with deat
 	animation_mode.stop()
 	queue_free()
 
+func _on_weapon_changed(weapon):
+	weapons.change_weapon(weapon)

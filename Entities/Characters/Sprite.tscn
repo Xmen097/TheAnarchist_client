@@ -1086,6 +1086,7 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = 1
 script = ExtResource( 6 )
+frame = Vector2( 2, 0 )
 
 [node name="torso" type="Sprite" parent="."]
 texture = ExtResource( 1 )

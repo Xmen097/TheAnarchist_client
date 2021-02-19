@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Maps/Assets/tilesets/map.tres" type="TileSet" id=1]
 [ext_resource path="res://Entities/Characters/AI/AI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Characters/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Maps/Falling_area.gd" type="Script" id=4]
+[ext_resource path="res://Entities/Characters/Vendor/Vendor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entities/Objects/Flag/Flag.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
@@ -74,25 +75,28 @@ collision_mask = 7
 format = 1
 tile_data = PoolIntArray( 4, 6, 1, 5, 6, 196610, 6, 6, 196610, 7, 6, 196610, 8, 6, 196610, 9, 6, 196610, 10, 6, 196610, 11, 6, 3, 65539, 6, 1, 65540, 6, 131075, 65547, 6, 131073, 65548, 6, 3, 131075, 6, 131072, 131084, 6, 65536, 196620, 6, 131072, 327683, 6, 0, 327692, 6, 0, 393219, 6, 65536, 393228, 6, 65536, 458755, 6, 131073, 458756, 6, 3, 458763, 6, 1, 458764, 6, 131075, 524292, 6, 131073, 524293, 6, 196610, 524294, 6, 196610, 524295, 6, 196610, 524296, 6, 196610, 524297, 6, 196610, 524298, 6, 196610, 524299, 6, 131075 )
 
-[node name="Player" parent="Foreground" instance=ExtResource( 3 )]
-position = Vector2( 43, 167 )
+[node name="Entities" type="YSort" parent="Foreground"]
 
-[node name="AI3" parent="Foreground" instance=ExtResource( 2 )]
+[node name="Player" parent="Foreground/Entities" instance=ExtResource( 3 )]
+position = Vector2( 42, 167 )
+
+[node name="AI3" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( -128, 149 )
+weapon = 2
+personality = 1
+
+[node name="AI4" parent="Foreground/Entities" instance=ExtResource( 2 )]
+position = Vector2( -135, 7 )
 weapon = 1
 personality = 1
 
-[node name="AI4" parent="Foreground" instance=ExtResource( 2 )]
-position = Vector2( -135, 7 )
-personality = 1
-
-[node name="AI" parent="Foreground" instance=ExtResource( 2 )]
+[node name="AI" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( 3, 18 )
 personality = 2
 
-[node name="AI2" parent="Foreground" instance=ExtResource( 2 )]
+[node name="AI2" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( 321, 87 )
 
-[node name="Vendor" parent="Foreground" instance=ExtResource( 6 )]
-position = Vector2( 13, 149 )
+[node name="Vendor" parent="Foreground/Entities" instance=ExtResource( 5 )]
+position = Vector2( -35, 167 )
 [connection signal="body_entered" from="Background/Falling_area" to="Background/Falling_area" method="_on_Falling_area_body_entered"]

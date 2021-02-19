@@ -32,9 +32,8 @@ export var max_hp = 100
 
 
 func _ready():
-	weapons.weapon_id = weapon
-	weapons.target = Weapons.targets.Player
-	weapons.ready()
+	weapons.ready(Weapons.targets.Player)
+	weapons.change_weapon(weapon)
 	hp = max_hp
 	scale = Vector2(1,1)
 

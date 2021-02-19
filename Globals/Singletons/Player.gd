@@ -6,14 +6,16 @@ var items = {
 	hotbar = [],
 	inventory = [],
 	body = [],
+	hands = [],
 }
 
-enum frame_type {Inventory, Hotbar, Body, Backpack, Trash, Shop}
+enum frame_type {Inventory, Hotbar, Body, Backpack, Trash, Shop, Weapon, Amulet, Shoes}
 signal item_changed(new_item, id, type)
 signal item_hovered(item, id, type)
 signal armor_changed(body_part) # on change of armor, or destroy
 signal armor_damaged(body_part) # decrease of durability of armor
 signal body_damaged(body_part) # decrease of durability of body part
+signal weapon_changed(weapon) # on weapon change
 
 var body = {
 	head = {health = 150, max_health = 150, armor = Items.armor_type.None, id="head", item_id=0 },
@@ -37,6 +39,8 @@ func _init():
 		items.inventory.append(Items.items.None)
 	for _a in range(10):
 		items.body.append(Items.items.None)
+	for _a in range(2):
+		items.hands.append(Weapons.weapons.None)
 	randomize() # generate a new global seed
  
 func get_reference(): # returns reference to Player gameobject (not this script)
@@ -47,6 +51,11 @@ func _on_item_changed(new_item, id, type): # called from inventory_frames and ot
 		items.hotbar[id] = new_item
 	elif type == frame_type.Inventory:
 		items.inventory[id] = new_item
+	elif type == frame_type.Weapon:
+		if new_item != Items.items.None:
+			emit_signal("weapon_changed", new_item.weapon)
+		else:
+			emit_signal("weapon_changed", Weapons.weapons.None)
 	elif type == frame_type.Body:
 		items.body[id] = new_item
 		if new_item == Items.items.None:

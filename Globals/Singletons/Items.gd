@@ -50,7 +50,7 @@ var items = {
 	Moss_armplate = Armor.new(types.Arm_armor, 23, "Lišejníkový nárameník", "", armor_type.Moss, 100),
 	Moss_helmet = Armor.new(types.Head_armor, 24, "Lišejníková helma", "", armor_type.Moss, 100),
 	Leather_shoes = Item.new(types.Shoes, 25, "Kožené boty", ""),
-	Cutlass = Item.new(types.Weapon, 26, "Šavle", ""),
+	Cutlass = Weapon.new(types.Weapon, 26, "Šavle", "", Weapons.weapons.Cutlass),
 	Necklace = Item.new(types.Amulet, 27, "Smaragdový náhrdelník", ""),
 	Acid = Item.new(types.Usable, 28, "Šmahajova kyselinka", "[img]res://Scenes/UI/assets/AoE.png[/img][img]res://Scenes/UI/assets/throwable.png[/img]"),
 }
@@ -82,4 +82,13 @@ class Armor extends Item:
 		
 	func duplicate():
 		var dup = Armor.new(self.type, self.id, self.tooltip, self.description, self.armor_type, self.durability)
+		return dup
+		
+class Weapon extends Item:
+	var weapon
+	func _init(new_type, new_id, new_tooltip, new_description, new_weapon).(new_type, new_id, new_tooltip, new_description):
+		self.weapon = new_weapon
+		
+	func duplicate():
+		var dup = Weapon.new(self.type, self.id, self.tooltip, self.description, self.weapon)
 		return dup

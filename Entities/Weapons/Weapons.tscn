@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Entities/Weapons/Cutlass/cutlass.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Weapons/Halberd/Halberd_spritesheet.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Entities/Weapons/Bow/Bow.gd" type="Script" id=6]
 [ext_resource path="res://Entities/Weapons/Halberd/Halberd.gd" type="Script" id=7]
 [ext_resource path="res://Entities/Weapons/Weapon_handler.gd" type="Script" id=8]
+[ext_resource path="res://Entities/Weapons/None.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Bow_Idle"
@@ -332,7 +333,7 @@ states/Halberd_Idle/position = Vector2( -1005, -189 )
 states/Halberd_Stab/node = SubResource( 18 )
 states/Halberd_Stab/position = Vector2( -739, -189 )
 transitions = [ "Cutlass_Swing", "Cutlass_Idle", SubResource( 19 ), "Cutlass_Idle", "Cutlass_Swing", SubResource( 20 ), "Halberd_Idle", "Halberd_Stab", SubResource( 21 ), "Halberd_Stab", "Halberd_Idle", SubResource( 22 ), "Cutlass_Idle", "Cutlass_Stab", SubResource( 23 ), "Cutlass_Stab", "Cutlass_Idle", SubResource( 24 ), "Bow_Idle", "Bow_Prime", SubResource( 25 ), "Bow_Prime", "Bow_Idle", SubResource( 26 ), "Bow_Prime", "Bow_Shoot", SubResource( 27 ), "Bow_Shoot", "Bow_Idle", SubResource( 28 ), "Cutlass_Idle", "Cutlass_Block", SubResource( 29 ), "Cutlass_Block", "Cutlass_Idle", SubResource( 30 ) ]
-graph_offset = Vector2( -1555, -688 )
+graph_offset = Vector2( -1525, -614 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=32]
 
@@ -357,6 +358,10 @@ tree_root = SubResource( 31 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 32 )
+
+[node name="None" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 9 )
 
 [node name="Cutlass" type="Node2D" parent="."]
 visible = false

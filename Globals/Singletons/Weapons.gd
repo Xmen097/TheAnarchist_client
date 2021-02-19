@@ -6,6 +6,7 @@ func _ready():
 	projectiles_root = get_tree().get_root().get_node("Game/ViewportContainer/Viewport/ProjectilesContainer")
 
 enum weapons {
+	None,
 	Cutlass, 
 	Halberd, 
 	Bow,
@@ -42,6 +43,7 @@ class Melee extends Node2D:
 		primary_range = 0,
 		seconary_range = 0,
 	}
+	var has_idle
 	var has_primary
 	var has_secondary
 	var has_block
@@ -56,8 +58,9 @@ class Melee extends Node2D:
 
 	func idle(animation_mode):
 		if state != states.Idle:
-			animation_mode.travel(data.idle_animation)
 			state = states.Idle
+			if has_idle:
+				animation_mode.travel(data.idle_animation)
 
 	func primary_attack(animation_mode):
 		if state != states.Idle or not has_primary:
@@ -80,16 +83,24 @@ class Melee extends Node2D:
 		if state != states.Preparing:
 			state = states.Preparing
 
-	func init(animation_mode, target):
-		animation_mode.start(data.idle_animation)
-		visible = true
+	func init(target):
 		if has_primary:
 			primary_area.set_collision_mask_bit(target, true)
 		if has_secondary:
 			secondary_area.set_collision_mask_bit(target, true)
+			
+	func set_active(animation_mode):
+		visible = true
+		if has_idle:
+			animation_mode.start(data.idle_animation)
 
 	func _ready(): # Get all necessary references
-		sprite = $Sprite
+		has_idle = true if data.idle_animation != "" else false
+		has_primary = true if data.primary_animation != "" else false
+		has_secondary = true if data.secondary_animation != "" else false
+		has_block = true if data.block_animation != "" else false
+		if has_idle:
+			sprite = $Sprite
 		if has_primary:
 			primary_area = $Primary
 			primary_collider = $Primary/Collider
@@ -109,14 +120,16 @@ class Melee extends Node2D:
 
 	func look_at_mouse(mouse_angle, mirrored): #Weapon will look at mouse
 		if mirrored:
-			sprite.frame_coords.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
+			if has_idle:
+				sprite.frame_coords.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
 			if has_primary:
 				primary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
 			if has_secondary:
 				secondary_collider.rotation_degrees = mouse_angle - sign(mouse_angle)*180
 			pass
 		else:
-			sprite.frame_coords.y = round((mouse_angle + 100) / 10)
+			if has_idle:
+				sprite.frame_coords.y = round((mouse_angle + 100) / 10)
 			if has_primary:
 				primary_collider.rotation_degrees = -mouse_angle
 			if has_secondary:
@@ -168,9 +181,12 @@ class Ranged extends Node2D:
 		animation_mode.travel(data.secondary_animation)
 		attacking = true
 
-	func init(animation_mode, _target):
+	func set_active(animation_mode):
 		animation_mode.start(data.idle_animation)
 		visible = true
+		
+	func init(_animation_mode):
+		pass # needed for compatibility with meele weapons
 
 	func _ready(): # Get all necessary references
 		weapon_sprite = $Weapon
