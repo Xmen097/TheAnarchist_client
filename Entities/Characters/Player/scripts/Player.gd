@@ -11,6 +11,7 @@ onready var animation_tree = $Sprite/AnimationTree
 onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprites = $Sprite
 onready var weapons = $Sprite/Weapons
+onready var kick_range = $KickRange
 export(Weapons.weapons) var weapon
 
 enum states {
@@ -120,7 +121,12 @@ func kick():
 	if state != states.Rolling:
 		state = states.Kicking
 		animation_mode.travel("Kick")
-	
+		
+func kicking(): # called from animation, will kick enemies in range
+	var areas = kick_range.inside();
+	for area in areas:
+		area.kick(position, kick_strength)
+
 func fall(): # Called from Falling_area
 	state = states.Falling
 	animation_mode.start("Falling") # Immidiately switch to falling

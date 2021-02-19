@@ -5,18 +5,18 @@
 [ext_resource path="res://Entities/Characters/Player/animations/Tree.tres" type="AnimationNodeStateMachine" id=3]
 [ext_resource path="res://Entities/Characters/Hitbox.gd" type="Script" id=14]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=23]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 8.96112, 3.96917 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=28]
 radius = 35.0
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=29]
 radius = 100.0
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 11.574, 13.5608 )
 
 [node name="AI" type="KinematicBody2D" groups=[
@@ -34,7 +34,7 @@ speed = 75
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = ExtResource( 3 )
 anim_player = NodePath("../Sprite/AnimationPlayer")
-parameters/playback = SubResource( 1 )
+parameters/playback = SubResource( 23 )
 parameters/Idle/blend_position = Vector2( 0.0181191, -0.875 )
 parameters/Kick/blend_position = Vector2( 0, 0 )
 parameters/Roll/blend_position = Vector2( 0, 0 )
@@ -44,7 +44,7 @@ parameters/Walk/blend_position = Vector2( 0.000862837, 1 )
 visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -4 )
-shape = SubResource( 2 )
+shape = SubResource( 24 )
 
 [node name="Sprite" parent="." instance=ExtResource( 1 )]
 z_index = 1
@@ -58,7 +58,7 @@ collision_mask = 1024
 
 [node name="CollisionShape" type="CollisionShape2D" parent="AttackRange"]
 position = Vector2( 0, 7 )
-shape = SubResource( 3 )
+shape = SubResource( 28 )
 
 [node name="FollowRange" type="Area2D" parent="."]
 visible = false
@@ -67,7 +67,7 @@ collision_layer = 2147483648
 collision_mask = 1024
 
 [node name="CollisionShape" type="CollisionShape2D" parent="FollowRange"]
-shape = SubResource( 4 )
+shape = SubResource( 29 )
 
 [node name="Hitbox" type="Area2D" parent="."]
 position = Vector2( 0, -12 )
@@ -78,7 +78,7 @@ script = ExtResource( 14 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 visible = false
 modulate = Color( 1, 0.960784, 0, 1 )
-shape = SubResource( 5 )
+shape = SubResource( 30 )
 [connection signal="area_entered" from="AttackRange" to="." method="_on_AttackRange_entered"]
 [connection signal="area_exited" from="AttackRange" to="." method="_on_AttackRange_exited"]
 [connection signal="area_entered" from="FollowRange" to="." method="_on_FollowRange_entered"]

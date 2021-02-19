@@ -3,8 +3,8 @@
 [ext_resource path="res://Entities/Characters/Sprite.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Entities/Characters/Player/scripts/Camera_pixel_perfect.gd" type="Script" id=2]
 [ext_resource path="res://Entities/Characters/Player/scripts/Player.gd" type="Script" id=3]
+[ext_resource path="res://Entities/Weapons/Inside_range.gd" type="Script" id=4]
 [ext_resource path="res://Entities/Characters/Hitbox.gd" type="Script" id=15]
-[ext_resource path="res://Entities/Characters/Player/light.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 4 )
@@ -13,7 +13,7 @@ extents = Vector2( 7, 4 )
 extents = Vector2( 9, 11 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 14.0357
+radius = 10.0499
 
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
@@ -22,24 +22,22 @@ z_index = -1
 collision_mask = 12
 script = ExtResource( 3 )
 falling_speed = 25
+kick_strength = 250
 
 [node name="Light2D" type="Light2D" parent="."]
 visible = false
 position = Vector2( 0, -20 )
-scale = Vector2( 1.777, 1 )
-texture = ExtResource( 16 )
 shadow_enabled = true
-shadow_color = Color( 0, 0, 0, 1 )
-
-[node name="Sprite" parent="." instance=ExtResource( 1 )]
-z_index = 1
-frame = Vector2( 2, 0 )
+shadow_color = Color( 0, 0, 0, 0.34902 )
 
 [node name="Movement_collider" type="CollisionShape2D" parent="."]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -4 )
 shape = SubResource( 1 )
+
+[node name="Sprite" parent="." instance=ExtResource( 1 )]
+frame = Vector2( 6, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -12 )
@@ -62,7 +60,9 @@ position = Vector2( -0.2, 0 )
 shape = SubResource( 2 )
 
 [node name="KickRange" type="Area2D" parent="."]
-visible = false
+collision_layer = 0
+collision_mask = 4096
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KickRange"]
 position = Vector2( 0, -4 )

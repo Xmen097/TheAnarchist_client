@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy.png-5893704cad69dcf58b5a584621b7dd5c.stex"
+path="res://.import/vendor.png-e1015fc6add63df7d4ec0eb0d2a2f634.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Characters/Strawman/enemy.png"
-dest_files=[ "res://.import/enemy.png-5893704cad69dcf58b5a584621b7dd5c.stex" ]
+source_file="res://Entities/Characters/Vendor/vendor.png"
+dest_files=[ "res://.import/vendor.png-e1015fc6add63df7d4ec0eb0d2a2f634.stex" ]
 
 [params]
 

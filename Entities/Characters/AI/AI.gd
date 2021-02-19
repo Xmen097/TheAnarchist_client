@@ -23,6 +23,9 @@ enum Personality {
 }
 export(Personality) var personality
 
+var velocity = Vector2(0,0)
+var friction = 5
+
 
 var hp
 export var max_hp = 100
@@ -35,10 +38,12 @@ func _ready():
 	hp = max_hp
 	scale = Vector2(1,1)
 
-func _process(_delta):
+func _process(delta):
 	attack()
-	go()
 	look_at_player()
+	
+func _physics_process(delta):
+	move(delta)
 
 func attack():
 	if personality == Personality.Chaser || personality == Personality.StaticDefender:
@@ -48,7 +53,10 @@ func attack():
 			elif weapons.active_weapon.has_secondary:
 				weapons.secondary_attack()
 		
-func go():
+func move(delta):
+	if velocity.length() > 0.1: #velocity treshold
+		move_and_slide(velocity)
+		velocity -= velocity * friction * delta # slowly decrease velocity
 	if personality == Personality.Chaser:
 		var velocity = Vector2.ZERO
 		if inside_follow_range:
@@ -83,6 +91,9 @@ func hit(type, damage): # Will apply damage
 	$Sprite.modulate = Color(1, hp/float(max_hp), hp/float(max_hp))
 	if hp <= 0:
 		die()
+		
+func kicked(kicker_position, strength):
+	velocity = (position - kicker_position).normalized() * strength
 
 func die():
 	set_deferred("visible", false)

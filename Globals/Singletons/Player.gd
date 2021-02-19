@@ -8,7 +8,7 @@ var items = {
 	body = [],
 }
 
-enum frame_type {Inventory, Hotbar, Body, Backpack, Trash}
+enum frame_type {Inventory, Hotbar, Body, Backpack, Trash, Shop}
 signal item_changed(new_item, id, type)
 signal item_hovered(item, id, type)
 signal armor_changed(body_part) # on change of armor, or destroy
