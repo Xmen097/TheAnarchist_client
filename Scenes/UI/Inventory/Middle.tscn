@@ -9,6 +9,7 @@
 margin_top = 34.0
 margin_right = 384.0
 margin_bottom = 169.0
+mouse_filter = 2
 custom_constants/margin_top = -16
 custom_constants/margin_bottom = -4
 __meta__ = {
@@ -19,10 +20,12 @@ __meta__ = {
 margin_top = -16.0
 margin_right = 384.0
 margin_bottom = 139.0
+mouse_filter = 2
 
 [node name="Inventory" type="MarginContainer" parent="Middle"]
 margin_right = 236.0
 margin_bottom = 155.0
+mouse_filter = 2
 custom_constants/margin_right = 0
 custom_constants/margin_top = 12
 custom_constants/margin_left = 6
@@ -38,6 +41,7 @@ custom_constants/separation = 6
 [node name="NoBackpack" type="MarginContainer" parent="Middle/Inventory/Inventory"]
 margin_right = 112.0
 margin_bottom = 140.0
+mouse_filter = 1
 custom_constants/margin_left = 112
 
 [node name="Backpack" parent="Middle/Inventory/Inventory" instance=ExtResource( 2 )]

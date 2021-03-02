@@ -63,6 +63,7 @@ visible = false
 margin_top = 22.0
 margin_right = 384.0
 margin_bottom = 30.0
+mouse_filter = 1
 custom_constants/margin_top = -8
 custom_constants/margin_left = 98
 
@@ -90,6 +91,7 @@ margin_top = 22.0
 margin_right = 384.0
 margin_bottom = 30.0
 mouse_filter = 1
+mouse_default_cursor_shape = 2
 custom_constants/margin_top = -8
 custom_constants/margin_left = 6
 
@@ -103,6 +105,7 @@ custom_constants/separation = 0
 [node name="Button1" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/TopShop/HBoxContainer"]
 margin_right = 20.0
 margin_bottom = 16.0
+mouse_filter = 1
 texture_normal = ExtResource( 24 )
 script = ExtResource( 3 )
 shop_scene = ExtResource( 4 )
@@ -111,6 +114,7 @@ shop_scene = ExtResource( 4 )
 margin_left = 20.0
 margin_right = 40.0
 margin_bottom = 16.0
+mouse_filter = 1
 texture_normal = ExtResource( 24 )
 script = ExtResource( 3 )
 shop_scene = ExtResource( 6 )
@@ -119,6 +123,7 @@ shop_scene = ExtResource( 6 )
 margin_top = 22.0
 margin_right = 384.0
 margin_bottom = 30.0
+mouse_filter = 1
 custom_constants/margin_top = 8
 
 [node name="Middle" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 2 )]

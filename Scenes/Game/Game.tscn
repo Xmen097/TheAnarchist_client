@@ -62,4 +62,4 @@ render_target_update_mode = 3
 
 [node name="CanvasModulate" type="CanvasModulate" parent="ViewportContainer/Viewport"]
 visible = false
-color = Color( 0.211765, 0.211765, 0.211765, 1 )
+color = Color( 0, 0, 0, 1 )
