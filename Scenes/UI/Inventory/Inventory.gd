@@ -16,23 +16,25 @@ func _input(event): #Call methods on hands on click event
 		visible = false
 	if event.is_action_pressed("open_inventory"):
 		visible = !visible
-	if event.is_action_pressed("open_shop") and visible:
+	if event.is_action_pressed("open_shop") and visible and state != states.Shop:
 		change_state(states.Shop)
-	if event.is_action_released("open_shop") and visible:
+	elif event.is_action_pressed("open_shop") and visible and state == states.Shop:
 		change_state(states.Backpack)
 
 func _ready():
 	visible = false
 	for path in nobackpack_nodes:
-		state_nodes[0].append(get_node(path))
+		state_nodes[0].append(path)
 	for path in backpack_nodes:
-		state_nodes[1].append(get_node(path))
+		state_nodes[1].append(path)
 	for path in shop_nodes:
-		state_nodes[2].append(get_node(path))
+		state_nodes[2].append(path)
 		
 func change_state(new_state):
 	for node in state_nodes[state]:
-		node.visible = false
+		if get_node(node):
+			get_node(node).visible = false
 	for node in state_nodes[new_state]:
-		node.visible = true
+		if get_node(node):
+			get_node(node).visible = true
 	state = new_state

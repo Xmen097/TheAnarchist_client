@@ -16,6 +16,7 @@ export(bool) var has_preview = false
 export(int) var frame_id
 export(Player.frame_type) var frame_type
 
+export(int) var cost = 0
 
 signal item_changed(new_item, id, type)
 
@@ -30,7 +31,7 @@ func _ready():
 	if not is_trash:
 		item_texture = $Item
 		if starting_item_id != 0:
-			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type);
+			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type)
 	if has_preview:
 		preview = $Preview
 	
@@ -42,7 +43,7 @@ func _on_mouse_exited():
 	self_modulate = Color(1, 1, 1, 1)
 	
 func change_item(new_item): # item setter
-	item = new_item;
+	item = new_item
 	if has_preview:
 		preview.visible = item == Items.items.None
 	if item_texture:
@@ -63,17 +64,21 @@ func get_drag_data(_pos):
 	return {item = item, from = self}
 
 func can_drop_data(_pos, data):
-	return item == Items.items.None and \
+	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.cost < GameManager.get_stat(GameManager.stat.player.gold) and not is_trash)
+	
+	return shop_ok and item == Items.items.None and \
 	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
 	not (frame_type == Player.frame_type.Body and Player.body[Player.body.keys()[frame_id]].armor == Items.armor_type.Destroyed) or\
 	is_trash
 	
 func drop_data(_pos, data):
-	emit_signal("item_changed", data.item, frame_id, frame_type);
+	emit_signal("item_changed", data.item, frame_id, frame_type)
+	GameManager.increase_stat(GameManager.stat.player.gold, -data.from.cost)
 	data.from.dropped_success()
 	
 func dropped_success():
-	emit_signal("item_changed", Items.items.None, frame_id, frame_type);
+	if frame_type != Player.frame_type.Shop:
+		emit_signal("item_changed", Items.items.None, frame_id, frame_type)
 
 func _on_item_changed(new_item, id, type):
 	if frame_type == type and id == frame_id:

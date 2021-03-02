@@ -1,84 +1,83 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Inventory_frame.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/boxes/backpack.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/UI/boxes/frame_basic.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=4]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=20]
@@ -106,12 +105,13 @@ __meta__ = {
 }
 starting_item_id = 5
 frame_type = 5
+cost = 10
 
 [node name="Item" type="TextureRect" parent="TextureRect"]
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 1 )
+texture = SubResource( 21 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -153,7 +153,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 3 )
+texture = SubResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -195,7 +195,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 5 )
+texture = SubResource( 23 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -240,7 +240,7 @@ margin_right = 252.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 243.938, -6.50571 )
 mouse_filter = 2
-texture = SubResource( 7 )
+texture = SubResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -283,7 +283,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 9 )
+texture = SubResource( 25 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -328,7 +328,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 11 )
+texture = SubResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -371,7 +371,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 13 )
+texture = SubResource( 27 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -415,7 +415,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 15 )
+texture = SubResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -458,7 +458,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 17 )
+texture = SubResource( 29 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -502,7 +502,7 @@ frame_type = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 19 )
+texture = SubResource( 30 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
