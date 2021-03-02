@@ -67,6 +67,9 @@ func _on_item_changed(new_item, id, type): # called from inventory_frames and ot
 	
 	emit_signal("item_changed", new_item, id, type)
 	
+func on_body_damaged(body_part):
+	emit_signal("body_damaged", body_part)
+	
 func swing(damage): # will be called from Player gameobject (not this script)
 	if not stats.vulnerable:
 		return

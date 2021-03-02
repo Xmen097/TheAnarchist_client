@@ -20,13 +20,13 @@ region = Rect2( 0, 1344, 240, 336 )
 
 [sub_resource type="AtlasTexture" id=2]
 resource_local_to_scene = true
-atlas = ExtResource( 8 )
-region = Rect2( 0, 1680, 240, 336 )
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 240, 336 )
 
 [sub_resource type="AtlasTexture" id=3]
 resource_local_to_scene = true
-atlas = ExtResource( 10 )
-region = Rect2( 0, 0, 240, 336 )
+atlas = ExtResource( 8 )
+region = Rect2( 0, 1680, 240, 336 )
 
 [sub_resource type="AtlasTexture" id=4]
 resource_local_to_scene = true
@@ -1086,7 +1086,7 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = 1
 script = ExtResource( 6 )
-frame = Vector2( 2, 0 )
+frame = Vector2( 3, 0 )
 
 [node name="torso" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -1100,13 +1100,13 @@ offset = Vector2( 0, -12 )
 vframes = 14
 hframes = 10
 
-[node name="leg_left" type="Sprite" parent="."]
+[node name="shoe_right" type="Sprite" parent="."]
 texture = SubResource( 2 )
 offset = Vector2( 0, -12 )
 vframes = 14
 hframes = 10
 
-[node name="shoe_right" type="Sprite" parent="."]
+[node name="leg_left" type="Sprite" parent="."]
 texture = SubResource( 3 )
 offset = Vector2( 0, -12 )
 vframes = 14
@@ -1125,7 +1125,7 @@ vframes = 14
 hframes = 10
 
 [node name="Weapons" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1, -10 )
+position = Vector2( 1, -9 )
 
 [node name="hand_right" type="Sprite" parent="."]
 texture = SubResource( 6 )

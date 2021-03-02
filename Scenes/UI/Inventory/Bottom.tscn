@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Inventory_description.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/Hotkey.gd" type="Script" id=2]
@@ -12,81 +12,82 @@
 [ext_resource path="res://Scenes/UI/boxes/hotbar.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/sell.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/drop.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/UI/Inventory/Hotbar.gd" type="Script" id=13]
 
-[sub_resource type="StyleBoxEmpty" id=115]
+[sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="StyleBoxEmpty" id=116]
+[sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="StyleBoxEmpty" id=117]
+[sub_resource type="StyleBoxEmpty" id=3]
 
-[sub_resource type="StyleBoxEmpty" id=118]
+[sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=119]
+[sub_resource type="StyleBoxEmpty" id=5]
 
-[sub_resource type="Theme" id=120]
+[sub_resource type="Theme" id=6]
 HScrollBar/icons/decrement = null
 HScrollBar/icons/decrement_highlight = null
 HScrollBar/icons/increment = null
 HScrollBar/icons/increment_highlight = null
-HScrollBar/styles/grabber = SubResource( 115 )
-HScrollBar/styles/grabber_highlight = SubResource( 116 )
-HScrollBar/styles/grabber_pressed = SubResource( 117 )
-HScrollBar/styles/scroll = SubResource( 118 )
-HScrollBar/styles/scroll_focus = SubResource( 119 )
+HScrollBar/styles/grabber = SubResource( 1 )
+HScrollBar/styles/grabber_highlight = SubResource( 2 )
+HScrollBar/styles/grabber_pressed = SubResource( 3 )
+HScrollBar/styles/scroll = SubResource( 4 )
+HScrollBar/styles/scroll_focus = SubResource( 5 )
 
-[sub_resource type="AtlasTexture" id=121]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=122]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=123]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=124]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=125]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=126]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=127]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=128]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=129]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=130]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=131]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=132]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=133]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=134]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
@@ -95,6 +96,9 @@ margin_top = 173.0
 margin_right = 384.0
 margin_bottom = 210.0
 custom_constants/separation = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Description" type="MarginContainer" parent="."]
 margin_right = 90.0
@@ -113,7 +117,7 @@ margin_left = 1.0
 margin_top = 1.0
 margin_right = 83.0
 margin_bottom = 10.0
-theme = SubResource( 120 )
+theme = SubResource( 6 )
 scroll_vertical_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -130,6 +134,7 @@ margin_top = 11.0
 margin_right = 16.052
 margin_bottom = 36.0
 bbcode_enabled = true
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -143,6 +148,7 @@ custom_constants/margin_right = 0
 custom_constants/margin_top = 8
 custom_constants/margin_left = 2
 custom_constants/margin_bottom = 1
+script = ExtResource( 13 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Hotbar"]
 margin_left = 2.0
@@ -165,7 +171,7 @@ frame_type = 1
 [node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 121 )
+texture = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -196,7 +202,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 122 )
+texture = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -217,7 +223,7 @@ frame_type = 1
 [node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 123 )
+texture = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -248,7 +254,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 124 )
+texture = SubResource( 10 )
 
 [node name="TextureRect3" type="TextureRect" parent="Hotbar/HBoxContainer"]
 margin_left = 56.0
@@ -272,7 +278,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 125 )
+texture = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -303,7 +309,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 126 )
+texture = SubResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -330,7 +336,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 127 )
+texture = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -361,7 +367,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 128 )
+texture = SubResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -388,7 +394,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 129 )
+texture = SubResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -419,7 +425,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 130 )
+texture = SubResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -446,7 +452,7 @@ margin_left = -14.0
 margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
-texture = SubResource( 131 )
+texture = SubResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -477,7 +483,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 132 )
+texture = SubResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -505,7 +511,7 @@ margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 224, -63.9091 )
-texture = SubResource( 133 )
+texture = SubResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -536,7 +542,7 @@ margin_left = -2.5
 margin_top = -4.5
 margin_right = 2.5
 margin_bottom = 4.5
-texture = SubResource( 134 )
+texture = SubResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

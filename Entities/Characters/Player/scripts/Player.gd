@@ -4,6 +4,7 @@ extends KinematicBody2D
 export var speed = 100
 
 export var roll_speed_multiplier = 1.2
+export var effect_speed_multiplier = 1
 export var falling_speed = 60
 export var kick_strength = 5
 
@@ -44,7 +45,7 @@ func _process(delta):
 
 func move(delta):
 	if state == states.Rolling:
-		var moved = move_and_slide(velocity * roll_speed_multiplier)
+		var moved = move_and_slide(velocity * roll_speed_multiplier * effect_speed_multiplier)
 		if moved.length() == 0:
 			state = states.Idle
 			animation_mode.start("Idle")
@@ -55,7 +56,7 @@ func move(delta):
 		velocity.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		if velocity.length() > 0: # if moved
-			velocity = velocity.normalized() * speed
+			velocity = velocity.normalized() * speed * effect_speed_multiplier
 			var result = move_and_slide(velocity)
 			if result.length() > 0: # not stopped by collision
 				state = states.Walking

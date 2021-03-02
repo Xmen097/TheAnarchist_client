@@ -53,42 +53,6 @@ var items = {
 	Cutlass = Weapon.new(types.Weapon, 26, "Šavle", "", Weapons.weapons.Cutlass),
 	Necklace = Item.new(types.Amulet, 27, "Smaragdový náhrdelník", ""),
 	Acid = Item.new(types.Usable, 28, "Šmahajova kyselinka", "[img]res://Scenes/UI/assets/AoE.png[/img][img]res://Scenes/UI/assets/throwable.png[/img]"),
+	Medkit = Usables.Medkit.new(types.Usable, 29, "Lékárnička", ""),
+	Drug = Usables.Drug.new(types.Usable, 30, "Droga", ""),
 }
-
-class Item:
-	var type = types.General
-	var id = -1
-	var tooltip = ""
-	var description = ""
-	
-	func _init(new_type, new_id, new_tooltip, new_description):
-		self.type = new_type
-		self.id = new_id
-		self.tooltip = new_tooltip
-		self.description = new_description
-		
-	func duplicate():
-		var dup = Item.new(self.type, self.id, self.tooltip, self.description)
-		return dup
-
-class Armor extends Item:
-	var armor_type
-	var durability
-	var max_durability
-	func _init(new_type, new_id, new_tooltip, new_description, new_armor_type, new_durability).(new_type, new_id, new_tooltip, new_description):
-		self.armor_type = new_armor_type
-		self.durability = new_durability
-		self.max_durability = new_durability
-		
-	func duplicate():
-		var dup = Armor.new(self.type, self.id, self.tooltip, self.description, self.armor_type, self.durability)
-		return dup
-		
-class Weapon extends Item:
-	var weapon
-	func _init(new_type, new_id, new_tooltip, new_description, new_weapon).(new_type, new_id, new_tooltip, new_description):
-		self.weapon = new_weapon
-		
-	func duplicate():
-		var dup = Weapon.new(self.type, self.id, self.tooltip, self.description, self.weapon)
-		return dup
