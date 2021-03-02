@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player.png-5572338a22e14c94eb2537ebf99e5a0f.stex"
+path="res://.import/ancom.png-e578c8fe6a93a16f15d6ffa013a1c85b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Characters/assets/Player.png"
-dest_files=[ "res://.import/Player.png-5572338a22e14c94eb2537ebf99e5a0f.stex" ]
+source_file="res://Entities/Objects/Flag/ancom.png"
+dest_files=[ "res://.import/ancom.png-e578c8fe6a93a16f15d6ffa013a1c85b.stex" ]
 
 [params]
 

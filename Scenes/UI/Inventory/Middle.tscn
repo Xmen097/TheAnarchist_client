@@ -41,6 +41,8 @@ margin_bottom = 140.0
 custom_constants/margin_left = 112
 
 [node name="Backpack" parent="Middle/Inventory/Inventory" instance=ExtResource( 2 )]
+margin_left = 118.0
+margin_right = 230.0
 
 [node name="Shop" parent="Middle/Inventory/Inventory" instance=ExtResource( 1 )]
 

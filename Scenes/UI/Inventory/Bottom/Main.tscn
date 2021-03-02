@@ -4,55 +4,103 @@
 [ext_resource path="res://Scenes/UI/boxes/frame_basic.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=3]
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
@@ -116,54 +164,6 @@ region = Rect2( 0, 0, 28, 28 )
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=45]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=46]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=47]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=48]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=49]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=50]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=51]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=52]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 28, 28 )
-
 [node name="Main" type="GridContainer"]
 margin_left = 118.0
 margin_right = 230.0
@@ -178,7 +178,7 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 28.0
 margin_bottom = 28.0
-texture = SubResource( 14 )
+texture = SubResource( 1 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -189,7 +189,7 @@ starting_item_id = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 15 )
+texture = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -198,7 +198,7 @@ __meta__ = {
 margin_left = 28.0
 margin_right = 56.0
 margin_bottom = 28.0
-texture = SubResource( 16 )
+texture = SubResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -210,7 +210,7 @@ frame_id = 1
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 17 )
+texture = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -219,7 +219,7 @@ __meta__ = {
 margin_left = 56.0
 margin_right = 84.0
 margin_bottom = 28.0
-texture = SubResource( 18 )
+texture = SubResource( 5 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -231,7 +231,7 @@ frame_id = 2
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 19 )
+texture = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -240,7 +240,7 @@ __meta__ = {
 margin_left = 84.0
 margin_right = 112.0
 margin_bottom = 28.0
-texture = SubResource( 20 )
+texture = SubResource( 7 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -252,7 +252,7 @@ frame_id = 3
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 21 )
+texture = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -261,7 +261,7 @@ __meta__ = {
 margin_top = 28.0
 margin_right = 28.0
 margin_bottom = 56.0
-texture = SubResource( 22 )
+texture = SubResource( 9 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -273,7 +273,7 @@ frame_id = 4
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 23 )
+texture = SubResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -283,7 +283,7 @@ margin_left = 28.0
 margin_top = 28.0
 margin_right = 56.0
 margin_bottom = 56.0
-texture = SubResource( 24 )
+texture = SubResource( 11 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -295,7 +295,7 @@ frame_id = 5
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 25 )
+texture = SubResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -317,7 +317,7 @@ frame_id = 6
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 26 )
+texture = SubResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -327,7 +327,7 @@ margin_left = 84.0
 margin_top = 28.0
 margin_right = 112.0
 margin_bottom = 56.0
-texture = SubResource( 27 )
+texture = SubResource( 15 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -339,7 +339,7 @@ frame_id = 7
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 28 )
+texture = SubResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -348,7 +348,7 @@ __meta__ = {
 margin_top = 56.0
 margin_right = 28.0
 margin_bottom = 84.0
-texture = SubResource( 29 )
+texture = SubResource( 17 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -360,7 +360,7 @@ frame_id = 8
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 30 )
+texture = SubResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -370,7 +370,7 @@ margin_left = 28.0
 margin_top = 56.0
 margin_right = 56.0
 margin_bottom = 84.0
-texture = SubResource( 31 )
+texture = SubResource( 19 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -382,7 +382,7 @@ frame_id = 9
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 32 )
+texture = SubResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -392,7 +392,7 @@ margin_left = 56.0
 margin_top = 56.0
 margin_right = 84.0
 margin_bottom = 84.0
-texture = SubResource( 33 )
+texture = SubResource( 21 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -404,7 +404,7 @@ frame_id = 10
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 34 )
+texture = SubResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -414,7 +414,7 @@ margin_left = 84.0
 margin_top = 56.0
 margin_right = 112.0
 margin_bottom = 84.0
-texture = SubResource( 35 )
+texture = SubResource( 23 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -426,7 +426,7 @@ frame_id = 11
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 36 )
+texture = SubResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -435,7 +435,7 @@ __meta__ = {
 margin_top = 84.0
 margin_right = 28.0
 margin_bottom = 112.0
-texture = SubResource( 37 )
+texture = SubResource( 25 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -447,7 +447,7 @@ frame_id = 12
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 38 )
+texture = SubResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -457,7 +457,7 @@ margin_left = 28.0
 margin_top = 84.0
 margin_right = 56.0
 margin_bottom = 112.0
-texture = SubResource( 39 )
+texture = SubResource( 27 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -469,7 +469,7 @@ frame_id = 13
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 40 )
+texture = SubResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -479,7 +479,7 @@ margin_left = 56.0
 margin_top = 84.0
 margin_right = 84.0
 margin_bottom = 112.0
-texture = SubResource( 41 )
+texture = SubResource( 29 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -491,7 +491,7 @@ frame_id = 14
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 42 )
+texture = SubResource( 30 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -501,7 +501,7 @@ margin_left = 84.0
 margin_top = 84.0
 margin_right = 112.0
 margin_bottom = 112.0
-texture = SubResource( 43 )
+texture = SubResource( 31 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -513,7 +513,7 @@ frame_id = 15
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 44 )
+texture = SubResource( 32 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -522,7 +522,7 @@ __meta__ = {
 margin_top = 112.0
 margin_right = 28.0
 margin_bottom = 140.0
-texture = SubResource( 45 )
+texture = SubResource( 33 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -534,7 +534,7 @@ frame_id = 16
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 46 )
+texture = SubResource( 34 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -544,7 +544,7 @@ margin_left = 28.0
 margin_top = 112.0
 margin_right = 56.0
 margin_bottom = 140.0
-texture = SubResource( 47 )
+texture = SubResource( 35 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -556,7 +556,7 @@ frame_id = 17
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 48 )
+texture = SubResource( 36 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -566,7 +566,7 @@ margin_left = 56.0
 margin_top = 112.0
 margin_right = 84.0
 margin_bottom = 140.0
-texture = SubResource( 49 )
+texture = SubResource( 37 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -578,7 +578,7 @@ frame_id = 18
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 50 )
+texture = SubResource( 38 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -588,7 +588,7 @@ margin_left = 84.0
 margin_top = 112.0
 margin_right = 112.0
 margin_bottom = 140.0
-texture = SubResource( 51 )
+texture = SubResource( 39 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -600,7 +600,7 @@ frame_id = 19
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
-texture = SubResource( 52 )
+texture = SubResource( 40 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
