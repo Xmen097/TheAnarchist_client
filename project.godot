@@ -8,9 +8,32 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Item",
+"class": "Armor",
+"language": "GDScript",
+"path": "res://Globals/Items/Armor.gd"
+}, {
+"base": "Reference",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Globals/Items/Item.gd"
+}, {
+"base": "Reference",
+"class": "Usables",
+"language": "GDScript",
+"path": "res://Globals/Items/Usables.gd"
+}, {
+"base": "Item",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://Globals/Items/Weapon.gd"
+} ]
 _global_script_class_icons={
-
+"Armor": "",
+"Item": "",
+"Usables": "",
+"Weapon": ""
 }
 
 [application]

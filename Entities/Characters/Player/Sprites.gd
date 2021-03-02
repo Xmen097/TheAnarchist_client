@@ -43,3 +43,7 @@ func _on_armor_changed(part):
 	armor[part.id] = part.armor
 	var part_slot = body_parts[part.id]
 	part_slot.texture.region = Rect2(armor[part.id]*240, part_slot.texture.region.position.y, 240, 336)
+	if part.id == "left_leg" and part.armor == Items.armor_type.Destroyed:
+		body_parts.left_shoe.visible = false
+	if part.id == "right_leg" and part.armor == Items.armor_type.Destroyed:
+		body_parts.right_shoe.visible = false

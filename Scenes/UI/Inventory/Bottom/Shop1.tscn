@@ -1,15 +1,16 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Inventory_frame.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/boxes/backpack.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI/boxes/frame_basic.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=3]
@@ -17,7 +18,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=5]
@@ -25,7 +26,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=7]
@@ -33,7 +34,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=9]
@@ -41,7 +42,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=11]
@@ -49,7 +50,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=13]
@@ -57,7 +58,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=15]
@@ -65,7 +66,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=17]
@@ -73,7 +74,7 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=19]
@@ -81,10 +82,10 @@ atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 28, 28 )
 
 [sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 28, 28 )
 
-[node name="Backpack" type="GridContainer"]
+[node name="Shop" type="GridContainer"]
 visible = false
 margin_right = 112.0
 margin_bottom = 140.0
@@ -103,8 +104,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 21
-frame_type = 3
+starting_item_id = 5
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect"]
 margin_right = 40.0
@@ -124,9 +125,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 22
 frame_id = 1
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect2"]
 margin_right = 40.0
@@ -146,9 +146,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 23
 frame_id = 2
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect3"]
 margin_right = 40.0
@@ -168,9 +167,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 24
 frame_id = 3
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect4"]
 margin_right = 40.0
@@ -190,9 +188,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 25
 frame_id = 4
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect5"]
 margin_right = 40.0
@@ -213,9 +210,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 26
 frame_id = 5
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect6"]
 margin_right = 40.0
@@ -236,9 +232,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 27
 frame_id = 6
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect7"]
 margin_right = 252.0
@@ -260,9 +255,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 28
 frame_id = 7
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect8"]
 margin_right = 40.0
@@ -282,9 +276,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 1
 frame_id = 8
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect9"]
 margin_right = 40.0
@@ -305,9 +298,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 2
 frame_id = 9
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect10"]
 margin_right = 252.0
@@ -329,9 +321,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 3
 frame_id = 10
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect11"]
 margin_right = 40.0
@@ -352,9 +343,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 4
 frame_id = 11
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect12"]
 margin_right = 40.0
@@ -374,9 +364,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 29
 frame_id = 12
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect13"]
 margin_right = 40.0
@@ -397,9 +386,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 30
 frame_id = 13
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect14"]
 margin_right = 40.0
@@ -421,7 +409,7 @@ __meta__ = {
 "_edit_group_": true
 }
 frame_id = 14
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect15"]
 margin_right = 40.0
@@ -443,7 +431,7 @@ __meta__ = {
 "_edit_group_": true
 }
 frame_id = 15
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect16"]
 margin_right = 40.0
@@ -464,7 +452,7 @@ __meta__ = {
 "_edit_group_": true
 }
 frame_id = 16
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect17"]
 margin_right = 40.0
@@ -486,7 +474,7 @@ __meta__ = {
 "_edit_group_": true
 }
 frame_id = 17
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect18"]
 margin_right = 40.0
@@ -508,7 +496,7 @@ __meta__ = {
 "_edit_group_": true
 }
 frame_id = 18
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect19"]
 margin_right = 40.0
@@ -530,7 +518,7 @@ __meta__ = {
 "_edit_group_": true
 }
 frame_id = 19
-frame_type = 3
+frame_type = 5
 
 [node name="Item" type="TextureRect" parent="TextureRect20"]
 margin_right = 40.0
