@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://Globals/Items/Item.gd"
 }, {
 "base": "Reference",
+"class": "Throwables",
+"language": "GDScript",
+"path": "res://Globals/Items/Throwables.gd"
+}, {
+"base": "Reference",
 "class": "Usables",
 "language": "GDScript",
 "path": "res://Globals/Items/Usables.gd"
@@ -32,6 +37,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Armor": "",
 "Item": "",
+"Throwables": "",
 "Usables": "",
 "Weapon": ""
 }

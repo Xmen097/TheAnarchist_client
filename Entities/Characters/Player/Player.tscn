@@ -37,7 +37,7 @@ position = Vector2( 0, -4 )
 shape = SubResource( 1 )
 
 [node name="Sprite" parent="." instance=ExtResource( 1 )]
-frame = Vector2( 1, 0 )
+frame = Vector2( 5, 0 )
 is_player = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

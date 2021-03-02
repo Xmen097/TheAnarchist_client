@@ -55,4 +55,6 @@ var items = {
 	Acid = Item.new(types.Usable, 28, "Šmahajova kyselinka", "[img]res://Scenes/UI/assets/AoE.png[/img][img]res://Scenes/UI/assets/throwable.png[/img]"),
 	Medkit = Usables.Medkit.new(types.Usable, 29, "Lékárnička", ""),
 	Drug = Usables.Drug.new(types.Usable, 30, "Droga", ""),
+	Stone = Throwables.Stone.new(types.Usable, 31, "Kámen", ""),
+	Cyanite = Usables.Cyanite.new(types.Usable, 32, "Kyanid", ""),
 }
