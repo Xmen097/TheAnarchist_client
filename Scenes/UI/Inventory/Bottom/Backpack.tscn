@@ -465,6 +465,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+starting_item_id = 33
 frame_id = 16
 frame_type = 3
 
@@ -487,6 +488,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+starting_item_id = 34
 frame_id = 17
 frame_type = 3
 
@@ -509,6 +511,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+starting_item_id = 35
 frame_id = 18
 frame_type = 3
 
@@ -531,6 +534,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+starting_item_id = 36
 frame_id = 19
 frame_type = 3
 

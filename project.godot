@@ -51,11 +51,12 @@ config/icon="res://icon.png"
 [autoload]
 
 Utils="*res://Globals/Singletons/Utils.gd"
-Weapons="*res://Globals/Singletons/Weapons.gd"
-Items="*res://Globals/Singletons/Items.gd"
+Effects="*res://Globals/Definitions/Effects.gd"
+Weapons="*res://Globals/Definitions/Weapons.gd"
+Items="*res://Globals/Definitions/Items.gd"
 Player="*res://Globals/Singletons/Player.gd"
 GameManager="*res://Globals/Singletons/GameManager.gd"
-Music="*res://Globals/Music.tscn"
+Music="*res://Globals/Singletons/Music.tscn"
 
 [display]
 
