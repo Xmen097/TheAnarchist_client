@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AoE.png-2c450b917c09323ca91fb9a74703c8c7.stex"
+path="res://.import/increase3.png-a14259438d6c8750e7425dbe562baf87.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/assets/AoE.png"
-dest_files=[ "res://.import/AoE.png-2c450b917c09323ca91fb9a74703c8c7.stex" ]
+source_file="res://Scenes/UI/assets/items_abilities/increase3.png"
+dest_files=[ "res://.import/increase3.png-a14259438d6c8750e7425dbe562baf87.stex" ]
 
 [params]
 

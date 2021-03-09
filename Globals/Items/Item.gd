@@ -2,7 +2,7 @@ class_name Item
 
 var type
 var id = -1
-var tooltip = ""
+var tooltip = []
 
 func _init(new_type, new_id, new_tooltip):
 	self.type = new_type

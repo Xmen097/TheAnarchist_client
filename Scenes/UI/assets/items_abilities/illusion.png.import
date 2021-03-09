@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/team_box_red.png-cfce0c7a844029e4e5830a83c69df72e.stex"
+path="res://.import/illusion.png-2ef314ec1cf04b16aa9d6a0c62ac3978.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/overlay/team_box/team_box_red.png"
-dest_files=[ "res://.import/team_box_red.png-cfce0c7a844029e4e5830a83c69df72e.stex" ]
+source_file="res://Scenes/UI/assets/items_abilities/illusion.png"
+dest_files=[ "res://.import/illusion.png-2ef314ec1cf04b16aa9d6a0c62ac3978.stex" ]
 
 [params]
 

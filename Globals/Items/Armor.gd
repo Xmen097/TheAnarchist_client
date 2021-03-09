@@ -8,6 +8,7 @@ func _init(new_type, new_id, new_tooltip, new_armor_type, new_durability).(new_t
 	self.armor_type = new_armor_type
 	self.durability = new_durability
 	self.max_durability = new_durability
+	self.tooltip = ["armor"] + new_tooltip
 	
 func duplicate():
 	var dup = get_script().new(self.type, self.id, self.tooltip, self.armor_type, self.durability)
