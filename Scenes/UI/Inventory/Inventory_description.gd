@@ -5,8 +5,6 @@ extends TextureRect
 # var a = 2
 # var b = "text"
 
-onready var scroll = $ScrollContainer
-onready var label = $ScrollContainer/Label
 onready var desc = $RichTextLabel
 var time = 0
 var text = ""

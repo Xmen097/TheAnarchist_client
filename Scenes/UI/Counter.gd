@@ -26,9 +26,9 @@ func _ready():
 		nodes.append(get_node(path))
 	nodes_num = nodes.size()
 	max_num = pow(10, nodes_num)
-	update_number(number)
 	var failed = GameManager.connect("stat_changed", self, "_on_stat_changed")
 	assert(!failed, "Counter failed to connect to events!")
+	update_number(GameManager.stat_data[value_id])
 
 func _on_stat_changed(stat, value):
 	if stat == value_id:

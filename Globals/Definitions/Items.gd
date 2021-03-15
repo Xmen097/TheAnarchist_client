@@ -1,5 +1,6 @@
 extends Node
 
+onready var throwable_instance = preload("res://Entities/Objects/Throwable/Throwable.tscn")
 
 enum types {
 	General,
@@ -52,14 +53,23 @@ var items = {
 	Moss_helmet = Armor.new(types.Head_armor, 24, [], armor_type.Moss, 100),
 	Leather_shoes = Item.new(types.Shoes, 25, []),
 	Cutlass = Weapon.new(types.Weapon, 26, [], Weapons.weapons.Cutlass),
+	Bow = Weapon.new(types.Weapon, 78, [], Weapons.weapons.Bow),
+	Halberd = Weapon.new(types.Weapon, 79, [], Weapons.weapons.Halberd),
 	Necklace = Item.new(types.Amulet, 27, []),
-	Acid = Item.new(types.Usable, 28, []),
-	Medkit = Usables.Medkit.new(types.Usable, 29, []),
-	Drug = Usables.Drug.new(types.Usable, 30, []),
+	Medkit = Usables.Medkit.new(types.Usable, 28, []),
+	Drug = Usables.Drug.new(types.Usable, 45, []),
 	Stone = Throwables.Stone.new(types.Usable, 31, []),
-	Cyanite = Usables.Cyanite.new(types.Usable, 32, []),
+	Cyanite = Usables.Cyanite.new(types.Usable, 44, []),
 	Reptail = Usables.Reptail.new(types.Usable, 33, []),
 	Drug2 = Usables.Drug.new(types.Usable, 34, []),
 	Beer = Usables.Beer.new(types.Usable, 35, []),
 	Chocolate = Usables.Chocolate.new(types.Usable, 36, []),
+	FlaskGreen = Throwables.FlaskGreen.new(types.Usable, 37, []),
+	FlaskRed = Throwables.FlaskRed.new(types.Usable, 38, []),
+	BananaPeel = Throwables.BananaPeel.new(types.Usable, 47, []),
+	CauldronRed = Throwables.CauldronRed.new(types.Usable, 55, []),
+	CauldronGreen = Throwables.CauldronGreen.new(types.Usable, 59, []),
+	CauldronHand = Throwables.CauldronHand.new(types.Usable, 60, []),
+	Molotov = Throwables.Molotov.new(types.Usable, 76, []),
+	Carrot = Usables.Carrot.new(types.Usable, 43, []),
 }

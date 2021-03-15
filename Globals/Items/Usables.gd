@@ -47,3 +47,9 @@ class Chocolate extends Usable:
 		for effect in Effects.effects:
 			Effects.remove_effect(effect)
 		Effects.add_effect(Effects.effects.Slow)
+
+class Carrot extends Usable:
+	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+		pass
+	func use():
+		pass

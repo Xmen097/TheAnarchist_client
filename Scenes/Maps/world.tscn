@@ -7,7 +7,7 @@
 [ext_resource path="res://Entities/Characters/Vendor/Vendor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entities/Objects/Flag/Flag.tscn" type="PackedScene" id=6]
 
-[node name="World" type="Node2D"]
+[node name="World" type="YSort"]
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -100,3 +100,4 @@ position = Vector2( 321, 87 )
 [node name="Vendor" parent="Foreground/Entities" instance=ExtResource( 5 )]
 position = Vector2( -35, 167 )
 [connection signal="body_entered" from="Background/Falling_area" to="Background/Falling_area" method="_on_Falling_area_body_entered"]
+[connection signal="body_exited" from="Background/Falling_area" to="Background/Falling_area" method="_on_Falling_area_body_exited"]

@@ -13,6 +13,7 @@ onready var animation_mode = animation_tree["parameters/playback"]
 onready var sprites = $Sprite
 onready var weapons = $Sprite/Weapons
 onready var kick_range = $KickRange
+onready var camera = $Camera2D
 
 enum states {
 	Idle,
@@ -22,8 +23,12 @@ enum states {
 	Falling,
 }
 var state = states.Idle
-
 var velocity
+
+var flags = { # only local flags, other should be in the singleton
+	in_fall_area = false,
+}
+
 
 
 func _init():
@@ -128,11 +133,16 @@ func kicking(): # called from animation, will kick enemies in range
 		area.kick(position, kick_strength)
 
 func fall(): # Called from Falling_area
-	state = states.Falling
-	animation_mode.start("Falling") # Immidiately switch to falling
+	if state != states.Rolling:
+		state = states.Falling
+		animation_mode.start("Falling") # Immidiately switch to falling
+	else:
+		flags.in_fall_area=true
 
 func change_state(state_id): #called from animations
 	state = state_id
+	if flags.in_fall_area:
+		fall()
 	if state != states.Rolling:
 		Player.stats.vulnerable = true
 

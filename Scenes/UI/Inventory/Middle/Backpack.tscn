@@ -103,7 +103,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 21
 frame_type = 3
 
 [node name="Item" type="TextureRect" parent="TextureRect"]
@@ -124,7 +123,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 22
 frame_id = 1
 frame_type = 3
 
@@ -146,7 +144,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 23
 frame_id = 2
 frame_type = 3
 
@@ -168,7 +165,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 24
 frame_id = 3
 frame_type = 3
 
@@ -190,7 +186,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 25
 frame_id = 4
 frame_type = 3
 
@@ -213,7 +208,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 26
 frame_id = 5
 frame_type = 3
 
@@ -236,7 +230,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 27
 frame_id = 6
 frame_type = 3
 
@@ -260,7 +253,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 28
 frame_id = 7
 frame_type = 3
 
@@ -282,7 +274,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 1
 frame_id = 8
 frame_type = 3
 
@@ -305,7 +296,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 2
 frame_id = 9
 frame_type = 3
 
@@ -329,7 +319,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 3
 frame_id = 10
 frame_type = 3
 
@@ -352,7 +341,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-starting_item_id = 4
 frame_id = 11
 frame_type = 3
 

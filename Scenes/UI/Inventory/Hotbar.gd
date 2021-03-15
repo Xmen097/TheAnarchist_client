@@ -20,4 +20,4 @@ func _input(event): #  Call methods on hands on click event
 func use(id):
 	if Player.items.hotbar[id] != Items.items.None:
 		Player.items.hotbar[id].use()
-		Player._on_item_changed(Items.items.None, id, Player.frame_type.Hotbar)
+		#Player._on_item_changed(Items.items.None, id, Player.frame_type.Hotbar)

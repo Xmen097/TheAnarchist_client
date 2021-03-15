@@ -315,6 +315,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 accepted_type = 7
+has_preview = true
 frame_type = 7
 
 [node name="Item" type="TextureRect" parent="Boxes/Amulet"]
@@ -539,6 +540,7 @@ mouse_filter = 2
 texture = SubResource( 28 )
 
 [node name="Preview" type="TextureRect" parent="Boxes/Shoes"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = SubResource( 29 )
@@ -574,6 +576,7 @@ mouse_filter = 2
 texture = SubResource( 30 )
 
 [node name="Preview" type="TextureRect" parent="Boxes/LWeapon"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = SubResource( 31 )
@@ -610,6 +613,7 @@ mouse_filter = 2
 texture = SubResource( 32 )
 
 [node name="Preview" type="TextureRect" parent="Boxes/RWeapon"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = SubResource( 33 )

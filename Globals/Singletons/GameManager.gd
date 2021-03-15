@@ -16,6 +16,7 @@ signal stat_changed(stat, value)
 func _ready():
 	for _i in range(stat_count):
 		stat_data.append(0)
+	change_stat(stat.player.gold, 1000) # some starting money
 
 func change_stat(stat_id, value):
 	stat_data[stat_id] = value

@@ -3,7 +3,7 @@ extends Node
 var projectiles_root
 
 func _ready():
-	projectiles_root = get_tree().get_root().get_node("Game/ViewportContainer/Viewport/ProjectilesContainer")
+	projectiles_root = get_tree().get_root().get_node("Game/ViewportContainer/Viewport/World/ProjectilesContainer")
 
 enum weapons {
 	None,
@@ -138,6 +138,7 @@ class Melee extends Node2D:
 
 class Ranged extends Node2D:
 	var type = "Ranged"
+	var state = states.Idle
 	export var data = { # This MUST be changed in child scripts
 		idle_animation = "",
 		prime_animation = "",
@@ -161,6 +162,7 @@ class Ranged extends Node2D:
 
 	func prime(animation_mode):
 		animation_mode.travel(data.prime_animation)
+		attacking = false
 		
 	func primary_attack(animation_mode):
 		if attacking:
@@ -194,24 +196,18 @@ class Ranged extends Node2D:
 
 	func idle(animation_mode):
 		attacking = false
-		look_at_mouse(Utils.mouse_angle())
 		if click_queued:
 			click_queued = false
 			prime(animation_mode)
 
-	func look_at_mouse(mouse_angle): #Weapon will look at mouse
-		projectile_sprite.angle = mouse_angle
-		if mouse_angle > 105 or mouse_angle < -105:
-			scale = Vector2(-1, 1)
-			projectile_sprite.flip_h = true
-		elif mouse_angle < 75 and mouse_angle >= 0 or\
-			mouse_angle > -75 and mouse_angle <= 0:
-			scale = Vector2(1, 1)
-			projectile_sprite.flip_h = false
-
-		if scale == Vector2(-1, 1):
+	func look_at_mouse(mouse_angle, mirrored): #Weapon will look at mouse
+		if mirrored:
 			weapon_sprite.frame_coords.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
 			projectile_sprite.y = round((sign(mouse_angle)*180 - mouse_angle + 100) / 10)
+			projectile_sprite.angle = mouse_angle
+			projectile_sprite.flip_h = true
 		else:
 			weapon_sprite.frame_coords.y = round((mouse_angle + 100) / 10)
 			projectile_sprite.y = round((mouse_angle + 100) / 10)
+			projectile_sprite.angle = mouse_angle
+			projectile_sprite.flip_h = false
