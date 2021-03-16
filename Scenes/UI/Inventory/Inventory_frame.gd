@@ -67,7 +67,7 @@ func can_drop_data(_pos, data):
 	if frame_type == Player.frame_type.Shop:
 		return false
 	
-	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.cost < GameManager.get_stat(GameManager.stat.player.gold) and not is_trash)
+	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.cost <= GameManager.get_stat(GameManager.stat.player.gold) and not is_trash)
 	
 	return shop_ok and item == Items.items.None and \
 	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
