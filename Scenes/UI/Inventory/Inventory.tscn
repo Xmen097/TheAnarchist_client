@@ -12,7 +12,6 @@
 [ext_resource path="res://Scenes/UI/Inventory/buttons/arrow_left.png" type="Texture" id=23]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/shop_category.png" type="Texture" id=24]
 
-
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0.470588 )
 

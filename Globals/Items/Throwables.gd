@@ -5,7 +5,7 @@ class Throwable extends Item:
 	var rotspeed = -10 # multiple of 100 deg/sec
 	var offset = Vector2(0, 6)
 	
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		pass
 	func use():
 		var throw = Items.throwable_instance.instance()
@@ -24,7 +24,7 @@ class Throwable extends Item:
 		return false # return whether flying item should stop
 
 class Stone extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 1
 		
 	func hit(body):
@@ -32,29 +32,29 @@ class Stone extends Throwable:
 		return true
 		
 class FlaskGreen extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 2
 		
 class FlaskRed extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 3
 		
 class BananaPeel extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 8
 		
 class CauldronRed extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 9
 		
 class CauldronGreen extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 13
 		
 class CauldronHand extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 14
 		
 class Molotov extends Throwable:
-	func _init(new_type, new_id, new_tooltip).(new_type, new_id, new_tooltip):
+	func _init(new_type, new_id, new_tooltip, new_cost).(new_type, new_id, new_tooltip, new_cost):
 		throwable_id = 15

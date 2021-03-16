@@ -64,7 +64,7 @@ func get_drag_data(_pos):
 	return {item = item, from = self}
 
 func can_drop_data(_pos, data):
-	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.cost < GameManager.get_stat(GameManager.stat.player.gold) and not is_trash)
+	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.cost < GameManager.get_stat(GameManager.stat.player.gold) and not is_trash)
 	
 	return shop_ok and item == Items.items.None and \
 	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
@@ -73,7 +73,7 @@ func can_drop_data(_pos, data):
 	
 func drop_data(_pos, data):
 	emit_signal("item_changed", data.item, frame_id, frame_type)
-	GameManager.increase_stat(GameManager.stat.player.gold, -data.from.cost)
+	GameManager.increase_stat(GameManager.stat.player.gold, -data.from.item.cost)
 	data.from.dropped_success()
 	
 func dropped_success():

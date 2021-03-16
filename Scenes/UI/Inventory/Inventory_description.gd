@@ -6,6 +6,7 @@ extends TextureRect
 # var b = "text"
 
 onready var desc = $RichTextLabel
+onready var costlabel = $CostLabel
 var time = 0
 var text = ""
 var space_len = 3
@@ -34,7 +35,7 @@ func _on_item_hovered(item, id, type):
 	#else:
 	#	label.text = text
 	
-	print(item.tooltip)
+	costlabel.text = str(item.cost)
 	
 	desc.bbcode_text = ""
 	for prop in item.tooltip:
