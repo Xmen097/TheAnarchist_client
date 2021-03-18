@@ -64,6 +64,7 @@ window/size/width=384
 window/size/height=216
 window/size/test_width=1152
 window/size/test_height=648
+window/stretch/mode="viewport"
 
 [importer_defaults]
 
