@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/team_box_yellow.png-916d4e2b3638fe191d500f6e5093be11.stex"
+path="res://.import/team_box_yellow.png-cee5a472a88e396e76fe34093b3b7518.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/overlay/team_box/team_box_yellow.png"
-dest_files=[ "res://.import/team_box_yellow.png-916d4e2b3638fe191d500f6e5093be11.stex" ]
+source_file="res://Scenes/UI/Overlay/team_box/team_box_yellow.png"
+dest_files=[ "res://.import/team_box_yellow.png-cee5a472a88e396e76fe34093b3b7518.stex" ]
 
 [params]
 
