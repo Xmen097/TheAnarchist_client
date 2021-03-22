@@ -22,7 +22,7 @@ func _ready():
 	animationPlayer.playback_speed = rotspeed
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not flying:
 		return
 

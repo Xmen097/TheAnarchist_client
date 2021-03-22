@@ -21,6 +21,7 @@ enum states {
 	Rolling,
 	Kicking,
 	Falling,
+	Throwing,
 }
 var state = states.Idle
 var velocity
@@ -56,7 +57,7 @@ func move(delta):
 			animation_mode.start("Idle")
 	elif state == states.Falling:
 		position += Vector2(0, delta * falling_speed)
-	elif state != states.Kicking:
+	elif state == states.Walking or state == states.Idle:
 		velocity = Vector2()
 		velocity.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 		velocity.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
@@ -76,6 +77,7 @@ func look_at_mouse(): #change player sprite to look at mouse
 	animation_tree.set('parameters/Idle/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Walk/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Kick/blend_position', mouse_pos_blended)
+	animation_tree.set('parameters/Throw/blend_position', mouse_pos_blended)
 	var mouse_angle = Utils.mouse_angle()
 	if mouse_angle > 105 or mouse_angle < -105: #some space as to not flicker at border
 		weapons.mirrored = true
@@ -138,6 +140,11 @@ func fall(): # Called from Falling_area
 		animation_mode.start("Falling") # Immidiately switch to falling
 	else:
 		flags.in_fall_area=true
+
+func throw(): 
+	if state != states.Throwing:
+		state = states.Throwing
+		animation_mode.travel("Throw")
 
 func change_state(state_id): #called from animations
 	state = state_id

@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=47 format=2]
+[gd_resource type="AnimationNodeStateMachine" load_steps=60 format=2]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "falling"
@@ -138,6 +138,51 @@ blend_point_7/pos = Vector2( -1, 1 )
 triangles = PoolIntArray( 0, 1, 2, 2, 3, 4, 4, 5, 6, 0, 6, 7 )
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id=47]
+animation = "throw_front"
+
+[sub_resource type="AnimationNodeAnimation" id=48]
+animation = "throw_frontside"
+
+[sub_resource type="AnimationNodeAnimation" id=49]
+animation = "throw_frontside"
+
+[sub_resource type="AnimationNodeAnimation" id=50]
+animation = "throw_frontside"
+
+[sub_resource type="AnimationNodeAnimation" id=51]
+animation = "throw_back"
+
+[sub_resource type="AnimationNodeAnimation" id=52]
+animation = "throw_backside"
+
+[sub_resource type="AnimationNodeAnimation" id=53]
+animation = "throw_backside"
+
+[sub_resource type="AnimationNodeAnimation" id=54]
+animation = "throw_frontside"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=55]
+auto_triangles = false
+blend_point_0/node = SubResource( 47 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 48 )
+blend_point_1/pos = Vector2( 1, 1 )
+blend_point_2/node = SubResource( 49 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 50 )
+blend_point_3/pos = Vector2( -1, 0 )
+blend_point_4/node = SubResource( 51 )
+blend_point_4/pos = Vector2( 0, -1 )
+blend_point_5/node = SubResource( 52 )
+blend_point_5/pos = Vector2( -1, -1 )
+blend_point_6/node = SubResource( 53 )
+blend_point_6/pos = Vector2( 1, -1 )
+blend_point_7/node = SubResource( 54 )
+blend_point_7/pos = Vector2( -1, 1 )
+triangles = PoolIntArray( 0, 1, 2, 3, 4, 5, 2, 4, 6, 0, 3, 7 )
+blend_mode = 1
+
 [sub_resource type="AnimationNodeAnimation" id=29]
 animation = "walk_front"
 
@@ -207,17 +252,30 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=46]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+
 [resource]
 states/Falling/node = SubResource( 1 )
-states/Falling/position = Vector2( 67, 102 )
+states/Falling/position = Vector2( -161, 102 )
 states/Idle/node = SubResource( 10 )
 states/Idle/position = Vector2( 256, 102 )
 states/Kick/node = SubResource( 19 )
-states/Kick/position = Vector2( 459, -42 )
+states/Kick/position = Vector2( 459, -33 )
 states/Roll/node = SubResource( 28 )
-states/Roll/position = Vector2( 459, 257 )
+states/Roll/position = Vector2( 459, 190 )
+states/Throw/node = SubResource( 55 )
+states/Throw/position = Vector2( 459, 325 )
 states/Walk/node = SubResource( 37 )
 states/Walk/position = Vector2( 687, 102 )
-transitions = [ "Idle", "Walk", SubResource( 38 ), "Idle", "Kick", SubResource( 39 ), "Walk", "Idle", SubResource( 40 ), "Kick", "Idle", SubResource( 41 ), "Roll", "Idle", SubResource( 42 ), "Kick", "Walk", SubResource( 43 ), "Roll", "Walk", SubResource( 44 ), "Walk", "Roll", SubResource( 45 ), "Walk", "Kick", SubResource( 46 ) ]
+transitions = [ "Idle", "Walk", SubResource( 38 ), "Idle", "Kick", SubResource( 39 ), "Walk", "Idle", SubResource( 40 ), "Kick", "Idle", SubResource( 41 ), "Roll", "Idle", SubResource( 42 ), "Kick", "Walk", SubResource( 43 ), "Roll", "Walk", SubResource( 44 ), "Walk", "Roll", SubResource( 45 ), "Walk", "Kick", SubResource( 46 ), "Idle", "Throw", SubResource( 56 ), "Throw", "Idle", SubResource( 57 ), "Throw", "Walk", SubResource( 58 ), "Walk", "Throw", SubResource( 59 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -35, -76 )
+graph_offset = Vector2( -140, -48 )

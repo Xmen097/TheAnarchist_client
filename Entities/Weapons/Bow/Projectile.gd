@@ -14,7 +14,7 @@ func _ready():
 	direction = Vector2(cos(PI*sprite_data.angle/180.0), -sin(PI*sprite_data.angle/180.0)).normalized()
 	$Collider.rotation_degrees = -sprite_data.angle
 
-func _physics_process(delta): # Position rounded to be whole pixel
+func _physics_process(_delta): # Position rounded to be whole pixel
 	var result = move_and_collide(direction * speed)
 	if result:
 		hit(result.collider)
