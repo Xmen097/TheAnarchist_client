@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/Maps/Assets/tilesets/map.tres" type="TileSet" id=1]
 [ext_resource path="res://Entities/Characters/AI/AI.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@ emission_shape = 2
 emission_box_extents = Vector3( 2, 1, 1 )
 flag_disable_z = true
 direction = Vector3( 0, -20, 10 )
+spread = 44.77
 gravity = Vector3( 0, 30, 0 )
 initial_velocity = 40.0
 initial_velocity_random = 0.6
@@ -27,34 +28,154 @@ linear_accel = -19.4
 color_ramp = SubResource( 2 )
 
 [sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0.190114, 0.768061, 1 )
-colors = PoolColorArray( 0.458824, 0.141176, 0.219608, 1, 0.854902, 0.52549, 0.243137, 1, 0.0627451, 0.0784314, 0.121569, 1 )
+offsets = PoolRealArray( 0.29096, 0.782486, 0.977401 )
+colors = PoolColorArray( 0.458824, 0.141176, 0.219608, 1, 0.854902, 0.52549, 0.243137, 1, 0.0823529, 0.113725, 0.156863, 1 )
 
 [sub_resource type="GradientTexture" id=5]
 gradient = SubResource( 4 )
 
-[sub_resource type="Curve" id=6]
-_data = [ Vector2( 0.0185676, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.181818 ), -0.329545, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=7]
-curve = SubResource( 6 )
-
-[sub_resource type="ParticlesMaterial" id=8]
+[sub_resource type="ParticlesMaterial" id=6]
 emission_shape = 1
 emission_sphere_radius = 30.0
 flag_disable_z = true
 direction = Vector3( 0, -5, 0 )
 spread = 20.21
 gravity = Vector3( 0, 0, 0 )
-initial_velocity = 5.0
-initial_velocity_random = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 2.0
-scale_curve = SubResource( 7 )
 color_ramp = SubResource( 5 )
 
+[sub_resource type="ParticlesMaterial" id=7]
+emission_shape = 2
+emission_box_extents = Vector3( 50, 50, 50 )
+flag_disable_z = true
+direction = Vector3( 0, -2, 0 )
+spread = 90.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0.145098, 0.337255, 0.180392, 1 )
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.474576, 1 )
+colors = PoolColorArray( 0.458824, 0.654902, 0.262745, 1, 0.145098, 0.337255, 0.180392, 1, 0.27451, 0.509804, 0.196078, 1 )
+
+[sub_resource type="GradientTexture" id=9]
+gradient = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_disable_z = true
+direction = Vector3( 0, -10, 0 )
+spread = 40.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 5.0
+initial_velocity_random = 0.5
+angular_velocity = 15.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 1.0
+linear_accel_random = 0.23
+color_ramp = SubResource( 9 )
+
+[sub_resource type="Gradient" id=11]
+offsets = PoolRealArray( 0.00564972, 1 )
+colors = PoolColorArray( 0.458824, 0.654902, 0.262745, 1, 0.658824, 0.792157, 0.345098, 1 )
+
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
+
+[sub_resource type="ParticlesMaterial" id=13]
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 29.07
+angular_velocity_random = 1.0
+orbit_velocity = 0.01
+orbit_velocity_random = 1.0
+scale = 6.0
+color_ramp = SubResource( 12 )
+
+[sub_resource type="Gradient" id=14]
+offsets = PoolRealArray( 0.101695, 0.799435, 1 )
+colors = PoolColorArray( 0.27451, 0.509804, 0.196078, 1, 0.658824, 0.792157, 0.345098, 1, 0.780392, 0.811765, 0.8, 1 )
+
+[sub_resource type="GradientTexture" id=15]
+gradient = SubResource( 14 )
+
+[sub_resource type="Curve" id=16]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -2.67997, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=17]
+curve = SubResource( 16 )
+
+[sub_resource type="ParticlesMaterial" id=18]
+emission_shape = 1
+emission_sphere_radius = 10.0
+flag_disable_z = true
+direction = Vector3( 0, -100, 0 )
+spread = 90.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 100.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -80.0
+scale = 5.0
+scale_curve = SubResource( 17 )
+color_ramp = SubResource( 15 )
+
+[sub_resource type="Gradient" id=19]
+offsets = PoolRealArray( 0, 0.553719, 0.987603 )
+colors = PoolColorArray( 0.921569, 0.929412, 0.913725, 1, 0.505882, 0.592157, 0.588235, 1, 0.0823529, 0.113725, 0.156863, 1 )
+
+[sub_resource type="GradientTexture" id=20]
+gradient = SubResource( 19 )
+
+[sub_resource type="ParticlesMaterial" id=21]
+emission_shape = 1
+emission_sphere_radius = 4.0
+flag_disable_z = true
+direction = Vector3( -50, 0, 0 )
+spread = 20.0
+gravity = Vector3( 0, 10, 0 )
+initial_velocity = 40.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -20.0
+color_ramp = SubResource( 20 )
+
+[sub_resource type="Gradient" id=22]
+offsets = PoolRealArray( 0, 0.409091, 0.834711, 1 )
+colors = PoolColorArray( 0.458824, 0.141176, 0.219608, 1, 0.870588, 0.619608, 0.254902, 1, 0.658824, 0.709804, 0.698039, 1, 0.12549, 0.180392, 0.215686, 1 )
+
+[sub_resource type="GradientTexture" id=23]
+gradient = SubResource( 22 )
+
+[sub_resource type="ParticlesMaterial" id=24]
+trail_divisor = 5
+emission_shape = 2
+emission_box_extents = Vector3( 1, 3, 1 )
+flag_disable_z = true
+direction = Vector3( -50, 0, 0 )
+spread = 5.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -20.0
+color_ramp = SubResource( 23 )
+
 [node name="World" type="YSort"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 148.961 ]
+}
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -100,6 +221,56 @@ position = Vector2( -79.3, -42 )
 
 [node name="Foreground" type="YSort" parent="."]
 
+[node name="Particles2D" type="Particles2D" parent="Foreground"]
+position = Vector2( 35.8392, 64.1762 )
+z_index = 1
+amount = 2000
+lifetime = 2.8
+process_material = SubResource( 3 )
+
+[node name="Particles2D2" type="Particles2D" parent="Foreground"]
+position = Vector2( 420.676, 106.927 )
+amount = 1500
+lifetime = 2.0
+process_material = SubResource( 6 )
+
+[node name="Particles2D3" type="Particles2D" parent="Foreground"]
+position = Vector2( 18.6832, 191.989 )
+amount = 20
+lifetime = 2.0
+process_material = SubResource( 7 )
+
+[node name="Particles2D6" type="Particles2D" parent="Foreground"]
+position = Vector2( 257.135, 80.2589 )
+z_index = 1
+amount = 1000
+lifetime = 5.0
+process_material = SubResource( 10 )
+
+[node name="Particles2D5" type="Particles2D" parent="Foreground"]
+position = Vector2( 257.135, 80.2589 )
+amount = 200
+lifetime = 3.0
+process_material = SubResource( 13 )
+
+[node name="Particles2D4" type="Particles2D" parent="Foreground"]
+position = Vector2( 368.962, 143.514 )
+amount = 100
+lifetime = 0.5
+explosiveness = 0.6
+process_material = SubResource( 18 )
+
+[node name="Particles2D7" type="Particles2D" parent="Foreground"]
+position = Vector2( 174.557, -33.3631 )
+amount = 10
+process_material = SubResource( 21 )
+
+[node name="Particles2D8" type="Particles2D" parent="Foreground"]
+position = Vector2( 278.33, -36.3241 )
+amount = 100
+lifetime = 2.0
+process_material = SubResource( 24 )
+
 [node name="Decorations" type="TileMap" parent="Foreground"]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 12, 12 )
@@ -125,7 +296,7 @@ tile_data = PoolIntArray( 4, 6, 1, 5, 6, 196610, 6, 6, 196610, 7, 6, 196610, 8, 
 [node name="Entities" type="YSort" parent="Foreground"]
 
 [node name="Player" parent="Foreground/Entities" instance=ExtResource( 3 )]
-position = Vector2( 42, 167 )
+position = Vector2( 254.706, 136.132 )
 
 [node name="AI3" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( -128, 149 )
@@ -146,38 +317,5 @@ position = Vector2( 321, 87 )
 
 [node name="Vendor" parent="Foreground/Entities" instance=ExtResource( 5 )]
 position = Vector2( -35, 167 )
-
-[node name="Effects" type="Node2D" parent="."]
-position = Vector2( 23, 267 )
-
-[node name="ViewportContainer" type="ViewportContainer" parent="Effects"]
-margin_left = -24.0
-margin_top = -263.0
-margin_right = 380.0
-margin_bottom = -43.0
-stretch = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Viewport" type="Viewport" parent="Effects/ViewportContainer"]
-size = Vector2( 404, 220 )
-transparent_bg = true
-handle_input_locally = false
-usage = 1
-render_target_update_mode = 3
-
-[node name="Particles2D" type="Particles2D" parent="Effects/ViewportContainer/Viewport"]
-position = Vector2( 36.2847, 62.3944 )
-z_index = 4096
-amount = 2000
-lifetime = 2.8
-process_material = SubResource( 3 )
-
-[node name="Particles2D2" type="Particles2D" parent="Effects/ViewportContainer/Viewport"]
-position = Vector2( 348.57, 162.216 )
-amount = 1500
-lifetime = 2.0
-process_material = SubResource( 8 )
 [connection signal="body_entered" from="Background/Falling_area" to="Background/Falling_area" method="_on_Falling_area_body_entered"]
 [connection signal="body_exited" from="Background/Falling_area" to="Background/Falling_area" method="_on_Falling_area_body_exited"]
