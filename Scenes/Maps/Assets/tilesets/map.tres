@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=51 format=2]
+[gd_resource type="TileSet" load_steps=55 format=2]
 
 [ext_resource path="res://Scenes/Maps/Assets/Map/Decorations/statue-Sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Maps/Assets/Map/Ground/grass.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://Scenes/Maps/Assets/Map/Ground/grass-Sheet01.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Maps/Assets/Map/ancap_flag-Sheet.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Maps/Assets/Map/Ground/grass-Sheet.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Maps/Assets/Map/Decorations/altanky.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Maps/Assets/Map/Decorations/bench.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Maps/Assets/Map/Decorations/rose_bush.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Maps/Assets/Map/Walls/wall.png" type="Texture" id=13]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 5, 24, 5, 6, 9, 2, 15, 2, 19, 6, 19, 24 )
@@ -466,3 +470,89 @@ points = PoolVector2Array( 19, 24, 5, 24, 5, 22, 19, 22 )
 13/shape_one_way_margin = 0.0
 13/shapes = [  ]
 13/z_index = 0
+14/name = "bench.png 14"
+14/texture = ExtResource( 11 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 384, 24 )
+14/tile_mode = 2
+14/autotile/icon_coordinate = Vector2( 0, 0 )
+14/autotile/tile_size = Vector2( 48, 24 )
+14/autotile/spacing = 0
+14/autotile/occluder_map = [  ]
+14/autotile/navpoly_map = [  ]
+14/autotile/priority_map = [  ]
+14/autotile/z_index_map = [  ]
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "altanky.png 15"
+15/texture = ExtResource( 10 )
+15/tex_offset = Vector2( 0, -60 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 216, 72 )
+15/tile_mode = 2
+15/autotile/icon_coordinate = Vector2( 0, 0 )
+15/autotile/tile_size = Vector2( 72, 72 )
+15/autotile/spacing = 0
+15/autotile/occluder_map = [  ]
+15/autotile/navpoly_map = [  ]
+15/autotile/priority_map = [  ]
+15/autotile/z_index_map = [  ]
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "rose_bush.png 16"
+16/texture = ExtResource( 12 )
+16/tex_offset = Vector2( 0, -36 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 288, 48 )
+16/tile_mode = 2
+16/autotile/icon_coordinate = Vector2( 0, 0 )
+16/autotile/tile_size = Vector2( 48, 48 )
+16/autotile/spacing = 0
+16/autotile/occluder_map = [  ]
+16/autotile/navpoly_map = [  ]
+16/autotile/priority_map = [  ]
+16/autotile/z_index_map = [  ]
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "wall.png 17"
+17/texture = ExtResource( 13 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 96, 96 )
+17/tile_mode = 1
+17/autotile/bitmask_mode = 1
+17/autotile/bitmask_flags = [ Vector2( 0, 0 ), 144, Vector2( 0, 1 ), 23920786, Vector2( 0, 2 ), 18, Vector2( 0, 3 ), 16, Vector2( 1, 0 ), 16777392, Vector2( 1, 1 ), 17039538, Vector2( 1, 2 ), 262194, Vector2( 1, 3 ), 48, Vector2( 2, 0 ), 20971704, Vector2( 2, 1 ), 21299386, Vector2( 2, 2 ), 327738, Vector2( 2, 3 ), 29818936, Vector2( 3, 0 ), 4194456, Vector2( 3, 1 ), 4259994, Vector2( 3, 2 ), 65562, Vector2( 3, 3 ), 24 ]
+17/autotile/icon_coordinate = Vector2( 0, 3 )
+17/autotile/tile_size = Vector2( 24, 24 )
+17/autotile/spacing = 0
+17/autotile/occluder_map = [  ]
+17/autotile/navpoly_map = [  ]
+17/autotile/priority_map = [  ]
+17/autotile/z_index_map = [  ]
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
