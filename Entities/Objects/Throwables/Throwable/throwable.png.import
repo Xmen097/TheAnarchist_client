@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/throwable.png-ba9f9c7fc8ff6d656b3c7dab45d5f545.stex"
+path="res://.import/throwable.png-2e072f896aea56283e1d2230f5102926.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Objects/Throwable/throwable.png"
-dest_files=[ "res://.import/throwable.png-ba9f9c7fc8ff6d656b3c7dab45d5f545.stex" ]
+source_file="res://Entities/Objects/Throwables/Throwable/throwable.png"
+dest_files=[ "res://.import/throwable.png-2e072f896aea56283e1d2230f5102926.stex" ]
 
 [params]
 

@@ -1,6 +1,6 @@
 extends Node
 
-onready var throwable_instance = preload("res://Entities/Objects/Throwable/Throwable.tscn")
+onready var throwable_instance = preload("res://Entities/Objects/Throwables/Throwable/Throwable.tscn")
 
 enum types {
 	General,
