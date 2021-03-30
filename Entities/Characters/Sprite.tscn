@@ -1086,7 +1086,6 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = 1
 script = ExtResource( 6 )
-frame = Vector2( 3, 0 )
 
 [node name="torso" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -1125,7 +1124,7 @@ vframes = 14
 hframes = 10
 
 [node name="Weapons" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1, -9 )
+position = Vector2( 1, -10 )
 
 [node name="hand_right" type="Sprite" parent="."]
 texture = SubResource( 6 )

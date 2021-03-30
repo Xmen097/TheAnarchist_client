@@ -12,6 +12,7 @@ var item_texture
 var preview
 export(bool) var is_trash = false
 export(bool) var has_preview = false
+export(bool) var is_sell = false
 
 export(int) var frame_id
 export(Player.frame_type) var frame_type
@@ -28,7 +29,7 @@ func _ready():
 	success = success or connect("item_changed", Player, "_on_item_changed")
 	success = success or Player.connect("item_changed", self, "_on_item_changed")
 	assert(!success, "Inventory frame failed to connect to events!")
-	if not is_trash:
+	if not is_trash and not is_sell:
 		item_texture = $Item
 		if starting_item_id != 0:
 			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type)
@@ -66,18 +67,23 @@ func get_drag_data(_pos):
 func can_drop_data(_pos, data):
 	if frame_type == Player.frame_type.Shop:
 		return false
+		
+	if data.from.frame_type == Player.frame_type.Shop and (is_trash or is_sell):
+		return false
 	
-	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.cost < GameManager.get_stat(GameManager.stat.player.gold) and not is_trash)
+	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.properties.cost < GameManager.get_stat(GameManager.stat.player.gold))
 	
 	return shop_ok and item == Items.items.None and \
 	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
 	not (frame_type == Player.frame_type.Body and Player.body[Player.body.keys()[frame_id]].armor == Items.armor_type.Destroyed) or\
-	is_trash
+	is_trash or is_sell
 	
 func drop_data(_pos, data):
 	emit_signal("item_changed", data.item, frame_id, frame_type)
 	if data.from.frame_type == Player.frame_type.Shop:
-		GameManager.increase_stat(GameManager.stat.player.gold, -data.from.item.cost)
+		GameManager.increase_stat(GameManager.stat.player.gold, -data.from.item.properties.cost)
+	if is_sell:
+		GameManager.increase_stat(GameManager.stat.player.gold, data.from.item.properties.cost)
 	data.from.dropped_success()
 	
 func dropped_success():

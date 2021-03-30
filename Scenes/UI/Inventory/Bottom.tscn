@@ -586,6 +586,8 @@ visible = false
 margin_right = 40.0
 margin_bottom = 37.0
 texture = ExtResource( 11 )
+script = ExtResource( 4 )
+is_sell = true
 
 [node name="TextureRect" type="TextureRect" parent="Buttons/HBoxContainer"]
 margin_left = 44.0
