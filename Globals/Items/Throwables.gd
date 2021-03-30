@@ -20,7 +20,7 @@ class Throwable extends Item:
 	func dropped():
 		print("DROPPED!")
 		
-	func hit(body):
+	func hit(_body):
 		return false # return whether flying item should stop
 
 class Stone extends Throwable:

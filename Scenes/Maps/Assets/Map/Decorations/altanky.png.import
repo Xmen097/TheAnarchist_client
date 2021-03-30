@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/throwable.png-ba9f9c7fc8ff6d656b3c7dab45d5f545.stex"
+path="res://.import/altanky.png-55eb51d5b46aa8b07a8b7ffa6f7671f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Objects/Throwable/throwable.png"
-dest_files=[ "res://.import/throwable.png-ba9f9c7fc8ff6d656b3c7dab45d5f545.stex" ]
+source_file="res://Scenes/Maps/Assets/Map/Decorations/altanky.png"
+dest_files=[ "res://.import/altanky.png-55eb51d5b46aa8b07a8b7ffa6f7671f7.stex" ]
 
 [params]
 

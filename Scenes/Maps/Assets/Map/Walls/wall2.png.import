@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/r_shoe.png-7e2e55bd75fd83e6aef39b76d99937eb.stex"
+path="res://.import/wall2.png-7945b00b681f74d4f754e63d1d1d7482.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Characters/assets/r_shoe.png"
-dest_files=[ "res://.import/r_shoe.png-7e2e55bd75fd83e6aef39b76d99937eb.stex" ]
+source_file="res://Scenes/Maps/Assets/Map/Walls/wall2.png"
+dest_files=[ "res://.import/wall2.png-7945b00b681f74d4f754e63d1d1d7482.stex" ]
 
 [params]
 

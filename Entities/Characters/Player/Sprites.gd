@@ -1,3 +1,5 @@
+tool
+
 extends Node2D
 
 export var frame = Vector2(0,0) setget change_frame
@@ -32,18 +34,26 @@ func _ready():
 		assert(!failed, "UI failed to connect to events!")
 
 func change_frame(new_value):
-	for id in body_parts:
-		body_parts[id].frame_coords = new_value
+	frame = new_value
+	if Engine.editor_hint:  # If is in editor, debug
+		for id in get_node(".").get_children():
+			if id.get("frame_coords") != null:
+				id.frame_coords = new_value
+	else:
+		for id in body_parts:
+			body_parts[id].frame_coords = new_value
 		
 func change_flip_h(new_value):
+	flip_h = new_value
 	for id in body_parts:
 		body_parts[id].flip_h = new_value
 
 func _on_armor_changed(part):
 	armor[part.id] = part.armor
 	var part_slot = body_parts[part.id]
-	part_slot.texture.region = Rect2(armor[part.id]*240, part_slot.texture.region.position.y, 240, 336)
+	part_slot.texture.region = Rect2(armor[part.id]*part_slot.texture.region.size.x, part_slot.texture.region.position.y, part_slot.texture.region.size.x, part_slot.texture.region.size.y)
 	if part.id == "left_leg" and part.armor == Items.armor_type.Destroyed:
 		body_parts.left_shoe.visible = false
 	if part.id == "right_leg" and part.armor == Items.armor_type.Destroyed:
 		body_parts.right_shoe.visible = false
+

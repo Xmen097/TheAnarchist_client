@@ -37,7 +37,7 @@ func _ready():
 	hp = max_hp
 	scale = Vector2(1,1)
 
-func _process(delta):
+func _process(_delta):
 	attack()
 	look_at_player()
 	
@@ -54,7 +54,7 @@ func attack():
 		
 func move(delta):
 	if velocity.length() > 0.1: #velocity treshold
-		move_and_slide(velocity)
+		var moved = move_and_slide(velocity)
 		velocity -= velocity * friction * delta # slowly decrease velocity
 	if personality == Personality.Chaser:
 		var velocity = Vector2.ZERO

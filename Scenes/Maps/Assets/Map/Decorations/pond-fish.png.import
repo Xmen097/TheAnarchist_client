@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/torso.png-d5f0e3f1d8be358c856f260399b3d2dc.stex"
+path="res://.import/pond-fish.png-3d76a2359817538df24a1ffb6143a752.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Characters/assets/torso.png"
-dest_files=[ "res://.import/torso.png-d5f0e3f1d8be358c856f260399b3d2dc.stex" ]
+source_file="res://Scenes/Maps/Assets/Map/Decorations/pond-fish.png"
+dest_files=[ "res://.import/pond-fish.png-3d76a2359817538df24a1ffb6143a752.stex" ]
 
 [params]
 

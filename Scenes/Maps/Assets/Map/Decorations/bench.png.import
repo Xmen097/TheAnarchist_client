@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/r_arm.png-1049ea66bde9ef3b276a1e7b21b6b5c4.stex"
+path="res://.import/bench.png-9c2497460dfd5511a6afc146fadf17a2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Characters/assets/r_arm.png"
-dest_files=[ "res://.import/r_arm.png-1049ea66bde9ef3b276a1e7b21b6b5c4.stex" ]
+source_file="res://Scenes/Maps/Assets/Map/Decorations/bench.png"
+dest_files=[ "res://.import/bench.png-9c2497460dfd5511a6afc146fadf17a2.stex" ]
 
 [params]
 
