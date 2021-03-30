@@ -5,7 +5,9 @@
 
 extends TextureRect
 
-export(Items.types) var accepted_type = Items.types.General
+const types = preload("res://Globals/Definitions/Items.gd").types
+
+export(types) var accepted_type = types.General
 var item = Items.items.None setget change_item
 export var starting_item_id = 0 
 var item_texture
@@ -80,6 +82,7 @@ func can_drop_data(_pos, data):
 	
 func drop_data(_pos, data):
 	emit_signal("item_changed", data.item, frame_id, frame_type)
+	print(data.from.frame_type, Player.frame_type.Shop)
 	if data.from.frame_type == Player.frame_type.Shop:
 		GameManager.increase_stat(GameManager.stat.player.gold, -data.from.item.properties.cost)
 	if is_sell:
