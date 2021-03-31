@@ -62,9 +62,9 @@ render_target_update_mode = 3
 [node name="ProjectilesContainer" type="YSort" parent="ViewportContainer/Viewport/World"]
 
 [node name="World" parent="ViewportContainer/Viewport/World" instance=ExtResource( 7 )]
+visible = false
 
 [node name="Map" parent="ViewportContainer/Viewport/World" instance=ExtResource( 1 )]
-visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="ViewportContainer/Viewport"]
 visible = false
