@@ -9,7 +9,7 @@ var items = {
 	hands = [],
 }
 
-enum frame_type {Inventory, Hotbar, Body, Backpack, Trash, Shop, Weapon, Amulet, Shoes}
+enum frame_type {Inventory, Hotbar, Body, Backpack, Trash, Shop, Weapon, Amulet, Shoes, Sell}
 signal item_changed(new_item, id, type)
 signal item_hovered(item, id, type)
 signal armor_changed(body_part) # on change of armor, or destroy

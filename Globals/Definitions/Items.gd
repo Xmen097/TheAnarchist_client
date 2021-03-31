@@ -25,7 +25,11 @@ enum armor_type {
 	Obsidian,
 }
 
-# item id = line_number - 30
+func props(cost=0, tooltip=null):
+	if tooltip == null:
+		tooltip = []
+	return {"cost": cost, "tooltip": tooltip}
+
 var items = {
 	None = Item.new(types.General, 0, [], 0),
 	Obsidian_leggins = Armor.new(types.Leg_armor, 1, [], 250, armor_type.Obsidian, 300),

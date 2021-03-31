@@ -2,15 +2,14 @@ class_name Item
 
 var type
 var id = -1
-var tooltip = []
+var properties = {}
 var cost
 
-func _init(new_type, new_id, new_tooltip, new_cost):
+func _init(new_type, new_id, new_properties):
 	self.type = new_type
 	self.id = new_id
-	self.tooltip = new_tooltip
-	self.cost = new_cost
+	self.properties = new_properties
 	
 func duplicate():
-	var dup = get_script().new(self.type, self.id, self.tooltip, self.cost)
+	var dup = get_script().new(self.type, self.id, self.properties)
 	return dup

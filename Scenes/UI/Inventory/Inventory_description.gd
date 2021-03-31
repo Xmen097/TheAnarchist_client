@@ -35,8 +35,11 @@ func _on_item_hovered(item, id, type):
 	#else:
 	#	label.text = text
 	
-	costlabel.text = str(item.cost)
+	costlabel.text = str(item.properties.cost)
 	
 	desc.bbcode_text = ""
-	for prop in item.tooltip:
-		desc.bbcode_text += "[img]res://Scenes/UI/assets/items_abilities/" + prop + ".png[/img]"
+	for prop in item.properties.tooltip:
+		if prop == "break":
+			desc.bbcode_text += "\n"
+		else:
+			desc.bbcode_text += "[img]res://Scenes/UI/assets/items_abilities/" + prop + ".png[/img]"
