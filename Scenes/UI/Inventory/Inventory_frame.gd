@@ -10,8 +10,11 @@ var item = Items.items.None setget change_item
 export var starting_item_id = 0 
 var item_texture
 var preview
+var stack
+var stack_number
 export(bool) var is_trash = false
 export(bool) var has_preview = false
+export(bool) var has_stack_counter = true
 export(bool) var is_sell = false
 
 export(int) var frame_id
@@ -29,12 +32,18 @@ func _ready():
 	success = success or connect("item_changed", Player, "_on_item_changed")
 	success = success or Player.connect("item_changed", self, "_on_item_changed")
 	assert(!success, "Inventory frame failed to connect to events!")
+	
+	if has_preview:
+		preview = $Preview
+	if has_stack_counter:
+		stack = $Stack
+		stack_number = $Stack/Count
+	
 	if not is_trash and not is_sell:
 		item_texture = $Item
 		if starting_item_id != 0:
 			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type)
-	if has_preview:
-		preview = $Preview
+
 	
 func _on_mouse_entered():
 	self_modulate = Color(1, 1, 1, 255/220.0)
@@ -46,7 +55,22 @@ func _on_mouse_exited():
 func change_item(new_item): # item setter
 	item = new_item
 	if has_preview:
-		preview.visible = item == Items.items.None
+		preview.visible = (item == Items.items.None)
+	if has_stack_counter:
+		if item.properties.stackability == Items.stackability.None:
+			stack.visible = false
+		elif item.properties.stackability == Items.stackability.Single:
+			var count = item.count
+			stack.visible = true
+			stack_number.texture.region = Rect2(count * 9, 0, 9, 8)
+			stack.texture.region = Rect2(0, 0, 13, 22)
+		elif item.properties.stackability == Items.stackability.Multi:
+			var stack_count = item.count / 12
+			var count = item.count % 12
+			stack.visible = true
+			stack_number.texture.region = Rect2(count * 9, 0, 9, 8)
+			stack.texture.region = Rect2(13 + stack_count * 13, 0, 13, 22)
+
 	if item_texture:
 		item_texture.texture.region = Rect2(item.id * 28, 0, 28, 28) # 28 pixels per item
 	

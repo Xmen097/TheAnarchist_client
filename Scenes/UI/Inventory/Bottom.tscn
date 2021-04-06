@@ -14,7 +14,6 @@
 [ext_resource path="res://Scenes/UI/Inventory/buttons/drop.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/UI/Inventory/Hotbar.gd" type="Script" id=13]
 
-
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="StyleBoxEmpty" id=2]
@@ -588,6 +587,7 @@ margin_right = 40.0
 margin_bottom = 37.0
 texture = ExtResource( 11 )
 script = ExtResource( 4 )
+has_stack_counter = false
 is_sell = true
 frame_type = 9
 
@@ -598,4 +598,5 @@ margin_bottom = 37.0
 texture = ExtResource( 7 )
 script = ExtResource( 4 )
 is_trash = true
+has_stack_counter = false
 frame_type = 4

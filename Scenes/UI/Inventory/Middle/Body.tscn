@@ -9,7 +9,6 @@
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/UI/assets/boxes/frame_shoes.png" type="Texture" id=8]
 
-
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 360, 60, 72 )
@@ -285,6 +284,7 @@ __meta__ = {
 }
 accepted_type = 1
 has_preview = true
+has_stack_counter = false
 frame_type = 2
 
 [node name="Item" type="TextureRect" parent="Boxes/Head"]
@@ -317,6 +317,7 @@ __meta__ = {
 }
 accepted_type = 7
 has_preview = true
+has_stack_counter = false
 frame_type = 7
 
 [node name="Item" type="TextureRect" parent="Boxes/Amulet"]
@@ -353,6 +354,7 @@ __meta__ = {
 }
 accepted_type = 2
 has_preview = true
+has_stack_counter = false
 frame_id = 1
 frame_type = 2
 
@@ -389,6 +391,7 @@ __meta__ = {
 }
 accepted_type = 2
 has_preview = true
+has_stack_counter = false
 frame_id = 2
 frame_type = 2
 
@@ -425,6 +428,7 @@ __meta__ = {
 }
 accepted_type = 3
 has_preview = true
+has_stack_counter = false
 frame_id = 3
 frame_type = 2
 
@@ -461,6 +465,7 @@ __meta__ = {
 }
 accepted_type = 4
 has_preview = true
+has_stack_counter = false
 frame_id = 4
 frame_type = 2
 
@@ -497,6 +502,7 @@ __meta__ = {
 }
 accepted_type = 4
 has_preview = true
+has_stack_counter = false
 frame_id = 5
 frame_type = 2
 
@@ -532,6 +538,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 accepted_type = 5
+has_stack_counter = false
 frame_type = 8
 
 [node name="Item" type="TextureRect" parent="Boxes/Shoes"]
@@ -568,6 +575,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 accepted_type = 6
+has_stack_counter = false
 frame_type = 6
 
 [node name="Item" type="TextureRect" parent="Boxes/LWeapon"]
@@ -604,6 +612,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 accepted_type = 6
+has_stack_counter = false
 frame_id = 1
 frame_type = 6
 
