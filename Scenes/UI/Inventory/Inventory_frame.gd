@@ -5,9 +5,7 @@
 
 extends TextureRect
 
-const types = preload("res://Globals/Definitions/Items.gd").types
-
-export(types) var accepted_type = types.General
+export(Items.types) var accepted_type = Items.types.General
 var item = Items.items.None setget change_item
 export var starting_item_id = 0 
 var item_texture

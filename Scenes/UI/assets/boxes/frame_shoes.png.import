@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame_shoes.png-d548a094c39675079dd49bab583ff337.stex"
+path="res://.import/frame_shoes.png-c41562640996d8a49c89eca21e4a02af.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/boxes/frame_shoes.png"
-dest_files=[ "res://.import/frame_shoes.png-d548a094c39675079dd49bab583ff337.stex" ]
+source_file="res://Scenes/UI/assets/boxes/frame_shoes.png"
+dest_files=[ "res://.import/frame_shoes.png-c41562640996d8a49c89eca21e4a02af.stex" ]
 
 [params]
 

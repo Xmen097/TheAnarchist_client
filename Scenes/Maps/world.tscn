@@ -104,24 +104,28 @@ tile_data = PoolIntArray( 4, 6, 1, 5, 6, 196610, 6, 6, 196610, 7, 6, 196610, 8, 
 
 [node name="Player" parent="Foreground/Entities" instance=ExtResource( 3 )]
 position = Vector2( 42, 167 )
-z_index = 2
+z_index = 1
 
 [node name="AI3" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( -128, 149 )
+z_index = 1
 weapon = 2
 personality = 1
 
 [node name="AI4" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( -135, 7 )
+z_index = 1
 weapon = 1
 personality = 1
 
 [node name="AI" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( 3, 18 )
+z_index = 1
 personality = 2
 
 [node name="AI2" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( 321, 87 )
+z_index = 1
 
 [node name="Vendor" parent="Foreground/Entities" instance=ExtResource( 5 )]
 position = Vector2( -35, 167 )

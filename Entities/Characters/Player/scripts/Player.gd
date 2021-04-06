@@ -22,6 +22,8 @@ enum states {
 	Kicking,
 	Falling,
 	Throwing,
+	Dying,
+	Using,  # Using item or drug
 }
 var state = states.Idle
 var velocity
@@ -145,6 +147,11 @@ func throw():
 	if state != states.Throwing:
 		state = states.Throwing
 		animation_mode.travel("Throw")
+		
+func use(animation_name):
+	if state != states.Using:
+		state = states.Using
+		animation_mode.travel(animation_name)
 
 func change_state(state_id): #called from animations
 	state = state_id

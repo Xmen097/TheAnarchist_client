@@ -9,10 +9,11 @@
 [ext_resource path="res://Scenes/UI/Inventory/buttons/trash.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/UI/assets/hotbar_number_holder.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/UI/boxes/hotbar.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/UI/assets/boxes/hotbar.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/sell.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/drop.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/UI/Inventory/Hotbar.gd" type="Script" id=13]
+
 
 [sub_resource type="StyleBoxEmpty" id=1]
 

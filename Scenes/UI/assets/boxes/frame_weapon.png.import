@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backpack.png-f662aba8c1c9884781b20649663bc29c.stex"
+path="res://.import/frame_weapon.png-ae22d83efd7c88fc1c44a690b1293f5b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/boxes/backpack.png"
-dest_files=[ "res://.import/backpack.png-f662aba8c1c9884781b20649663bc29c.stex" ]
+source_file="res://Scenes/UI/assets/boxes/frame_weapon.png"
+dest_files=[ "res://.import/frame_weapon.png-ae22d83efd7c88fc1c44a690b1293f5b.stex" ]
 
 [params]
 

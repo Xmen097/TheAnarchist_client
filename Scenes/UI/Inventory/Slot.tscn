@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/UI/Inventory/Inventory_frame.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI/assets/boxes/backpack.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+resource_local_to_scene = true
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 28, 28 )
+
+[node name="Slot" type="TextureRect"]
+margin_right = 28.0
+margin_bottom = 28.0
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

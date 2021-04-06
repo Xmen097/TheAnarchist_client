@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame_weapon.png-eee8e2e86aeddaa4cf439b31fc07f5c9.stex"
+path="res://.import/hotbar.png-5f054b7c6e52efac84bc8d006ea50330.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/boxes/frame_weapon.png"
-dest_files=[ "res://.import/frame_weapon.png-eee8e2e86aeddaa4cf439b31fc07f5c9.stex" ]
+source_file="res://Scenes/UI/assets/boxes/hotbar.png"
+dest_files=[ "res://.import/hotbar.png-5f054b7c6e52efac84bc8d006ea50330.stex" ]
 
 [params]
 

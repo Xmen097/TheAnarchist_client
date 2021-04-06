@@ -5,10 +5,10 @@ class Throwable extends Item:
 	var rotspeed = -10 # multiple of 100 deg/sec
 	var offset = Vector2(0, 6)
 	
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(8, new_id, new_properties):
 		pass
 	func use():
-		var throw = Items.throwable_instance.instance()
+		var throw = Utils.throwable_instance.instance()
 		throw.id = throwable_id
 		throw.item = self
 		throw.rotspeed = rotspeed
@@ -16,15 +16,20 @@ class Throwable extends Item:
 		throw.end_position = Player.get_reference().camera.global_position+Utils.mouse_pos()/Utils.scaling_factor
 		throw.velocity = throw.position.direction_to(throw.end_position)
 		Weapons.projectiles_root.add_child(throw)
+		Player.get_reference().throw()
 		
 	func dropped():
 		print("DROPPED!")
 		
 	func hit(_body):
-		return false # return whether flying item should stop
+		return false # return whether flying item should stop, otherwise fill fly throught bodies
+		
+	func duplicate():
+		var dup = get_script().new(self.id, self.properties)
+		return dup
 
 class Stone extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 1
 		
 	func hit(body):
@@ -32,29 +37,29 @@ class Stone extends Throwable:
 		return true
 		
 class FlaskGreen extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 2
 		
 class FlaskRed extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 3
 		
 class BananaPeel extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 8
 		
 class CauldronRed extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 9
 		
 class CauldronGreen extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 13
 		
 class CauldronHand extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 14
 		
 class Molotov extends Throwable:
-	func _init(new_type, new_id, new_properties).(new_type, new_id, new_properties):
+	func _init(new_id, new_properties).(new_id, new_properties):
 		throwable_id = 15

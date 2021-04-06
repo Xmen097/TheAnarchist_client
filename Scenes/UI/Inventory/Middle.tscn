@@ -45,8 +45,7 @@ mouse_filter = 1
 custom_constants/margin_left = 112
 
 [node name="Backpack" parent="Middle/Inventory/Inventory" instance=ExtResource( 2 )]
-margin_left = 118.0
-margin_right = 230.0
+visible = false
 
 [node name="Shop" parent="Middle/Inventory/Inventory" instance=ExtResource( 1 )]
 margin_left = 118.0

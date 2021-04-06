@@ -3,11 +3,12 @@
 [ext_resource path="res://Scenes/UI/Inventory/Body.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/Inventory/Inventory_frame.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/UI/assets/armor.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/UI/boxes/frame_weapon.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/UI/boxes/frame_basic.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/UI/assets/boxes/frame_weapon.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UI/assets/boxes/frame_basic.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/UI/Inventory/armor_preview.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/UI/boxes/frame_shoes.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/UI/assets/boxes/frame_shoes.png" type="Texture" id=8]
+
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )

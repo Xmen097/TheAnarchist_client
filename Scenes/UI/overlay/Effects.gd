@@ -5,7 +5,7 @@ onready var container = $Container
 
 var active = 0
 var size = 4
-var compression = 28/size
+var compression = 28
 
 func _init():
 	var success = Effects.connect("effect_added", self, "on_effect_added")
@@ -31,12 +31,12 @@ var effects = {
 }
 
 func on_effect_added(effect):
-	if effects[effect].count == 0 or true:
+	if effects[effect].count == 0:
 		active += 1
 		effects[effect].reference = displayer.instance()
 		effects[effect].reference.texture.region = Rect2(effects[effect].sprite_id * 28, 0, 28, 28)
 		container.add_child(effects[effect].reference)
-		container.add_constant_override("separation", -max(0, active-size)*compression)
+		container.add_constant_override("separation", -max(0, active-size)*compression/ (1 if active <= size else (active-1)))
 	effects[effect].count += 1
 
 func on_effect_expired(effect):
