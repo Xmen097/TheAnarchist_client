@@ -26,6 +26,7 @@ class Throwable extends Item:
 		
 	func duplicate():
 		var dup = get_script().new(self.id, self.properties)
+		dup.uuid = self.uuid
 		return dup
 
 class Stone extends Throwable:

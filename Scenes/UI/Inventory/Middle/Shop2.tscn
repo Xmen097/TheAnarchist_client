@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=4]
 
-[sub_resource type="StreamTexture" id=21]
+[sub_resource type="StreamTexture" id=1]
 resource_local_to_scene = true
 load_path = "res://.import/backpack.png-f662aba8c1c9884781b20649663bc29c.stex"
 
@@ -18,7 +18,7 @@ __meta__ = {
 }
 
 [node name="Slot" parent="." instance=ExtResource( 4 )]
-texture = SubResource( 21 )
+texture = SubResource( 1 )
 starting_item_id = 26
 frame_id = 20
 frame_type = 5
@@ -26,7 +26,7 @@ frame_type = 5
 [node name="Slot2" parent="." instance=ExtResource( 4 )]
 margin_left = 28.0
 margin_right = 56.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
 starting_item_id = 27
 frame_id = 21
 frame_type = 5
@@ -34,7 +34,7 @@ frame_type = 5
 [node name="Slot3" parent="." instance=ExtResource( 4 )]
 margin_left = 56.0
 margin_right = 84.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
 starting_item_id = 28
 frame_id = 22
 frame_type = 5
@@ -42,14 +42,15 @@ frame_type = 5
 [node name="Slot4" parent="." instance=ExtResource( 4 )]
 margin_left = 84.0
 margin_right = 112.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
 frame_id = 23
 frame_type = 5
 
 [node name="Slot5" parent="." instance=ExtResource( 4 )]
 margin_top = 28.0
 margin_bottom = 56.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 30
 frame_id = 24
 frame_type = 5
 
@@ -58,7 +59,8 @@ margin_left = 28.0
 margin_top = 28.0
 margin_right = 56.0
 margin_bottom = 56.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 31
 frame_id = 25
 frame_type = 5
 
@@ -67,7 +69,8 @@ margin_left = 56.0
 margin_top = 28.0
 margin_right = 84.0
 margin_bottom = 56.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 32
 frame_id = 26
 frame_type = 5
 
@@ -76,14 +79,16 @@ margin_left = 84.0
 margin_top = 28.0
 margin_right = 112.0
 margin_bottom = 56.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 33
 frame_id = 27
 frame_type = 5
 
 [node name="Slot9" parent="." instance=ExtResource( 4 )]
 margin_top = 56.0
 margin_bottom = 84.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 34
 frame_id = 28
 frame_type = 5
 
@@ -92,7 +97,8 @@ margin_left = 28.0
 margin_top = 56.0
 margin_right = 56.0
 margin_bottom = 84.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 35
 frame_id = 29
 frame_type = 5
 
@@ -101,7 +107,8 @@ margin_left = 56.0
 margin_top = 56.0
 margin_right = 84.0
 margin_bottom = 84.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 36
 frame_id = 30
 frame_type = 5
 
@@ -110,14 +117,16 @@ margin_left = 84.0
 margin_top = 56.0
 margin_right = 112.0
 margin_bottom = 84.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 37
 frame_id = 31
 frame_type = 5
 
 [node name="Slot13" parent="." instance=ExtResource( 4 )]
 margin_top = 84.0
 margin_bottom = 112.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 38
 frame_id = 32
 frame_type = 5
 
@@ -126,7 +135,8 @@ margin_left = 28.0
 margin_top = 84.0
 margin_right = 56.0
 margin_bottom = 112.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 39
 frame_id = 33
 frame_type = 5
 
@@ -135,7 +145,8 @@ margin_left = 56.0
 margin_top = 84.0
 margin_right = 84.0
 margin_bottom = 112.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 40
 frame_id = 34
 frame_type = 5
 
@@ -144,14 +155,16 @@ margin_left = 84.0
 margin_top = 84.0
 margin_right = 112.0
 margin_bottom = 112.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 41
 frame_id = 35
 frame_type = 5
 
 [node name="Slot17" parent="." instance=ExtResource( 4 )]
 margin_top = 112.0
 margin_bottom = 140.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 42
 frame_id = 36
 frame_type = 5
 
@@ -160,7 +173,8 @@ margin_left = 28.0
 margin_top = 112.0
 margin_right = 56.0
 margin_bottom = 140.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 43
 frame_id = 37
 frame_type = 5
 
@@ -169,7 +183,8 @@ margin_left = 56.0
 margin_top = 112.0
 margin_right = 84.0
 margin_bottom = 140.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 44
 frame_id = 38
 frame_type = 5
 
@@ -178,6 +193,7 @@ margin_left = 84.0
 margin_top = 112.0
 margin_right = 112.0
 margin_bottom = 140.0
-texture = SubResource( 21 )
+texture = SubResource( 1 )
+starting_item_id = 45
 frame_id = 39
 frame_type = 5

@@ -9,4 +9,5 @@ func _init(new_id, new_properties, new_weapon).(6, new_id, new_properties):
 	
 func duplicate():
 	var dup = get_script().new(self.id, self.properties, self.weapon)
+	dup.uuid = self.uuid
 	return dup

@@ -54,10 +54,10 @@ tile_data = PoolIntArray( 0, 4, 262152, 1, 4, 524298, 2, 4, 11, 65536, 4, 589832
 position = Vector2( -79.3, -42 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-margin_left = -191.0
-margin_top = 90.0
-margin_right = 193.0
-margin_bottom = 306.0
+margin_left = -192.0
+margin_top = 82.0
+margin_right = 192.0
+margin_bottom = 298.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false

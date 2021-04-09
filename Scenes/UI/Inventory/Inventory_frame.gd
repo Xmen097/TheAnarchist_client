@@ -65,8 +65,8 @@ func change_item(new_item): # item setter
 			stack_number.texture.region = Rect2(count * 9, 0, 9, 8)
 			stack.texture.region = Rect2(0, 0, 13, 22)
 		elif item.properties.stackability == Items.stackability.Multi:
-			var stack_count = item.count / 12
-			var count = item.count % 12
+			var stack_count = (item.count-1) / 12
+			var count = (item.count-1) % 12 +1
 			stack.visible = true
 			stack_number.texture.region = Rect2(count * 9, 0, 9, 8)
 			stack.texture.region = Rect2(13 + stack_count * 13, 0, 13, 22)
@@ -89,6 +89,9 @@ func get_drag_data(_pos):
 	return {item = item, from = self}
 
 func can_drop_data(_pos, data):
+	if frame_type == data.from.frame_type and frame_id == data.from.frame_id:
+		return false
+		
 	if frame_type == Player.frame_type.Shop:
 		return false
 		
@@ -97,18 +100,25 @@ func can_drop_data(_pos, data):
 	
 	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.properties.cost < GameManager.get_stat(GameManager.stat.player.gold))
 	
-	return shop_ok and item == Items.items.None and \
+	var stack_ok = item == Items.items.None or item.uuid == data.item.uuid and \
+	(item.properties.stackability == Items.stackability.Single and item.count + data.item.count <= 12 \
+	or item.properties.stackability == Items.stackability.Multi and item.count + data.item.count <= 60)
+	
+	return shop_ok and stack_ok and \
 	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
 	not (frame_type == Player.frame_type.Body and Player.body[Player.body.keys()[frame_id]].armor == Items.armor_type.Destroyed) or\
 	is_trash or is_sell
 	
 func drop_data(_pos, data):
+	if data.from.frame_type == Player.frame_type.Shop:
+		data.item = data.item.duplicate()
+	if item != Items.items.None:
+		data.item.count += item.count
 	emit_signal("item_changed", data.item, frame_id, frame_type)
-	print(data.from.frame_type, Player.frame_type.Shop)
 	if data.from.frame_type == Player.frame_type.Shop:
 		GameManager.increase_stat(GameManager.stat.player.gold, -data.from.item.properties.cost)
 	if is_sell:
-		GameManager.increase_stat(GameManager.stat.player.gold, data.from.item.properties.cost)
+		GameManager.increase_stat(GameManager.stat.player.gold, data.from.item.properties.cost*data.from.item.count)
 	data.from.dropped_success()
 	
 func dropped_success():

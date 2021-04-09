@@ -183,6 +183,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
+has_stack_counter = false
 frame_type = 1
 
 [node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect"]
@@ -234,6 +235,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
+has_stack_counter = false
 frame_id = 1
 frame_type = 1
 
@@ -283,6 +285,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
+has_stack_counter = false
 frame_id = 2
 frame_type = 1
 
@@ -341,6 +344,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
+has_stack_counter = false
 frame_id = 3
 frame_type = 1
 
@@ -399,6 +403,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
+has_stack_counter = false
 frame_id = 4
 frame_type = 1
 
@@ -457,6 +462,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
+has_stack_counter = false
 frame_id = 5
 frame_type = 1
 
@@ -515,6 +521,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
+has_stack_counter = false
 frame_id = 6
 frame_type = 1
 

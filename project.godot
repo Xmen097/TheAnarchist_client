@@ -50,6 +50,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Uuid="*res://addons/uuid.gd"
 Utils="*res://Globals/Singletons/Utils.gd"
 Effects="*res://Globals/Definitions/Effects.gd"
 Weapons="*res://Globals/Definitions/Weapons.gd"

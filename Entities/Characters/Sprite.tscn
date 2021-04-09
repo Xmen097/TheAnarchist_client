@@ -2031,73 +2031,73 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = -1
 script = ExtResource( 6 )
-frame = Vector2( 1, 0 )
+frame = Vector2( 5, 0 )
 
 [node name="torso" type="Sprite" parent="."]
 texture = SubResource( 1 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="leg_right" type="Sprite" parent="."]
 texture = SubResource( 2 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="shoe_right" type="Sprite" parent="."]
 texture = SubResource( 3 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="leg_left" type="Sprite" parent="."]
 texture = SubResource( 4 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="shoe_left" type="Sprite" parent="."]
 texture = SubResource( 5 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="head" type="Sprite" parent="."]
 texture = SubResource( 6 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="Weapons" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1, -10 )
+position = Vector2( 1, -9 )
 
 [node name="hand_right" type="Sprite" parent="."]
 texture = SubResource( 7 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="hand_left" type="Sprite" parent="."]
 texture = SubResource( 8 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 1
+frame = 5
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = ExtResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 9 )
-parameters/Die/blend_position = Vector2( -0.742451, 0.0753565 )
+parameters/Die/blend_position = Vector2( 0.0177619, -0.861183 )
 parameters/Idle/blend_position = Vector2( 0.000885725, 1 )
 parameters/Kick/blend_position = Vector2( -0.997897, 0.0317125 )
 parameters/Roll/blend_position = Vector2( 0, 0 )

@@ -41,10 +41,10 @@ __meta__ = {
 
 [node name="Stack" type="TextureRect" parent="."]
 visible = false
-margin_left = 16.0
-margin_top = 7.0
-margin_right = 29.0
-margin_bottom = 29.0
+margin_left = 15.0
+margin_top = 6.0
+margin_right = 28.0
+margin_bottom = 28.0
 texture = SubResource( 2 )
 stretch_mode = 3
 __meta__ = {
@@ -57,3 +57,6 @@ margin_top = 13.0
 margin_right = 11.0
 margin_bottom = 21.0
 texture = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
