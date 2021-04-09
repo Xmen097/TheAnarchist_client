@@ -12,6 +12,7 @@ var item_texture
 var preview
 var stack
 var stack_number
+export(NodePath) var stack_path
 export(bool) var is_trash = false
 export(bool) var has_preview = false
 export(bool) var has_stack_counter = true
@@ -36,11 +37,11 @@ func _ready():
 	if has_preview:
 		preview = $Preview
 	if has_stack_counter:
-		stack = $Stack
-		stack_number = $Stack/Count
+		stack = get_node(stack_path) if stack_path != "" else $Stack
+		stack_number = stack.get_node("Count")
 	
 	if not is_trash and not is_sell:
-		item_texture = $Item
+		item_texture =  $Item
 		if starting_item_id != 0:
 			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type)
 

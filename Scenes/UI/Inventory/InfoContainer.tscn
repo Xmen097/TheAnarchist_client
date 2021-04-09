@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/UI/assets/stack_counters/counter.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/UI/assets/font.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/assets/hotbar_number_holder.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI/Hotkey.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/UI/Inventory/Stack_counter.tscn" type="PackedScene" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+resource_local_to_scene = true
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=2]
+resource_local_to_scene = true
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 13, 22 )
+
+[node name="InfoContainer" type="HBoxContainer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -14.0
+margin_right = 14.0
+margin_bottom = 63.0
+mouse_filter = 2
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyContainer" type="MarginContainer" parent="."]
+margin_left = 7.0
+margin_right = 21.0
+margin_bottom = 63.0
+mouse_filter = 2
+custom_constants/margin_right = 2
+custom_constants/margin_top = 22
+custom_constants/margin_left = 1
+custom_constants/margin_bottom = 28
+
+[node name="Hotkey" type="TextureRect" parent="KeyContainer"]
+margin_left = 1.0
+margin_top = 22.0
+margin_right = 12.0
+margin_bottom = 35.0
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+position = 6
+
+[node name="Key" type="TextureRect" parent="KeyContainer/Hotkey"]
+modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2.5
+margin_top = -4.5
+margin_right = 2.5
+margin_bottom = 4.5
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StackContainer" type="MarginContainer" parent="."]
+margin_left = 21.0
+margin_right = 21.0
+margin_bottom = 63.0
+mouse_filter = 2
+custom_constants/margin_right = 0
+custom_constants/margin_top = 11
+custom_constants/margin_left = 0
+
+[node name="Stack" parent="StackContainer" instance=ExtResource( 5 )]
+margin_left = 0.0
+margin_top = 11.0
+margin_right = 13.0
+margin_bottom = 63.0
+texture = SubResource( 2 )

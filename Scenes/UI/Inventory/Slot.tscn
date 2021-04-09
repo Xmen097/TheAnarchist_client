@@ -1,10 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Inventory_frame.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/assets/boxes/backpack.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/UI/assets/stack_counters/counter.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/UI/assets/stack_counters/font.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/UI/Inventory/Stack_counter.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 resource_local_to_scene = true
@@ -15,11 +15,6 @@ region = Rect2( 0, 0, 28, 28 )
 resource_local_to_scene = true
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 13, 22 )
-
-[sub_resource type="AtlasTexture" id=3]
-resource_local_to_scene = true
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 9, 8 )
 
 [node name="Slot" type="TextureRect"]
 margin_right = 28.0
@@ -39,24 +34,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Stack" type="TextureRect" parent="."]
-visible = false
-margin_left = 15.0
-margin_top = 6.0
-margin_right = 28.0
-margin_bottom = 28.0
+[node name="Stack" parent="." instance=ExtResource( 5 )]
 texture = SubResource( 2 )
-stretch_mode = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Count" type="TextureRect" parent="Stack"]
-margin_left = 2.0
-margin_top = 13.0
-margin_right = 11.0
-margin_bottom = 21.0
-texture = SubResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}

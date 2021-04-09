@@ -1,18 +1,18 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Inventory_description.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/UI/Hotkey.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/UI/assets/Font.tres" type="BitmapFont" id=3]
 [ext_resource path="res://Scenes/UI/Inventory/Inventory_frame.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/UI/assets/font.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/UI/Inventory/text_area.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/trash.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/UI/assets/hotbar_number_holder.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/UI/assets/items.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/UI/assets/boxes/hotbar.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/sell.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/drop.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/UI/Inventory/Hotbar.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/UI/Inventory/InfoContainer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/UI/assets/stack_counters/counter.png" type="Texture" id=15]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -59,57 +59,99 @@ VScrollBar/styles/scroll_focus = SubResource( 10 )
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=27]
+resource_local_to_scene = true
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
 
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 28, 28 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 5, 9 )
+[sub_resource type="AtlasTexture" id=28]
+resource_local_to_scene = true
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 13, 22 )
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=29]
+resource_local_to_scene = true
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=30]
+resource_local_to_scene = true
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 13, 22 )
 
 [sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=31]
+resource_local_to_scene = true
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=32]
+resource_local_to_scene = true
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 13, 22 )
 
 [sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=33]
+resource_local_to_scene = true
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=34]
+resource_local_to_scene = true
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 13, 22 )
 
 [sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=35]
+resource_local_to_scene = true
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=36]
+resource_local_to_scene = true
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 13, 22 )
 
 [sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 28, 28 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=37]
+resource_local_to_scene = true
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=38]
+resource_local_to_scene = true
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 13, 22 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="AtlasTexture" id=39]
+resource_local_to_scene = true
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 5, 9 )
+
+[sub_resource type="AtlasTexture" id=40]
+resource_local_to_scene = true
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 13, 22 )
 
 [node name="Bottom" type="HBoxContainer"]
 margin_top = 173.0
@@ -179,11 +221,8 @@ margin_right = 28.0
 margin_bottom = 28.0
 texture = ExtResource( 10 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
 accepted_type = 8
-has_stack_counter = false
+stack_path = NodePath("InfoContainer/StackContainer/Stack")
 frame_type = 1
 
 [node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect"]
@@ -194,36 +233,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hotkey" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -6.0
-margin_right = 5.5
-margin_bottom = 7.0
-texture = ExtResource( 8 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="InfoContainer" parent="Hotbar/HBoxContainer/TextureRect" instance=ExtResource( 14 )]
+
+[node name="Hotkey" parent="Hotbar/HBoxContainer/TextureRect/InfoContainer/KeyContainer" index="0"]
 position = 0
 
-[node name="Key" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect/Hotkey"]
-modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -2.5
-margin_top = -4.5
-margin_right = 2.5
-margin_bottom = 4.5
-texture = SubResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Key" parent="Hotbar/HBoxContainer/TextureRect/InfoContainer/KeyContainer/Hotkey" index="0"]
+texture = SubResource( 27 )
+
+[node name="Stack" parent="Hotbar/HBoxContainer/TextureRect/InfoContainer/StackContainer" index="0"]
+texture = SubResource( 28 )
 
 [node name="TextureRect2" type="TextureRect" parent="Hotbar/HBoxContainer"]
 margin_left = 28.0
@@ -235,45 +254,28 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
-has_stack_counter = false
+stack_path = NodePath("InfoContainer/StackContainer/Stack")
 frame_id = 1
 frame_type = 1
 
 [node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 14 )
+texture = SubResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hotkey" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect2"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -6.0
-margin_right = 5.5
-margin_bottom = 7.0
-texture = ExtResource( 8 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="InfoContainer" parent="Hotbar/HBoxContainer/TextureRect2" instance=ExtResource( 14 )]
+
+[node name="Hotkey" parent="Hotbar/HBoxContainer/TextureRect2/InfoContainer/KeyContainer" index="0"]
 position = 1
 
-[node name="Key" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect2/Hotkey"]
-modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -2.5
-margin_top = -4.5
-margin_right = 2.5
-margin_bottom = 4.5
-texture = SubResource( 15 )
+[node name="Key" parent="Hotbar/HBoxContainer/TextureRect2/InfoContainer/KeyContainer/Hotkey" index="0"]
+texture = SubResource( 29 )
+
+[node name="Stack" parent="Hotbar/HBoxContainer/TextureRect2/InfoContainer/StackContainer" index="0"]
+texture = SubResource( 30 )
 
 [node name="TextureRect3" type="TextureRect" parent="Hotbar/HBoxContainer"]
 margin_left = 56.0
@@ -285,70 +287,11 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
-has_stack_counter = false
+stack_path = NodePath("InfoContainer/StackContainer/Stack")
 frame_id = 2
 frame_type = 1
 
 [node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect3"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -14.0
-margin_top = -14.0
-margin_right = 14.0
-margin_bottom = 14.0
-texture = SubResource( 16 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Hotkey" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect3"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -6.0
-margin_right = 5.5
-margin_bottom = 7.0
-texture = ExtResource( 8 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-position = 2
-
-[node name="Key" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect3/Hotkey"]
-modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -2.5
-margin_top = -4.5
-margin_right = 2.5
-margin_bottom = 4.5
-texture = SubResource( 17 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect4" type="TextureRect" parent="Hotbar/HBoxContainer"]
-margin_left = 84.0
-margin_right = 112.0
-margin_bottom = 28.0
-texture = ExtResource( 10 )
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
-accepted_type = 8
-has_stack_counter = false
-frame_id = 3
-frame_type = 1
-
-[node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect4"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -362,40 +305,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hotkey" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect4"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -6.0
-margin_right = 5.5
-margin_bottom = 7.0
-texture = ExtResource( 8 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-position = 3
+[node name="InfoContainer" parent="Hotbar/HBoxContainer/TextureRect3" instance=ExtResource( 14 )]
 
-[node name="Key" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect4/Hotkey"]
-modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -2.5
-margin_top = -4.5
-margin_right = 2.5
-margin_bottom = 4.5
-texture = SubResource( 19 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Hotkey" parent="Hotbar/HBoxContainer/TextureRect3/InfoContainer/KeyContainer" index="0"]
+position = 2
 
-[node name="TextureRect5" type="TextureRect" parent="Hotbar/HBoxContainer"]
-margin_left = 112.0
-margin_right = 140.0
+[node name="Key" parent="Hotbar/HBoxContainer/TextureRect3/InfoContainer/KeyContainer/Hotkey" index="0"]
+texture = SubResource( 31 )
+
+[node name="Stack" parent="Hotbar/HBoxContainer/TextureRect3/InfoContainer/StackContainer" index="0"]
+texture = SubResource( 32 )
+
+[node name="TextureRect4" type="TextureRect" parent="Hotbar/HBoxContainer"]
+margin_left = 84.0
+margin_right = 112.0
 margin_bottom = 28.0
 texture = ExtResource( 10 )
 script = ExtResource( 4 )
@@ -403,11 +326,11 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
-has_stack_counter = false
-frame_id = 4
+stack_path = NodePath("InfoContainer/StackContainer/Stack")
+frame_id = 3
 frame_type = 1
 
-[node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect5"]
+[node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect4"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -421,40 +344,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hotkey" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect5"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -6.0
-margin_right = 5.5
-margin_bottom = 7.0
-texture = ExtResource( 8 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-position = 4
+[node name="InfoContainer" parent="Hotbar/HBoxContainer/TextureRect4" instance=ExtResource( 14 )]
 
-[node name="Key" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect5/Hotkey"]
-modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -2.5
-margin_top = -4.5
-margin_right = 2.5
-margin_bottom = 4.5
-texture = SubResource( 21 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Hotkey" parent="Hotbar/HBoxContainer/TextureRect4/InfoContainer/KeyContainer" index="0"]
+position = 3
 
-[node name="TextureRect6" type="TextureRect" parent="Hotbar/HBoxContainer"]
-margin_left = 140.0
-margin_right = 168.0
+[node name="Key" parent="Hotbar/HBoxContainer/TextureRect4/InfoContainer/KeyContainer/Hotkey" index="0"]
+texture = SubResource( 33 )
+
+[node name="Stack" parent="Hotbar/HBoxContainer/TextureRect4/InfoContainer/StackContainer" index="0"]
+texture = SubResource( 34 )
+
+[node name="TextureRect5" type="TextureRect" parent="Hotbar/HBoxContainer"]
+margin_left = 112.0
+margin_right = 140.0
 margin_bottom = 28.0
 texture = ExtResource( 10 )
 script = ExtResource( 4 )
@@ -462,11 +365,11 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
-has_stack_counter = false
-frame_id = 5
+stack_path = NodePath("InfoContainer/StackContainer/Stack")
+frame_id = 4
 frame_type = 1
 
-[node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect6"]
+[node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect5"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -480,36 +383,55 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hotkey" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect6"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -6.0
-margin_right = 5.5
-margin_bottom = 7.0
-texture = ExtResource( 8 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-position = 5
+[node name="InfoContainer" parent="Hotbar/HBoxContainer/TextureRect5" instance=ExtResource( 14 )]
 
-[node name="Key" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect6/Hotkey"]
-modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
+[node name="Hotkey" parent="Hotbar/HBoxContainer/TextureRect5/InfoContainer/KeyContainer" index="0"]
+position = 4
+
+[node name="Key" parent="Hotbar/HBoxContainer/TextureRect5/InfoContainer/KeyContainer/Hotkey" index="0"]
+texture = SubResource( 35 )
+
+[node name="Stack" parent="Hotbar/HBoxContainer/TextureRect5/InfoContainer/StackContainer" index="0"]
+texture = SubResource( 36 )
+
+[node name="TextureRect6" type="TextureRect" parent="Hotbar/HBoxContainer"]
+margin_left = 140.0
+margin_right = 168.0
+margin_bottom = 28.0
+texture = ExtResource( 10 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+accepted_type = 8
+stack_path = NodePath("InfoContainer/StackContainer/Stack")
+frame_id = 5
+frame_type = 1
+
+[node name="Item" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect6"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -2.5
-margin_top = -4.5
-margin_right = 2.5
-margin_bottom = 4.5
-texture = SubResource( 23 )
+margin_left = -14.0
+margin_top = -14.0
+margin_right = 14.0
+margin_bottom = 14.0
+texture = SubResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="InfoContainer" parent="Hotbar/HBoxContainer/TextureRect6" instance=ExtResource( 14 )]
+
+[node name="Hotkey" parent="Hotbar/HBoxContainer/TextureRect6/InfoContainer/KeyContainer" index="0"]
+position = 5
+
+[node name="Key" parent="Hotbar/HBoxContainer/TextureRect6/InfoContainer/KeyContainer/Hotkey" index="0"]
+texture = SubResource( 37 )
+
+[node name="Stack" parent="Hotbar/HBoxContainer/TextureRect6/InfoContainer/StackContainer" index="0"]
+texture = SubResource( 38 )
 
 [node name="TextureRect7" type="TextureRect" parent="Hotbar/HBoxContainer"]
 margin_left = 168.0
@@ -521,7 +443,7 @@ __meta__ = {
 "_edit_group_": true
 }
 accepted_type = 8
-has_stack_counter = false
+stack_path = NodePath("InfoContainer/StackContainer/Stack")
 frame_id = 6
 frame_type = 1
 
@@ -535,41 +457,18 @@ margin_top = -14.0
 margin_right = 14.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 224, -63.9091 )
-texture = SubResource( 24 )
+texture = SubResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hotkey" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect7"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -5.5
-margin_top = -6.0
-margin_right = 5.5
-margin_bottom = 7.0
-texture = ExtResource( 8 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-position = 6
+[node name="InfoContainer" parent="Hotbar/HBoxContainer/TextureRect7" instance=ExtResource( 14 )]
 
-[node name="Key" type="TextureRect" parent="Hotbar/HBoxContainer/TextureRect7/Hotkey"]
-modulate = Color( 0.0352941, 0.0392157, 0.0784314, 1 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -2.5
-margin_top = -4.5
-margin_right = 2.5
-margin_bottom = 4.5
-texture = SubResource( 25 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Key" parent="Hotbar/HBoxContainer/TextureRect7/InfoContainer/KeyContainer/Hotkey" index="0"]
+texture = SubResource( 39 )
+
+[node name="Stack" parent="Hotbar/HBoxContainer/TextureRect7/InfoContainer/StackContainer" index="0"]
+texture = SubResource( 40 )
 
 [node name="Buttons" type="MarginContainer" parent="."]
 margin_left = 292.0
@@ -607,3 +506,17 @@ script = ExtResource( 4 )
 is_trash = true
 has_stack_counter = false
 frame_type = 4
+
+[editable path="Hotbar/HBoxContainer/TextureRect/InfoContainer"]
+
+[editable path="Hotbar/HBoxContainer/TextureRect2/InfoContainer"]
+
+[editable path="Hotbar/HBoxContainer/TextureRect3/InfoContainer"]
+
+[editable path="Hotbar/HBoxContainer/TextureRect4/InfoContainer"]
+
+[editable path="Hotbar/HBoxContainer/TextureRect5/InfoContainer"]
+
+[editable path="Hotbar/HBoxContainer/TextureRect6/InfoContainer"]
+
+[editable path="Hotbar/HBoxContainer/TextureRect7/InfoContainer"]
