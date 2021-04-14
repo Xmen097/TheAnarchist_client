@@ -29,7 +29,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-nochest_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/NoChest"), NodePath("PanelContainer/MarginContainer/VBoxContainer/TopEmpty"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Throw") ]
+nochest_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/TopEmpty"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/NoChest"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Throw") ]
 chest_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Chest"), NodePath("PanelContainer/MarginContainer/VBoxContainer/TopChest"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Throw") ]
 shop_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/TopShop"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Shop"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Sell") ]
 
@@ -128,3 +128,7 @@ custom_constants/margin_top = 8
 [node name="Middle" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 2 )]
 
 [node name="Bottom" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+
+[editable path="PanelContainer/MarginContainer/VBoxContainer/Middle"]
+
+[editable path="PanelContainer/MarginContainer/VBoxContainer/Bottom"]
