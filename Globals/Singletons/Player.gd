@@ -28,7 +28,8 @@ var body = {
 
 var stats = {
 	vulnerable = true,
-	flag = false
+	flag = false,
+	near_chest = null,
 }
 
 

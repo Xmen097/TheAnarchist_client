@@ -1,4 +1,5 @@
-# UUID lib from https://github.com/binogure-studio/godot-uuid
+# Note: The code might not be as pretty it could be, since it's written
+# in a way that maximizes performance. Methods are inlined and loops are avoided.
 extends Node
 
 const MODULO_8_BIT = 256
