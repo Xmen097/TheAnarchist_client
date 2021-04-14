@@ -46,7 +46,7 @@ func _ready():
 func _physics_process(delta):
 	move(delta)
 	
-func _process(delta):
+func _process(_delta):
 	if state != states.Rolling:
 		look_at_mouse()
 		weapons.look_at_mouse(Utils.mouse_angle())
@@ -77,6 +77,7 @@ func move(delta):
 func look_at_mouse(): #change player sprite to look at mouse
 	var mouse_pos_blended = Utils.mouse_pos_blended()
 	animation_tree.set('parameters/Idle/blend_position', mouse_pos_blended)
+	animation_tree.set('parameters/Walk/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Walk/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Kick/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Throw/blend_position', mouse_pos_blended)

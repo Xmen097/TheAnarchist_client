@@ -13,7 +13,7 @@ func _on_area_entered(area):
 	inside_range.append(area)
 
 func _on_area_exited(area):
-	inside_range.remove(inside_range.bsearch(area))
+	inside_range.remove(inside_range.find(area))
 
 func inside():
 	return inside_range

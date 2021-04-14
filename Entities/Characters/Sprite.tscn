@@ -2031,66 +2031,66 @@ tracks/5/keys = {
 [node name="Sprite" type="Node2D"]
 z_index = -1
 script = ExtResource( 6 )
-frame = Vector2( 5, 0 )
+frame = Vector2( 2, 0 )
 
 [node name="torso" type="Sprite" parent="."]
 texture = SubResource( 1 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="leg_right" type="Sprite" parent="."]
 texture = SubResource( 2 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="shoe_right" type="Sprite" parent="."]
 texture = SubResource( 3 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="leg_left" type="Sprite" parent="."]
 texture = SubResource( 4 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="shoe_left" type="Sprite" parent="."]
 texture = SubResource( 5 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="head" type="Sprite" parent="."]
 texture = SubResource( 6 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="Weapons" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1, -9 )
+position = Vector2( 1, -10 )
 
 [node name="hand_right" type="Sprite" parent="."]
 texture = SubResource( 7 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="hand_left" type="Sprite" parent="."]
 texture = SubResource( 8 )
 offset = Vector2( 0, -12 )
 vframes = 25
 hframes = 15
-frame = 5
+frame = 2
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = ExtResource( 7 )
@@ -2102,7 +2102,9 @@ parameters/Idle/blend_position = Vector2( 0.000885725, 1 )
 parameters/Kick/blend_position = Vector2( -0.997897, 0.0317125 )
 parameters/Roll/blend_position = Vector2( 0, 0 )
 parameters/Throw/blend_position = Vector2( 0, 0 )
-parameters/Walk/blend_position = Vector2( 0.0430797, 0.878049 )
+parameters/Walk/blend_position = Vector2( -0.00177622, 1 )
+"parameters/Walk 2/BlendSpace2D/blend_position" = Vector2( 0, 0 )
+"parameters/Walk 2/TimeScale/scale" = 2.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1

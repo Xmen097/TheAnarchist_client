@@ -16,14 +16,6 @@ func _ready():
 	assert(!Player.connect("item_hovered", self, "_on_item_hovered"), "Inventory item description failed to connect to signal")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	#time += delta
-	#if text and len(text) > 10:
-	#	scroll.scroll_horizontal = int(time*20)%(5*(len(text) + space_len))
-	pass
-
-
 func _on_item_hovered(item, id, type):
 	#text = item.tooltip
 	#for x in [["š", "s"], ["č", "c"], ["ř", "r"], ["ň", "n"], ["ě", "e"], ["ž", "z"], ["ú", "u"], ["ů", "ú"], ["á", "a"], ["é", "e"], ["í", "i"], ["ý", "y"], ["ó", "o"]]:
