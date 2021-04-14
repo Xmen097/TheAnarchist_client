@@ -38,13 +38,13 @@ margin_right = 236.0
 margin_bottom = 152.0
 custom_constants/separation = 6
 
-[node name="NoBackpack" type="MarginContainer" parent="Middle/Inventory/Inventory"]
+[node name="NoChest" type="MarginContainer" parent="Middle/Inventory/Inventory"]
 margin_right = 112.0
 margin_bottom = 140.0
 mouse_filter = 1
 custom_constants/margin_left = 112
 
-[node name="Backpack" parent="Middle/Inventory/Inventory" instance=ExtResource( 2 )]
+[node name="Chest" parent="Middle/Inventory/Inventory" instance=ExtResource( 2 )]
 visible = false
 
 [node name="Shop" parent="Middle/Inventory/Inventory" instance=ExtResource( 1 )]

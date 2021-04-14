@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Maps/Assets/tilesets/map.tres" type="TileSet" id=1]
 [ext_resource path="res://Entities/Characters/AI/AI.tscn" type="PackedScene" id=2]
@@ -15,6 +15,34 @@
 [ext_resource path="res://Entities/Objects/effects/particle-materials/molotov.tres" type="Material" id=13]
 [ext_resource path="res://Entities/Objects/effects/particle-materials/grass-grow.tres" type="Material" id=14]
 
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+varying vec2 v;
+uniform float shift : hint_range(0, 1);
+
+void fragment() {
+	vec2 uv = UV;
+	
+	float sizex = TEXTURE_PIXEL_SIZE.x*float(textureSize(TEXTURE,int(TEXTURE_PIXEL_SIZE.x)).x);
+	
+	vec4 color = texture(TEXTURE, uv);
+	
+	vec2 shadow_uv = uv - ((uv.y-sizex)*shift);
+	
+	color = mix(texture(TEXTURE, shadow_uv) * vec4(vec3(0.2), 0.5), color, texture(TEXTURE, uv).a);
+	
+	COLOR = color;
+}
+
+void vertex() {
+	v = VERTEX;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/shift = 0.145
+
 [node name="World" type="YSort"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 148.961 ]
@@ -24,6 +52,7 @@ __meta__ = {
 position = Vector2( 492, 417 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="Node2D"]
+visible = false
 margin_left = -492.0
 margin_top = -416.0
 margin_right = 1008.0
@@ -37,7 +66,7 @@ __meta__ = {
 size = Vector2( 1500, 1500 )
 transparent_bg = true
 handle_input_locally = false
-render_target_update_mode = 3
+render_target_update_mode = 0
 
 [node name="Particles2D" type="Particles2D" parent="Node2D/ViewportContainer/Viewport"]
 position = Vector2( 35.5495, 61.7076 )
@@ -135,6 +164,7 @@ position = Vector2( -79.3, -42 )
 [node name="Foreground" type="YSort" parent="."]
 
 [node name="Decorations" type="TileMap" parent="Foreground"]
+material = SubResource( 2 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 12, 12 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )

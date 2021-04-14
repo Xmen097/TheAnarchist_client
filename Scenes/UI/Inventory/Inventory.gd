@@ -1,13 +1,13 @@
 extends PanelContainer
 
 enum states {
-	NoBackpack,
-	Backpack,
+	NoChest,
+	Chest,
 	Shop,
 }
 export(states) var state setget change_state
-export(Array, NodePath) var nobackpack_nodes
-export(Array, NodePath) var backpack_nodes
+export(Array, NodePath) var nochest_nodes
+export(Array, NodePath) var chest_nodes
 export(Array, NodePath) var shop_nodes
 var state_nodes = [[], [], []]
 
@@ -19,13 +19,14 @@ func _input(event): #Call methods on hands on click event
 	if event.is_action_pressed("open_shop") and visible and state != states.Shop:
 		change_state(states.Shop)
 	elif event.is_action_pressed("open_shop") and visible and state == states.Shop:
-		change_state(states.Backpack)
+		change_state(states.Chest)
 
 func _ready():
 	visible = false
-	for path in nobackpack_nodes:
+	print(nochest_nodes)
+	for path in nochest_nodes:
 		state_nodes[0].append(path)
-	for path in backpack_nodes:
+	for path in chest_nodes:
 		state_nodes[1].append(path)
 	for path in shop_nodes:
 		state_nodes[2].append(path)
