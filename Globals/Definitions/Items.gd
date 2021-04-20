@@ -10,6 +10,7 @@ enum types {
 	Weapon = 6,
 	Amulet = 7,
 	Usable = 8,
+	Backpack = 9,
 }
 enum armor_type {
 	None,
@@ -37,13 +38,12 @@ func props(cost=0, tooltip=null, item_stackability=stackability.Default):
 
 
 
-
-
 # Usable constructor(sprite_id, props) ! requires separate item implementation.
 # Throwable constructor(sprite_id, props) ! requires separate item implementation.
 # Weapon constructor(sprite_id, props, weapon)
 # Item constructor(type, sprite_id, props)
 # Armor constructor(type, sprite_id, props, armor_type, durability)
+# Backpack constructor(type, sprite_id, props, grade)
 
 # item_id = line_number - 50
 var items = { # This should be on line 49
@@ -92,5 +92,8 @@ var items = { # This should be on line 49
 	CauldronGreen = Throwables.CauldronGreen.new(59, props(10)),
 	CauldronHand = Throwables.CauldronHand.new(60, props(10)),
 	Molotov = Throwables.Molotov.new(76, props(10)),
-	Carrot = Usables.Carrot.new(43, props(10, [], stackability.Multi)),
+	Carrot = Usables.Carrot.new(43, props(10, [])),
+	BackpackSmall = Backpack.new(71, props(10, []), 1),
+	BackpackMedium = Backpack.new(69, props(10, []), 2),
+	BackpackLarge = Backpack.new(67, props(10, []), 3)
 }

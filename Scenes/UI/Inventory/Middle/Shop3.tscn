@@ -1,0 +1,183 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StreamTexture" id=1]
+resource_local_to_scene = true
+load_path = "res://.import/backpack.png-f662aba8c1c9884781b20649663bc29c.stex"
+
+[node name="Shop" type="GridContainer"]
+visible = false
+margin_right = 112.0
+margin_bottom = 140.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" parent="." instance=ExtResource( 4 )]
+texture = SubResource( 1 )
+starting_item_id = 46
+frame_id = 40
+frame_type = 5
+
+[node name="Slot2" parent="." instance=ExtResource( 4 )]
+margin_left = 28.0
+margin_right = 56.0
+texture = SubResource( 1 )
+starting_item_id = 47
+frame_id = 41
+frame_type = 5
+
+[node name="Slot3" parent="." instance=ExtResource( 4 )]
+margin_left = 56.0
+margin_right = 84.0
+texture = SubResource( 1 )
+starting_item_id = 48
+frame_id = 42
+frame_type = 5
+
+[node name="Slot4" parent="." instance=ExtResource( 4 )]
+margin_left = 84.0
+margin_right = 112.0
+texture = SubResource( 1 )
+frame_id = 43
+frame_type = 5
+
+[node name="Slot5" parent="." instance=ExtResource( 4 )]
+margin_top = 28.0
+margin_bottom = 56.0
+texture = SubResource( 1 )
+frame_id = 44
+frame_type = 5
+
+[node name="Slot6" parent="." instance=ExtResource( 4 )]
+margin_left = 28.0
+margin_top = 28.0
+margin_right = 56.0
+margin_bottom = 56.0
+texture = SubResource( 1 )
+frame_id = 45
+frame_type = 5
+
+[node name="Slot7" parent="." instance=ExtResource( 4 )]
+margin_left = 56.0
+margin_top = 28.0
+margin_right = 84.0
+margin_bottom = 56.0
+texture = SubResource( 1 )
+frame_id = 46
+frame_type = 5
+
+[node name="Slot8" parent="." instance=ExtResource( 4 )]
+margin_left = 84.0
+margin_top = 28.0
+margin_right = 112.0
+margin_bottom = 56.0
+texture = SubResource( 1 )
+frame_id = 47
+frame_type = 5
+
+[node name="Slot9" parent="." instance=ExtResource( 4 )]
+margin_top = 56.0
+margin_bottom = 84.0
+texture = SubResource( 1 )
+frame_id = 48
+frame_type = 5
+
+[node name="Slot10" parent="." instance=ExtResource( 4 )]
+margin_left = 28.0
+margin_top = 56.0
+margin_right = 56.0
+margin_bottom = 84.0
+texture = SubResource( 1 )
+frame_id = 49
+frame_type = 5
+
+[node name="Slot11" parent="." instance=ExtResource( 4 )]
+margin_left = 56.0
+margin_top = 56.0
+margin_right = 84.0
+margin_bottom = 84.0
+texture = SubResource( 1 )
+frame_id = 50
+frame_type = 5
+
+[node name="Slot12" parent="." instance=ExtResource( 4 )]
+margin_left = 84.0
+margin_top = 56.0
+margin_right = 112.0
+margin_bottom = 84.0
+texture = SubResource( 1 )
+frame_id = 51
+frame_type = 5
+
+[node name="Slot13" parent="." instance=ExtResource( 4 )]
+margin_top = 84.0
+margin_bottom = 112.0
+texture = SubResource( 1 )
+frame_id = 52
+frame_type = 5
+
+[node name="Slot14" parent="." instance=ExtResource( 4 )]
+margin_left = 28.0
+margin_top = 84.0
+margin_right = 56.0
+margin_bottom = 112.0
+texture = SubResource( 1 )
+frame_id = 53
+frame_type = 5
+
+[node name="Slot15" parent="." instance=ExtResource( 4 )]
+margin_left = 56.0
+margin_top = 84.0
+margin_right = 84.0
+margin_bottom = 112.0
+texture = SubResource( 1 )
+frame_id = 54
+frame_type = 5
+
+[node name="Slot16" parent="." instance=ExtResource( 4 )]
+margin_left = 84.0
+margin_top = 84.0
+margin_right = 112.0
+margin_bottom = 112.0
+texture = SubResource( 1 )
+frame_id = 55
+frame_type = 5
+
+[node name="Slot17" parent="." instance=ExtResource( 4 )]
+margin_top = 112.0
+margin_bottom = 140.0
+texture = SubResource( 1 )
+frame_id = 56
+frame_type = 5
+
+[node name="Slot18" parent="." instance=ExtResource( 4 )]
+margin_left = 28.0
+margin_top = 112.0
+margin_right = 56.0
+margin_bottom = 140.0
+texture = SubResource( 1 )
+frame_id = 57
+frame_type = 5
+
+[node name="Slot19" parent="." instance=ExtResource( 4 )]
+margin_left = 56.0
+margin_top = 112.0
+margin_right = 84.0
+margin_bottom = 140.0
+texture = SubResource( 1 )
+frame_id = 58
+frame_type = 5
+
+[node name="Slot20" parent="." instance=ExtResource( 4 )]
+margin_left = 84.0
+margin_top = 112.0
+margin_right = 112.0
+margin_bottom = 140.0
+texture = SubResource( 1 )
+frame_id = 59
+frame_type = 5

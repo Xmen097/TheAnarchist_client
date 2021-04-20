@@ -1,168 +1,165 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://Scenes/UI/Inventory/Middle/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/assets/boxes/frame_basic.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=4]
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 28, 28 )
 
-[node name="Main" type="GridContainer"]
+[node name="Main" type="VBoxContainer"]
 margin_left = 118.0
 margin_right = 230.0
 margin_bottom = 140.0
-custom_constants/vseparation = 0
-custom_constants/hseparation = 0
-columns = 4
+custom_constants/separation = 0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+lines_paths = [ NodePath("HBoxContainer3"), NodePath("HBoxContainer4"), NodePath("HBoxContainer5") ]
 
-[node name="Slot" parent="." instance=ExtResource( 4 )]
-texture = SubResource( 2 )
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 112.0
+margin_bottom = 28.0
+custom_constants/separation = 0
+
+[node name="Slot" parent="HBoxContainer" instance=ExtResource( 4 )]
+texture = SubResource( 1 )
 starting_item_id = 38
 
-[node name="Slot2" parent="." instance=ExtResource( 4 )]
+[node name="Slot2" parent="HBoxContainer" instance=ExtResource( 4 )]
 margin_left = 28.0
 margin_right = 56.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 starting_item_id = 39
 frame_id = 1
 
-[node name="Slot3" parent="." instance=ExtResource( 4 )]
+[node name="Slot3" parent="HBoxContainer" instance=ExtResource( 4 )]
 margin_left = 56.0
 margin_right = 84.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 starting_item_id = 40
 frame_id = 2
 
-[node name="Slot4" parent="." instance=ExtResource( 4 )]
+[node name="Slot4" parent="HBoxContainer" instance=ExtResource( 4 )]
 margin_left = 84.0
 margin_right = 112.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 starting_item_id = 41
 frame_id = 3
 
-[node name="Slot5" parent="." instance=ExtResource( 4 )]
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
 margin_top = 28.0
+margin_right = 112.0
 margin_bottom = 56.0
-texture = SubResource( 2 )
-starting_item_id = 42
+custom_constants/separation = 0
+
+[node name="Slot5" parent="HBoxContainer2" instance=ExtResource( 4 )]
+texture = SubResource( 1 )
 frame_id = 4
 
-[node name="Slot6" parent="." instance=ExtResource( 4 )]
+[node name="Slot6" parent="HBoxContainer2" instance=ExtResource( 4 )]
 margin_left = 28.0
-margin_top = 28.0
 margin_right = 56.0
-margin_bottom = 56.0
-texture = SubResource( 2 )
-starting_item_id = 43
+texture = SubResource( 1 )
 frame_id = 5
 
-[node name="Slot7" parent="." instance=ExtResource( 4 )]
+[node name="Slot7" parent="HBoxContainer2" instance=ExtResource( 4 )]
 margin_left = 56.0
-margin_top = 28.0
 margin_right = 84.0
-margin_bottom = 56.0
-texture = SubResource( 2 )
-starting_item_id = 44
+texture = SubResource( 1 )
 frame_id = 6
 
-[node name="Slot8" parent="." instance=ExtResource( 4 )]
+[node name="Slot8" parent="HBoxContainer2" instance=ExtResource( 4 )]
 margin_left = 84.0
-margin_top = 28.0
 margin_right = 112.0
-margin_bottom = 56.0
-texture = SubResource( 2 )
-starting_item_id = 45
+texture = SubResource( 1 )
 frame_id = 7
 
-[node name="Slot9" parent="." instance=ExtResource( 4 )]
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+visible = false
 margin_top = 56.0
+margin_right = 112.0
 margin_bottom = 84.0
-texture = SubResource( 2 )
+custom_constants/separation = 0
+
+[node name="Slot9" parent="HBoxContainer3" instance=ExtResource( 4 )]
+texture = SubResource( 1 )
 frame_id = 8
 
-[node name="Slot10" parent="." instance=ExtResource( 4 )]
+[node name="Slot10" parent="HBoxContainer3" instance=ExtResource( 4 )]
 margin_left = 28.0
-margin_top = 56.0
 margin_right = 56.0
-margin_bottom = 84.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 frame_id = 9
 
-[node name="Slot11" parent="." instance=ExtResource( 4 )]
+[node name="Slot11" parent="HBoxContainer3" instance=ExtResource( 4 )]
 margin_left = 56.0
-margin_top = 56.0
 margin_right = 84.0
-margin_bottom = 84.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 frame_id = 10
 
-[node name="Slot12" parent="." instance=ExtResource( 4 )]
+[node name="Slot12" parent="HBoxContainer3" instance=ExtResource( 4 )]
 margin_left = 84.0
+margin_right = 112.0
+texture = SubResource( 1 )
+frame_id = 11
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+visible = false
 margin_top = 56.0
 margin_right = 112.0
 margin_bottom = 84.0
-texture = SubResource( 2 )
-frame_id = 11
+custom_constants/separation = 0
 
-[node name="Slot13" parent="." instance=ExtResource( 4 )]
-margin_top = 84.0
-margin_bottom = 112.0
-texture = SubResource( 2 )
-frame_id = 12
-
-[node name="Slot14" parent="." instance=ExtResource( 4 )]
-margin_left = 28.0
-margin_top = 84.0
-margin_right = 56.0
-margin_bottom = 112.0
-texture = SubResource( 2 )
-frame_id = 13
-
-[node name="Slot15" parent="." instance=ExtResource( 4 )]
-margin_left = 56.0
-margin_top = 84.0
-margin_right = 84.0
-margin_bottom = 112.0
-texture = SubResource( 2 )
+[node name="Slot15" parent="HBoxContainer4" instance=ExtResource( 4 )]
+texture = SubResource( 1 )
 frame_id = 14
 
-[node name="Slot16" parent="." instance=ExtResource( 4 )]
+[node name="Slot13" parent="HBoxContainer4" instance=ExtResource( 4 )]
+margin_left = 28.0
+margin_right = 56.0
+texture = SubResource( 1 )
+frame_id = 12
+
+[node name="Slot14" parent="HBoxContainer4" instance=ExtResource( 4 )]
+margin_left = 56.0
+margin_right = 84.0
+texture = SubResource( 1 )
+frame_id = 13
+
+[node name="Slot16" parent="HBoxContainer4" instance=ExtResource( 4 )]
 margin_left = 84.0
-margin_top = 84.0
 margin_right = 112.0
-margin_bottom = 112.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 frame_id = 15
 
-[node name="Slot17" parent="." instance=ExtResource( 4 )]
-margin_top = 112.0
-margin_bottom = 140.0
-texture = SubResource( 2 )
+[node name="HBoxContainer5" type="HBoxContainer" parent="."]
+visible = false
+margin_top = 56.0
+margin_right = 112.0
+margin_bottom = 84.0
+custom_constants/separation = 0
+
+[node name="Slot17" parent="HBoxContainer5" instance=ExtResource( 4 )]
+texture = SubResource( 1 )
 frame_id = 16
 
-[node name="Slot18" parent="." instance=ExtResource( 4 )]
+[node name="Slot18" parent="HBoxContainer5" instance=ExtResource( 4 )]
 margin_left = 28.0
-margin_top = 112.0
 margin_right = 56.0
-margin_bottom = 140.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 frame_id = 17
 
-[node name="Slot19" parent="." instance=ExtResource( 4 )]
+[node name="Slot19" parent="HBoxContainer5" instance=ExtResource( 4 )]
 margin_left = 56.0
-margin_top = 112.0
 margin_right = 84.0
-margin_bottom = 140.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 frame_id = 18
 
-[node name="Slot20" parent="." instance=ExtResource( 4 )]
+[node name="Slot20" parent="HBoxContainer5" instance=ExtResource( 4 )]
 margin_left = 84.0
-margin_top = 112.0
 margin_right = 112.0
-margin_bottom = 140.0
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 frame_id = 19

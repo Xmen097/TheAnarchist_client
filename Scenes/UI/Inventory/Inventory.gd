@@ -16,9 +16,11 @@ func _input(event): #Call methods on hands on click event
 		visible = false
 	if event.is_action_pressed("open_inventory"):
 		visible = !visible
-	if event.is_action_pressed("open_shop") and visible and state != states.Shop:
+	if event.is_action_pressed("open_shop") and visible and state == states.Chest:
 		change_state(states.Shop)
 	elif event.is_action_pressed("open_shop") and visible and state == states.Shop:
+		change_state(states.NoChest)
+	elif event.is_action_pressed("open_shop") and visible and state == states.NoChest:
 		change_state(states.Chest)
 
 func _ready():

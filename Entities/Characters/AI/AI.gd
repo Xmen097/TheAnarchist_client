@@ -62,7 +62,7 @@ func move(delta):
 			velocity = position.direction_to(player.position) * speed
 		if velocity.length() > 0: # if moved
 			var _suc = move_and_slide(velocity)
-			position = position.round() #rounds position to pixel grid, dunno if neccesary
+			#position = position.round() #rounds position to pixel grid, dunno if neccesary
 			animation_mode.travel("Walk")
 		else: # didn't move
 			animation_mode.travel("Idle")
