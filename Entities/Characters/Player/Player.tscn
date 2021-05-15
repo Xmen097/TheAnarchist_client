@@ -9,10 +9,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 4 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 9, 11 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=5]
 radius = 10.0499
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -38,7 +38,7 @@ position = Vector2( 0, -4 )
 shape = SubResource( 1 )
 
 [node name="Sprite" parent="." instance=ExtResource( 1 )]
-frame = Vector2( 0, 0 )
+frame = Vector2( 7, 0 )
 is_player = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -58,7 +58,7 @@ script = ExtResource( 15 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 modulate = Color( 0.968627, 1, 0, 1 )
 position = Vector2( -0.2, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="KickRange" type="Area2D" parent="."]
 collision_layer = 0
@@ -67,4 +67,4 @@ script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KickRange"]
 position = Vector2( 0, -4 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )

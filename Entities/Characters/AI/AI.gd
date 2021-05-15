@@ -57,12 +57,12 @@ func move(delta):
 		var moved = move_and_slide(velocity)
 		velocity -= velocity * friction * delta # slowly decrease velocity
 	if personality == Personality.Chaser:
-		var velocity = Vector2.ZERO
+		velocity = Vector2.ZERO
 		if inside_follow_range:
 			velocity = position.direction_to(player.position) * speed
 		if velocity.length() > 0: # if moved
 			var _suc = move_and_slide(velocity)
-			position = position.round() #rounds position to pixel grid, dunno if neccesary
+			#position = position.round() #rounds position to pixel grid, dunno if neccesary
 			animation_mode.travel("Walk")
 		else: # didn't move
 			animation_mode.travel("Idle")

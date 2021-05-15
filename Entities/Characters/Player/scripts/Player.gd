@@ -22,6 +22,8 @@ enum states {
 	Kicking,
 	Falling,
 	Throwing,
+	Dying,
+	Using,  # Using item or drug
 }
 var state = states.Idle
 var velocity
@@ -44,7 +46,7 @@ func _ready():
 func _physics_process(delta):
 	move(delta)
 	
-func _process(delta):
+func _process(_delta):
 	if state != states.Rolling:
 		look_at_mouse()
 		weapons.look_at_mouse(Utils.mouse_angle())
@@ -75,6 +77,7 @@ func move(delta):
 func look_at_mouse(): #change player sprite to look at mouse
 	var mouse_pos_blended = Utils.mouse_pos_blended()
 	animation_tree.set('parameters/Idle/blend_position', mouse_pos_blended)
+	animation_tree.set('parameters/Walk/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Walk/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Kick/blend_position', mouse_pos_blended)
 	animation_tree.set('parameters/Throw/blend_position', mouse_pos_blended)
@@ -145,6 +148,11 @@ func throw():
 	if state != states.Throwing:
 		state = states.Throwing
 		animation_mode.travel("Throw")
+		
+func use(animation_name):
+	if state != states.Using:
+		state = states.Using
+		animation_mode.travel(animation_name)
 
 func change_state(state_id): #called from animations
 	state = state_id

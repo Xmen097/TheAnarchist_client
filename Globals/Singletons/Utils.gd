@@ -1,6 +1,7 @@
 extends Node2D
 
 var player_ref
+onready var throwable_instance = preload("res://Entities/Objects/Throwables/Throwable/Throwable.tscn")
 var scaling_factor = 0
 
 func mouse_angle():

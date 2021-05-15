@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Middle/Shop1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI/Inventory/Middle/Backpack.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/UI/Inventory/Middle/Main.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/UI/Inventory/Middle/Body.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=5]
 
 [node name="Middle" type="MarginContainer"]
 margin_top = 34.0
@@ -38,15 +39,28 @@ margin_right = 236.0
 margin_bottom = 152.0
 custom_constants/separation = 6
 
-[node name="NoBackpack" type="MarginContainer" parent="Middle/Inventory/Inventory"]
+[node name="NoChest" type="MarginContainer" parent="Middle/Inventory/Inventory"]
 margin_right = 112.0
 margin_bottom = 140.0
 mouse_filter = 1
 custom_constants/margin_left = 112
 
-[node name="Backpack" parent="Middle/Inventory/Inventory" instance=ExtResource( 2 )]
-margin_left = 118.0
-margin_right = 230.0
+[node name="Control" type="Control" parent="Middle/Inventory/Inventory/NoChest"]
+margin_left = 112.0
+margin_right = 112.0
+margin_bottom = 140.0
+
+[node name="Slot" parent="Middle/Inventory/Inventory/NoChest/Control" instance=ExtResource( 5 )]
+margin_left = -69.0885
+margin_top = 56.5611
+margin_right = -41.0885
+margin_bottom = 84.5611
+accepted_type = 9
+has_stack_counter = false
+frame_type = 10
+
+[node name="Chest" parent="Middle/Inventory/Inventory" instance=ExtResource( 2 )]
+visible = false
 
 [node name="Shop" parent="Middle/Inventory/Inventory" instance=ExtResource( 1 )]
 margin_left = 118.0

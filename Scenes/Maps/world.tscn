@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Maps/Assets/tilesets/map.tres" type="TileSet" id=1]
 [ext_resource path="res://Entities/Characters/AI/AI.tscn" type="PackedScene" id=2]
@@ -6,10 +6,14 @@
 [ext_resource path="res://Scenes/Maps/Falling_area.gd" type="Script" id=4]
 [ext_resource path="res://Entities/Characters/Vendor/Vendor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Entities/Objects/Flag/Flag.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Maps/fontana_test.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Entities/Characters/Strawman/Strawman.tscn" type="PackedScene" id=8]
 
 [node name="World" type="YSort"]
+position = Vector2( -327, -127 )
 
 [node name="Background" type="Node2D" parent="."]
+z_index = -4096
 
 [node name="Grass" type="TileMap" parent="Background"]
 z_index = -1000
@@ -51,7 +55,43 @@ tile_data = PoolIntArray( 0, 4, 262152, 1, 4, 524298, 2, 4, 11, 65536, 4, 589832
 [node name="Flag" parent="." instance=ExtResource( 6 )]
 position = Vector2( -79.3, -42 )
 
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_left = -192.0
+margin_top = 82.0
+margin_right = 192.0
+margin_bottom = 298.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 384, 216 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Player" parent="ViewportContainer/Viewport" instance=ExtResource( 8 )]
+position = Vector2( 200, 100 )
+
+[node name="fontana" parent="ViewportContainer/Viewport" instance=ExtResource( 7 )]
+position = Vector2( 100, 100 )
+z_index = 7
+
 [node name="Foreground" type="YSort" parent="."]
+
+[node name="Decorations2" type="TileMap" parent="Foreground"]
+modulate = Color( 0, 0, 0, 0.513726 )
+position = Vector2( -4, -3 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 12, 12 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+cell_tile_origin = 2
+cell_y_sort = true
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 131078, 13, 3, 131087, 13, 7, 131096, 13, 3, 196621, 1, 0, 196661, 10, 4, 262152, 13, 10, 262166, 13, 10, 589839, 13, 5, 983050, 13, 6, 983060, 13, 6, 1048589, 1, 0, 1114118, 13, 3, 1114136, 13, 3 )
 
 [node name="Decorations" type="TileMap" parent="Foreground"]
 tile_set = ExtResource( 1 )
@@ -63,6 +103,19 @@ collision_layer = 8
 collision_mask = 7
 format = 1
 tile_data = PoolIntArray( 131078, 13, 3, 131087, 13, 7, 131096, 13, 3, 196621, 1, 0, 196661, 10, 4, 262152, 13, 10, 262166, 13, 10, 589839, 13, 5, 983050, 13, 6, 983060, 13, 6, 1048589, 1, 0, 1114118, 13, 3, 1114136, 13, 3 )
+
+[node name="Walls2" type="TileMap" parent="Foreground"]
+modulate = Color( 0, 0, 0, 0.439216 )
+position = Vector2( -6, -5 )
+z_index = -10
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 24, 24 )
+cell_tile_origin = 2
+collision_friction = 0.0
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 4, 6, 1, 5, 6, 196610, 6, 6, 196610, 7, 6, 196610, 8, 6, 196610, 9, 6, 196610, 10, 6, 196610, 11, 6, 3, 65539, 6, 1, 65540, 6, 131075, 65547, 6, 131073, 65548, 6, 3, 131075, 6, 131072, 131084, 6, 65536, 196620, 6, 131072, 327683, 6, 0, 327692, 6, 0, 393219, 6, 65536, 393228, 6, 65536, 458755, 6, 131073, 458756, 6, 3, 458763, 6, 1, 458764, 6, 131075, 524292, 6, 131073, 524293, 6, 196610, 524294, 6, 196610, 524295, 6, 196610, 524296, 6, 196610, 524297, 6, 196610, 524298, 6, 196610, 524299, 6, 131075 )
 
 [node name="Walls" type="TileMap" parent="Foreground"]
 tile_set = ExtResource( 1 )
@@ -79,23 +132,29 @@ tile_data = PoolIntArray( 4, 6, 1, 5, 6, 196610, 6, 6, 196610, 7, 6, 196610, 8, 
 
 [node name="Player" parent="Foreground/Entities" instance=ExtResource( 3 )]
 position = Vector2( 42, 167 )
+z_index = 1
 
 [node name="AI3" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( -128, 149 )
+z_index = 1
 weapon = 2
 personality = 1
 
 [node name="AI4" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( -135, 7 )
+z_index = 1
 weapon = 1
 personality = 1
 
 [node name="AI" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( 3, 18 )
+z_index = 1
 personality = 2
 
 [node name="AI2" parent="Foreground/Entities" instance=ExtResource( 2 )]
 position = Vector2( 321, 87 )
+z_index = 1
+speed = 35
 
 [node name="Vendor" parent="Foreground/Entities" instance=ExtResource( 5 )]
 position = Vector2( -35, 167 )

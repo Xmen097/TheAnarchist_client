@@ -10,8 +10,13 @@ var item = Items.items.None setget change_item
 export var starting_item_id = 0 
 var item_texture
 var preview
+var stack
+var stack_number
+export(NodePath) var stack_path
 export(bool) var is_trash = false
 export(bool) var has_preview = false
+export(bool) var has_stack_counter = true
+export(bool) var is_sell = false
 
 export(int) var frame_id
 export(Player.frame_type) var frame_type
@@ -28,12 +33,18 @@ func _ready():
 	success = success or connect("item_changed", Player, "_on_item_changed")
 	success = success or Player.connect("item_changed", self, "_on_item_changed")
 	assert(!success, "Inventory frame failed to connect to events!")
-	if not is_trash:
-		item_texture = $Item
-		if starting_item_id != 0:
-			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type)
+	
 	if has_preview:
 		preview = $Preview
+	if has_stack_counter:
+		stack = get_node(stack_path) if stack_path != "" else $Stack
+		stack_number = stack.get_node("Count")
+	
+	if not is_trash and not is_sell:
+		item_texture =  $Item
+		if starting_item_id != 0:
+			emit_signal("item_changed", Items.items[Items.items.keys()[starting_item_id]].duplicate(), frame_id, frame_type)
+
 	
 func _on_mouse_entered():
 	self_modulate = Color(1, 1, 1, 255/220.0)
@@ -45,7 +56,22 @@ func _on_mouse_exited():
 func change_item(new_item): # item setter
 	item = new_item
 	if has_preview:
-		preview.visible = item == Items.items.None
+		preview.visible = (item == Items.items.None)
+	if has_stack_counter:
+		if item.properties.stackability == Items.stackability.None:
+			stack.visible = false
+		elif item.properties.stackability == Items.stackability.Single:
+			var count = item.count
+			stack.visible = true
+			stack_number.texture.region = Rect2(count * 9, 0, 9, 8)
+			stack.texture.region = Rect2(0, 0, 13, 22)
+		elif item.properties.stackability == Items.stackability.Multi:
+			var stack_count = (item.count-1) / 12
+			var count = (item.count-1) % 12 +1
+			stack.visible = true
+			stack_number.texture.region = Rect2(count * 9, 0, 9, 8)
+			stack.texture.region = Rect2(13 + stack_count * 13, 0, 13, 22)
+
 	if item_texture:
 		item_texture.texture.region = Rect2(item.id * 28, 0, 28, 28) # 28 pixels per item
 	
@@ -64,20 +90,36 @@ func get_drag_data(_pos):
 	return {item = item, from = self}
 
 func can_drop_data(_pos, data):
+	if frame_type == data.from.frame_type and frame_id == data.from.frame_id:
+		return false
+		
 	if frame_type == Player.frame_type.Shop:
 		return false
+		
+	if data.from.frame_type == Player.frame_type.Shop and (is_trash or is_sell):
+		return false
 	
-	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.cost <= GameManager.get_stat(GameManager.stat.player.gold) and not is_trash)
+	var shop_ok = data.from.frame_type != Player.frame_type.Shop or (data.from.item.properties.cost < GameManager.get_stat(GameManager.stat.player.gold))
 	
-	return shop_ok and item == Items.items.None and \
+	var stack_ok = item == Items.items.None or item.uuid == data.item.uuid and \
+	(item.properties.stackability == Items.stackability.Single and item.count + data.item.count <= 12 \
+	or item.properties.stackability == Items.stackability.Multi and item.count + data.item.count <= 60)
+	
+	return shop_ok and stack_ok and \
 	(data.item.type == accepted_type or accepted_type == Items.types.General) and \
 	not (frame_type == Player.frame_type.Body and Player.body[Player.body.keys()[frame_id]].armor == Items.armor_type.Destroyed) or\
-	is_trash
+	is_trash or is_sell
 	
 func drop_data(_pos, data):
+	if data.from.frame_type == Player.frame_type.Shop:
+		data.item = data.item.duplicate()
+	if item != Items.items.None:
+		data.item.count += item.count
 	emit_signal("item_changed", data.item, frame_id, frame_type)
 	if data.from.frame_type == Player.frame_type.Shop:
-		GameManager.increase_stat(GameManager.stat.player.gold, -data.from.item.cost)
+		GameManager.increase_stat(GameManager.stat.player.gold, -data.from.item.properties.cost)
+	if is_sell:
+		GameManager.increase_stat(GameManager.stat.player.gold, data.from.item.properties.cost*data.from.item.count)
 	data.from.dropped_success()
 	
 func dropped_success():

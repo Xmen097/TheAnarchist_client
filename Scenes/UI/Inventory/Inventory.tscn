@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Bottom.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI/Inventory/Middle.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/UI/Inventory/Middle/Shop1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/UI/Inventory/Inventory.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/UI/Inventory/Middle/Shop2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/UI/Inventory/Middle/Shop3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/UI/assets/under.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/UI/Top/Top.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/UI/Inventory/buttons/arrow_right.png" type="Texture" id=22]
@@ -27,11 +28,10 @@ mouse_filter = 1
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 5 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-nobackpack_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/TopEmpty"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Throw"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/NoBackpack") ]
-backpack_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/TopBackpack"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Throw"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Backpack") ]
+nochest_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/TopEmpty"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/NoChest"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Throw") ]
+chest_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Chest"), NodePath("PanelContainer/MarginContainer/VBoxContainer/TopChest"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Throw") ]
 shop_nodes = [ NodePath("PanelContainer/MarginContainer/VBoxContainer/TopShop"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Middle/Middle/Inventory/Inventory/Shop"), NodePath("PanelContainer/MarginContainer/VBoxContainer/Bottom/Buttons/HBoxContainer/Sell") ]
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -58,7 +58,7 @@ __meta__ = {
 
 [node name="Top" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
 
-[node name="TopBackpack" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="TopChest" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 visible = false
 margin_top = 22.0
 margin_right = 384.0
@@ -67,19 +67,19 @@ mouse_filter = 1
 custom_constants/margin_top = -8
 custom_constants/margin_left = 98
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TopBackpack"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TopChest"]
 margin_left = 98.0
 margin_top = -8.0
 margin_right = 384.0
 margin_bottom = 8.0
 custom_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TopBackpack/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TopChest/HBoxContainer"]
 margin_right = 24.0
 margin_bottom = 16.0
 texture = ExtResource( 23 )
 
-[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TopBackpack/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TopChest/HBoxContainer"]
 margin_left = 24.0
 margin_right = 48.0
 margin_bottom = 16.0
@@ -119,6 +119,15 @@ texture_normal = ExtResource( 24 )
 script = ExtResource( 3 )
 shop_scene = ExtResource( 6 )
 
+[node name="Button3" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/TopShop/HBoxContainer"]
+margin_left = 40.0
+margin_right = 60.0
+margin_bottom = 16.0
+mouse_filter = 1
+texture_normal = ExtResource( 24 )
+script = ExtResource( 3 )
+shop_scene = ExtResource( 7 )
+
 [node name="TopEmpty" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 22.0
 margin_right = 384.0
@@ -129,3 +138,7 @@ custom_constants/margin_top = 8
 [node name="Middle" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 2 )]
 
 [node name="Bottom" parent="PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+
+[editable path="PanelContainer/MarginContainer/VBoxContainer/Middle"]
+
+[editable path="PanelContainer/MarginContainer/VBoxContainer/Bottom"]
