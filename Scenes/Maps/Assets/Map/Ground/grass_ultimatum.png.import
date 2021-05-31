@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/team_box_red.png-cfce0c7a844029e4e5830a83c69df72e.stex"
+path="res://.import/grass_ultimatum.png-4672b969db719e4127e50dfd5b8f75fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/overlay/team_box/team_box_red.png"
-dest_files=[ "res://.import/team_box_red.png-cfce0c7a844029e4e5830a83c69df72e.stex" ]
+source_file="res://Scenes/Maps/Assets/Map/Ground/grass_ultimatum.png"
+dest_files=[ "res://.import/grass_ultimatum.png-4672b969db719e4127e50dfd5b8f75fd.stex" ]
 
 [params]
 
